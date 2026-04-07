@@ -1,12 +1,11 @@
+import * as FUNC from "../funktioner/functions.js";
+
 async function handler(request) {
   const url = new URL(request.url);
 
   const headersCORS = new Headers();
   headersCORS.set("Access-Control-Allow-Origin", "*");
-  headersCORS.set(
-    "Access-Control-Allow-Methods",
-    "POST, GET, DELETE, PUT, OPTIONS",
-  );
+  headersCORS.set("Access-Control-Allow-Methods", "POST, GET, DELETE, OPTIONS");
   headersCORS.set("Access-Control-Allow-Headers", "Content-Type");
   headersCORS.set("Content-Type", "application/json");
 
@@ -19,7 +18,11 @@ async function handler(request) {
 
   const contentType = request.headers.get("content-type");
 
-  if (contentType !== "application/json" && request.method !== "GET") {
+  if (
+    request.method !== "GET" &&
+    request.method !== "OPTIONS" &&
+    (!contentType || !contentType.includes("application/json"))
+  ) {
     return new Response(
       JSON.stringify({ error: "Request-Body must be JSON!" }),
       { status: 400, headers: headersCORS },
@@ -27,12 +30,80 @@ async function handler(request) {
   }
 
   if (request.method == "GET") {
+    if (url.pathname == "/getPublishedTips") {
+      let json = await FUNC.getJsonInformation("../json/publishedTips.json");
+
+      return new Response(JSON.stringify(json), {
+        status: 200,
+        headers: headersCORS,
+      });
+    }
+
+    if (url.pathname == "/getSentTips") {
+      let json = await FUNC.getJsonInformation("../json/sentTips.json");
+
+      return new Response(JSON.stringify(json), {
+        status: 200,
+        headers: headersCORS,
+      });
+    }
+
+    if (url.pathname == "/pictures") {
+      let json = await FUNC.getJsonInformation("../json/pictures.json");
+
+      return new Response(JSON.stringify(json), {
+        status: 200,
+        headers: headersCORS,
+      });
+    }
   }
 
   if (request.method == "POST") {
-  }
+    /* inlogg för att logga in som mau gossip */
+    if (url.pathname == "/login") {
+      let users = await FUNC.getJsonInformation("../json/loginUser.json");
 
-  if (request.method == "PUT") {
+      const userAccount = await request.json();
+      let userFound = false;
+      let rightUser;
+
+      for (let user of users) {
+        if (
+          userAccount.username === user.username &&
+          userAccount.password === user.password
+        ) {
+          userFound = true;
+          rightUser = user;
+          break;
+        }
+      }
+
+      if (userFound) {
+        return new Response(JSON.stringify({ message: "login succesfull" }), {
+          status: 200,
+          headers: headersCORS,
+        });
+      } else {
+        return new Response(
+          JSON.stringify({ error: "Wrong username or password" }),
+          {
+            status: 400,
+            headers: headersCORS,
+          },
+        );
+      }
+    }
+    /* Uppdatera json fil med bilder, när nya bilder ska publiceras */
+    if (url.pathname == "/postPictures") {
+    }
+
+    /* För att kunna skicka in tips */
+    if (url.pathname == "/sendTips") {
+    }
+
+    /* Posta ett nytt tips */
+    if (url.pathname == "/publishTips") {
+    }
   }
 
   return new Response(JSON.stringify({ error: "Not Found" }), {
@@ -42,3 +113,5 @@ async function handler(request) {
 }
 
 Deno.serve(handler);
+
+
