@@ -103,6 +103,10 @@ async function handler(request) {
 
     /* Posta ett nytt tips */
     if (url.pathname == "/publishTips") {
+      let allTips = await FUNC.getJsonInformation("../json/publishedTips.json");
+      let newTips = await request.json();
+
+      
     }
   }
 
@@ -113,5 +117,3 @@ async function handler(request) {
 }
 
 Deno.serve(handler);
-
-
