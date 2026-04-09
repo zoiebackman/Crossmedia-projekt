@@ -97,8 +97,31 @@ async function handler(request) {
     if (url.pathname == "/postPictures") {
     }
 
-    /* För att kunna skicka in tips */
+    /* För att kunna skicka in tips, jag tänker att tipsen är ett objekt med {tips: "", insändare: ""} */
     if (url.pathname == "/sendTips") {
+      let allTips = await FUNC.getJsonInformation("../json/sentTips.json");
+      let newSentTips = await request.json();
+
+      if (newSentTips.tips == "" || newSentTips.sender == "") {
+        return new Response(
+          JSON.stringify({ error: "Alla fält måste vara ifyllda!" }),
+          {
+            status: 400,
+            headers: headersCORS,
+          },
+        );
+      } else {
+        allTips.push(newSentTips);
+        await Deno.writeTextFileSync(
+          "../json/sentTips.json",
+          JSON.stringify(allTips),
+        );
+
+        return new Response(JSON.stringify({ message: "Tips inskickat" }), {
+          status: 200,
+          headers: headersCORS,
+        });
+      }
     }
 
     /* Posta ett nytt tips */
