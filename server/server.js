@@ -124,12 +124,31 @@ async function handler(request) {
       }
     }
 
-    /* Posta ett nytt tips */
+    /* Posta ett nytt tips, tänker att man använder newdate som skapas när man skickar in för datum */
     if (url.pathname == "/publishTips") {
       let allTips = await FUNC.getJsonInformation("../json/publishedTips.json");
       let newTips = await request.json();
 
-      
+      if (newTips.tips == "" || newTips.sender == "" || newTips == "") {
+        return new Response(
+          JSON.stringify({ error: "Alla fält måste vara ifyllda" }),
+          {
+            status: 400,
+            headers: headersCORS,
+          },
+        );
+      } else {
+        allTips.push(newTips);
+        await Deno.writeTextFileSync(
+          "../json/publishedTips.json",
+          JSON.stringify(allTips),
+        );
+
+        return new Response(JSON.stringify({ message: "Tips publicerat" }), {
+          status: 200,
+          headers: headersCORS,
+        });
+      }
     }
   }
 
