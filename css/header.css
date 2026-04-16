@@ -34,3 +34,8 @@ header {
   font-size: 16px;
   letter-spacing: 1.2px;
 }
+
+#headerLogga {
+  margin-top: 75px;
+  height: 150px;
+}
