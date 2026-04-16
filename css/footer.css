@@ -5,35 +5,36 @@ footer {
   border-top: 2px solid #dd9c4c;
   width: 1200px;
   margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+#loggaOchLinks {
+  width: 800px;
+  height: 300px;
+  display: flex;
+  margin-top: 20px;
 }
 
 #mauGossipLogga {
-  height: 200px;
-  width: 350px;
+  height: 90px;
+  width: 200px;
 }
 
-#mau {
+#footerLogga {
+  height: 90px;
+}
+
+#linksBox {
+  height: 50px;
+  width: 600px;
   display: flex;
-  align-items: baseline;
-  margin: 0;
+  flex-wrap: wrap;
 }
 
-#mLogga {
-  font-family: "imperial script";
+.footerLinks {
   color: #dd9c4c;
-  font-size: 75px;
-}
-
-#auLogga {
-  font-family: "imperial script";
-  color: #dd9c4c;
-  font-size: 60px;
-}
-
-#gossipLogga {
-  margin-top: 0;
-  font-family: "didact gothic";
-  font-size: 40px;
-  color: #dd9c4c;
-  margin-left: 65px;
+  font-family: "bodondi72";
+  padding-left: 60px;
+  padding-bottom: 20px;
 }
