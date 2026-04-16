@@ -1,0 +1,12 @@
+@font-face {
+  font-family: "bodondi";
+  src: url(../fonts/BodoniModa-VariableFont_opsz\,wght.ttf);
+}
+@font-face {
+  font-family: "bodondiItalic";
+  src: url(../fonts/BodoniModa-Italic-VariableFont_opsz\,wght.ttf);
+}
+@font-face {
+  font-family: "bodondi72";
+  src: url(../fonts/bodoni-72-book.ttf);
+}

@@ -3,6 +3,10 @@ body {
   background-color: #311e29;
 }
 header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
   background-image: url(../pictures/turningtorso.jpg);
   height: 400px;
   width: 100%;
@@ -12,7 +16,7 @@ header {
 }
 
 #navbar {
-  width: 1060px;
+  width: 1000px;
   height: 40px;
   background-color: rgb(60, 40, 48, 0.3);
   border-radius: 20px;
@@ -21,8 +25,12 @@ header {
   justify-content: center;
   align-items: center;
   gap: 120px;
+  margin-top: 10px;
 }
 
-.navbarText{
-    color: white;
+.navbarText {
+  color: white;
+  font-family: "bodondi72";
+  font-size: 16px;
+  letter-spacing: 1.2px;
 }
