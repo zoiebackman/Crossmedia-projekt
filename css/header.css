@@ -1,8 +1,28 @@
 body {
   margin: 0;
+  background-color: #311e29;
 }
-img {
-  height: 500px;
+header {
+  background-image: url(../pictures/turningtorso.jpg);
+  height: 400px;
   width: 100%;
-  border-bottom: 3px solid #dd9c4c;
+  background-size: cover;
+  background-position: center;
+  border-bottom: 2px solid #dd9c4c;
+}
+
+#navbar {
+  width: 1060px;
+  height: 40px;
+  background-color: rgb(60, 40, 48, 0.3);
+  border-radius: 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 120px;
+}
+
+.navbarText{
+    color: white;
 }
