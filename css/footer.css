@@ -10,10 +10,11 @@ footer {
 }
 
 #loggaOchLinks {
-  width: 800px;
+  width: 1000px;
   height: 300px;
   display: flex;
-  margin-top: 20px;
+  margin-top: 30px;
+  gap: 40px;
 }
 
 #mauGossipLogga {
@@ -26,10 +27,11 @@ footer {
 }
 
 #linksBox {
-  height: 50px;
+  height: 60px;
   width: 600px;
   display: flex;
   flex-wrap: wrap;
+  padding-top: 10px;
 }
 
 .footerLinks {
