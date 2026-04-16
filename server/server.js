@@ -21,6 +21,7 @@ async function handler(request) {
   if (
     request.method !== "GET" &&
     request.method !== "OPTIONS" &&
+    url.pathname !== "/postPictures" &&
     (!contentType || !contentType.includes("application/json"))
   ) {
     return new Response(
@@ -95,6 +96,10 @@ async function handler(request) {
     }
     /* Uppdatera json fil med bilder, när nya bilder ska publiceras */
     if (url.pathname == "/postPictures") {
+      let allPictures = await FUNC.getJsonInformation("../json/pictures.json");
+
+      const formData = await request.formData();
+      const image = formData.get("image");
     }
 
     /* För att kunna skicka in tips, jag tänker att tipsen är ett objekt med {tips: "", insändare: ""} */
@@ -129,7 +134,7 @@ async function handler(request) {
       let allTips = await FUNC.getJsonInformation("../json/publishedTips.json");
       let newTips = await request.json();
 
-      if (newTips.tips == "" || newTips.sender == "" || newTips == "") {
+      if (newTips.tips == "" || newTips.sender == "" || newTips.date == "") {
         return new Response(
           JSON.stringify({ error: "Alla fält måste vara ifyllda" }),
           {
