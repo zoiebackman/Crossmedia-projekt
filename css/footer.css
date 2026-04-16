@@ -1,0 +1,8 @@
+main {
+  height: 100px;
+}
+footer {
+  border-top: 2px solid #dd9c4c;
+  width: 1200px;
+  margin: auto;
+}
