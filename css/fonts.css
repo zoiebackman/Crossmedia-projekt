@@ -10,3 +10,11 @@
   font-family: "bodondi72";
   src: url(../fonts/bodoni-72-book.ttf);
 }
+@font-face {
+  font-family: "imperial script";
+  src: url(../fonts/ImperialScript-Regular.ttf);
+}
+@font-face {
+  font-family: "didact gothic";
+  src: url(../fonts/DidactGothic-Regular.ttf);
+}

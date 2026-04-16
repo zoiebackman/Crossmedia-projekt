@@ -6,3 +6,34 @@ footer {
   width: 1200px;
   margin: auto;
 }
+
+#mauGossipLogga {
+  height: 200px;
+  width: 350px;
+}
+
+#mau {
+  display: flex;
+  align-items: baseline;
+  margin: 0;
+}
+
+#mLogga {
+  font-family: "imperial script";
+  color: #dd9c4c;
+  font-size: 75px;
+}
+
+#auLogga {
+  font-family: "imperial script";
+  color: #dd9c4c;
+  font-size: 60px;
+}
+
+#gossipLogga {
+  margin-top: 0;
+  font-family: "didact gothic";
+  font-size: 40px;
+  color: #dd9c4c;
+  margin-left: 65px;
+}
