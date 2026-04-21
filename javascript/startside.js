@@ -12,7 +12,12 @@ function homePage() {
     <div id="whisperBox">
         <p id="whisperTitle">Senaste viskningar...</p>
     </div>
-    <div id="gossipBox"></div>
+    <div id="gossipBox">
+        <div>
+            <img src="../pictures/kvinna.png" alt="">
+        </div>
+        <div></div>
+    </div>
     <div id="allTipsBox">
         <p class="allTipsAllPictures">alla gossips</p>
     </div>
