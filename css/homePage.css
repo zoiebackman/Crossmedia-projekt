@@ -1,4 +1,5 @@
-#whisperBox {
+#whisperBox,
+#selectedPicturesBox {
   width: 846px;
   display: flex;
   justify-content: start;
@@ -19,16 +20,47 @@
   border: 1px solid #dd9c4c;
 }
 
-#allTipsBox {
+#allTipsBox,
+#allPicturesTextBox {
   width: 846px;
   display: flex;
   justify-content: end;
 }
 
-#allTips {
+.allTipsAllPictures {
   font-family: "bodondi72";
-  font-size: 20px;
+  font-size: 16px;
   color: #e3820a;
-  margin-top: 5px;
+  margin-top: 8px;
   text-decoration: underline;
+}
+
+#selectedPicturesText {
+  font-family: "bodondi72";
+  font-size: 32px;
+  color: #e3820a;
+  margin-bottom: 10px;
+}
+
+#picturesBox {
+  width: 846px;
+  height: 300px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#picture1,
+#picture2,
+#picture3 {
+  height: 300px;
+  width: 260px;
+  background-color: white;
+}
+
+#quote {
+  font-family: "imperial script";
+  font-size: 36px;
+  color: white;
+  margin-top: 80px;
+  margin-bottom: 120px;
 }
