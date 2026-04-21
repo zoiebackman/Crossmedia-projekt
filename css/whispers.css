@@ -1,0 +1,77 @@
+:root {
+    --main-font-family: "bodondi72";
+    --main-font-size: 18px;
+    --main-text-color: rgb(60, 40, 48);
+}
+
+#containerGossip {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+    padding: 50px 30px;
+}
+
+.boxGossip {
+    background-color: #F8E1CD;
+    border-radius: 10px;
+    padding: 20px;
+    width: 30%;
+}
+
+
+#containerPages {
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+    align-items: center;
+
+}
+
+.textPages {
+    display: block;
+    color: #dd9c4c;
+    font-family: "bodondi72";
+    width: 33%;
+    text-align: center;
+}
+
+.dateText {
+    text-align: right;
+    margin: 0;
+    font-family: "didact gothic";
+    font-weight: bolder;
+    opacity: 50%;
+    font-size: 14px;
+
+}
+
+#headerText {
+    margin-top: 75px;
+    height: 150px;
+    font-size: 120px;
+    color: #dd9c4c;
+    font-family: "imperial script";
+
+}
+
+.textGossip {
+    font-family: var(--main-font-family);
+    font-size: var(--main-font-size);
+    color: var(--main-text-color);
+    letter-spacing: 1px;
+    margin: 10px;
+}
+
+.xoxoText {
+    font-family: "imperial script";
+}
+
+#headerLogga {
+    display: none;
+}
+
+#pageNum {
+    text-decoration: underline;
+}

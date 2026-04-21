@@ -1,6 +1,6 @@
-main {
+/* main {
   height: 100px;
-}
+} */
 footer {
   border-top: 2px solid #dd9c4c;
   width: 1100px;
@@ -47,6 +47,7 @@ footer {
   display: flex;
   justify-content: end;
 }
+
 #footerAdress {
   width: 670px;
   height: 20px;
