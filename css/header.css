@@ -2,6 +2,7 @@ body {
   margin: 0;
   background-color: #311e29;
 }
+
 header {
   display: flex;
   flex-direction: column;
@@ -19,13 +20,14 @@ header {
   width: 1000px;
   height: 40px;
   background-color: rgb(60, 40, 48, 0.3);
-  border-radius: 20px;
+  border-radius: 10px;
 
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 120px;
   margin-top: 10px;
+  padding: 10px;
 }
 
 .navbarText {
