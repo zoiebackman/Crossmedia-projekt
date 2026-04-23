@@ -97,17 +97,17 @@
   footer {
     display: hidden;
   }
-  main {
+  #popUpContainer {
     overflow: auto;
     padding: 20px;
     background-color: #311e29;
     width: 100%;
     margin: 0;
     position: relative;
-    top: 20px;
+    /* top: 20px;
     bottom: 20px;
     left: 20px;
-    right: 20px;
+    right: 20px; */
     box-shadow: none;
   }
 
@@ -126,6 +126,10 @@
     margin: 0 auto 10px auto;
     background-repeat: no-repeat;
     background-position: center;
+  }
+
+  #playRules{
+    font-size: 14px;
   }
 
   #textBox,
@@ -154,7 +158,7 @@
   #howToPlay
   ul {
     font-size: 12px;
-    width: 80%;
+    width: 90%;
     margin-left: -10px;
   }
 
@@ -172,7 +176,6 @@
 
   #startButton {
     width: 100px;
-    margin-left: 280px;
     margin-top: 20px;
   }
 }
