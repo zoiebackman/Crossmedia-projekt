@@ -96,8 +96,8 @@ function welcomeFun() {
   headerText.id = "headerText";
   headerText.textContent = "Välkomna till spelet";
   popUpContainer.append(headerText);
-  main.append(welcomeContainer)
-  welcomeContainer.append(popUpContainer)
+  main.append(welcomeContainer);
+  welcomeContainer.append(popUpContainer);
 
   const textBox = document.createElement("div");
   textBox.id = "textBox";
