@@ -2,7 +2,7 @@ body {
   overflow: scroll;
 }
 
-main {
+#popUpContainer {
   overflow: scroll;
   width: 1200px;
   height: 100vh;
@@ -37,7 +37,7 @@ main {
   text-align: left;
 }
 
-#textBox2,
+#textBox2
 h3 {
   text-align: left;
   margin-bottom: 0;
@@ -45,7 +45,7 @@ h3 {
   margin-left: 40px;
 }
 
-#textBox2,
+#textBox2
 p {
   text-align: left;
   margin-top: 0;
@@ -54,7 +54,7 @@ p {
   font-size: 16px;
 }
 
-#textBox2,
+#textBox2
 ul {
   font-size: 16px;
   margin-left: 40px;
@@ -103,17 +103,17 @@ ul {
   footer {
     display: hidden;
   }
-  main {
+  #popUpContainer {
     overflow: auto;
     padding: 20px;
     background-color: #311e29;
     width: 100%;
     margin: 0;
     position: relative;
-    top: 20px;
+    /* top: 20px;
     bottom: 20px;
     left: 20px;
-    right: 20px;
+    right: 20px; */
     box-shadow: none;
   }
 
@@ -134,6 +134,10 @@ ul {
     background-position: center;
   }
 
+  #playRules{
+    font-size: 14px;
+  }
+
   #textBox,
   #textBox2,
   #textBox2 ul {
@@ -143,24 +147,23 @@ ul {
     box-sizing: border-box;
   }
 
-  #howToPlay,
-  h3 {
+  #textBox p{
     font-size: 14px;
     margin-left: 0px;
   }
 
-  #howToPlay,
-  li,
-  p {
+  #textBox
+  li
+  {
     font-size: 12px;
     width: 80%;
     margin-left: 0px;
   }
 
-  #howToPlay,
+  #howToPlay
   ul {
     font-size: 12px;
-    width: 80%;
+    width: 90%;
     margin-left: -10px;
   }
 
@@ -178,7 +181,6 @@ ul {
 
   #startButton {
     width: 100px;
-    margin-left: 280px;
     margin-top: 20px;
   }
 }
