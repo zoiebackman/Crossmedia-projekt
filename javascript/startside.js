@@ -153,9 +153,9 @@ homeNav.addEventListener("click", () => {
 
 hamburgerMenu.addEventListener("click", () => {
   main.innerHTML = ``;
-  footer.innerHTML = ``;
+  footer.style.display = "none";
   main.innerHTML = `
-    <div #menuBox>
+    <div #menuBox">
         <div class="menuBoxChild">
             <p>Välkommen</p>
         </div>
