@@ -155,7 +155,10 @@ function goToWhisperPage() {
   headerLogga.style.display = "none";
 }
 
-welcomeFun();
+
+welcomeNav.addEventListener("click", function (){
+  welcomeFun();
+})
 
 homeNav.addEventListener("click", () => {
   homePage();
@@ -261,7 +264,8 @@ function welcomeFun() {
 
 }
 
-welcomeFun();
+// welcomeFun();
+
 
 loginButton.addEventListener("click", function (){
   main.innerHTML= ``
