@@ -9,6 +9,7 @@ let footer = document.querySelector("footer");
 let whisperContainer = document.getElementById("containerGossip");
 let headerLogga = document.getElementById("headerLogga");
 let hamburgerMenu = document.getElementById("hamburgerMenu");
+let loginButton = document.getElementById("logIn");
 
 function homePage() {
   main.style.display = "flex";
@@ -20,7 +21,7 @@ function homePage() {
         <p id="whisperTitle">Senaste viskningar...</p>
     </div>
     <div id="gossipBox">
-        <div id="girlPicture">
+        <div id="girlPicture"> 
             <img src="../pictures/kvinna.png" alt="">
         </div>
         <div id="gossipsBox">
@@ -203,3 +204,37 @@ linksNav.forEach((link) => {
 
 ///ta startsidan först
 //när du trycker på länkarna så byts sidan till whispers
+
+loginButton.addEventListener("click", function (event){
+  event.preventDefault();   
+  main.innerHTML= ``
+  main.innerHTML = `
+  <div id="loginContainer">
+    <div id="logInPopup">
+      <div id="popupLI">
+        <div id="logga-left">
+          <img id="loggaLoginIn" src="../pictures/logga2.png"></img>
+        </div>
+        <div id="login-right">
+          <div class="input-class"> <p id="username">Användarnamn</p>
+            <input id="input-username" type="text"></input>
+          </div>
+          <div class="input-class"> <p id="password">Lösenord</p>
+            <input id="input-password" type="password"></input>
+          </div>
+          <button id="login-knappen">Logga in</button>
+        </div>
+      </div>
+    </div>
+  </div>`
+;
+
+  const loginBtn = document.getElementById("login-knappen");
+  const usernameInput = document.getElementById("input-username");
+  const passwordInput = document.getElementById("input-password");
+
+  loginBtn.addEventListener("click", function () {
+    const username = usernameInput.value;
+    const password = passwordInput.value;
+  })
+})
