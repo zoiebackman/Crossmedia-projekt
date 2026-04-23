@@ -1,0 +1,184 @@
+body {
+  overflow: scroll;
+}
+
+main {
+  overflow: scroll;
+  width: 1200px;
+  height: 100vh;
+  background-color: #311e29;
+  position: fixed;
+  top: 20px;
+  left: 40px;
+  right: 40px;
+  z-index: 1000;
+  border-radius: 10px;
+  box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.2);
+  display: block;
+}
+
+#textBox {
+  width: 1000px;
+  margin-left: 80px;
+  color: #dd9c4c;
+  font-family: "didact gothic";
+  font-size: 18px;
+}
+
+#headerText {
+  margin-bottom: 5px;
+  font-family: "imperial script";
+  color: #dd9c4c;
+  text-align: center;
+  font-size: 48px;
+}
+
+#storyText {
+  text-align: left;
+}
+
+#textBox2,
+h3 {
+  text-align: left;
+  margin-bottom: 0;
+  font-family: "didact gothic";
+  margin-left: 40px;
+}
+
+#textBox2,
+p {
+  text-align: left;
+  margin-top: 0;
+  margin-left: 40px;
+  font-family: "didact gothic";
+  font-size: 16px;
+}
+
+#textBox2,
+ul {
+  font-size: 16px;
+  margin-left: 40px;
+  text-align: left;
+  font-family: "didact gothic";
+  width: 800px;
+}
+
+#imgContainer {
+  background-image: url(../pictures/Gemini_Generated_Image_xfggrnxfggrnxfgg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 600px;
+  height: 300px;
+  margin-left: 300px;
+  border-radius: 5px;
+  margin-bottom: 80px;
+}
+
+#universityTitle {
+  color: #dd9c4c;
+  text-align: center;
+  font-family: "didact gothic";
+  margin-bottom: 10px;
+}
+
+#startButton {
+  width: 128px;
+  height: 47px;
+  background-color: #dd9c4c;
+  color: "didact gothic";
+  border: none;
+  border-radius: 10px;
+  margin-bottom: 80px;
+}
+
+#startButton:hover {
+  background-color: #f8e1cd;
+}
+
+@media (max-width: 767px) {
+  header {
+    display: hidden;
+  }
+
+  footer {
+    display: hidden;
+  }
+  main {
+    overflow: auto;
+    padding: 20px;
+    background-color: #311e29;
+    width: 100%;
+    margin: 0;
+    position: relative;
+    top: 20px;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    box-shadow: none;
+  }
+
+  #headerText {
+    font-size: 24px;
+    font-family: "imperial script";
+    text-align: center;
+    margin-bottom: 5px;
+  }
+
+  #imgContainer {
+    width: 80%;
+    height: 40vh; 
+    border-radius: 10px;
+    background-size: cover;
+    margin: 0 auto 10px auto;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  #textBox,
+  #textBox2,
+  #textBox2 ul {
+    width: 80%;
+    margin-left: 0;
+    padding: 5px;
+    box-sizing: border-box;
+  }
+
+  #howToPlay,
+  h3 {
+    font-size: 14px;
+    margin-left: 0px;
+  }
+
+  #howToPlay,
+  li,
+  p {
+    font-size: 12px;
+    width: 80%;
+    margin-left: 0px;
+  }
+
+  #howToPlay,
+  ul {
+    font-size: 12px;
+    width: 80%;
+    margin-left: -10px;
+  }
+
+  #storyText {
+    font-size: 14px;
+    font-family: "didact gothic";
+    margin: 0;
+  }
+
+  #universityTitle {
+    font-size: 14px;
+    text-align: left;
+    margin-left: 50px;
+  }
+
+  #startButton {
+    width: 100px;
+    margin-left: 280px;
+    margin-top: 20px;
+  }
+}
