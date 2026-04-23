@@ -156,7 +156,7 @@ function goToWhisperPage() {
   headerLogga.style.display = "none";
 }
 
-homePage();
+welcomeFun();
 
 homeNav.addEventListener("click", () => {
   homePage();
