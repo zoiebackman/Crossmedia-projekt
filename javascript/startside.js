@@ -141,7 +141,7 @@ function welcomeFun() {
   startButton.textContent = "Start";
   popUpContainer.append(startButton);
 
-  startButton.addEventListener("click", () => {
+  startButton.addEventListener("click", function () {
     homePage();
   });
 }
@@ -161,6 +161,10 @@ homePage();
 homeNav.addEventListener("click", () => {
   homePage();
 });
+
+welcomeNav.addEventListener("click", function (){
+  welcomeFun()
+})
 
 hamburgerMenu.addEventListener("click", () => {
   main.innerHTML = ``;
