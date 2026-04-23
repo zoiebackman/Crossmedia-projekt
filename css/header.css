@@ -42,6 +42,10 @@ header {
   height: 150px;
 }
 
+#hamburgerMenu {
+  display: none;
+}
+
 @media (max-width: 767px) {
   * {
     box-sizing: border-box;
