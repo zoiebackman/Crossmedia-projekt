@@ -5,8 +5,11 @@ let picturesNav = document.getElementById("pictures");
 let sendTipsNav = document.getElementById("sendTips");
 let linksNav = document.querySelectorAll("#navbar .navbarText");
 let main = document.querySelector("main");
+let footer = document.querySelector("footer");
 let whisperContainer = document.getElementById("containerGossip");
 let headerLogga = document.getElementById("headerLogga");
+let hamburgerMenu = document.getElementById("hamburgerMenu");
+
 function homePage() {
   main.style.display = "flex";
   main.style.flexDirection = "column";
@@ -93,6 +96,30 @@ function goToWhisperPage() {
 homePage();
 homeNav.addEventListener("click", () => {
   homePage();
+});
+
+hamburgerMenu.addEventListener("click", () => {
+  main.innerHTML = ``;
+  footer.innerHTML = ``;
+  main.innerHTML = `
+    <div #menuBox>
+        <div class="menuBoxChild">
+            <p>Välkommen</p>
+        </div>
+        <div class="menuBoxChild">
+            <p>Hem</p>
+        </div>
+        <div class="menuBoxChild">
+            <p>Alla viskningar</p>
+        </div>
+        <div class="menuBoxChild">
+            <p>Bildgalleri</p>
+        </div>
+        <div class="menuBoxChild">
+            <p>Skicka in tips</p>
+        </div>
+    </div>
+  `;
 });
 
 //loopa ingenom
