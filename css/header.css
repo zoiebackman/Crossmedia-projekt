@@ -39,3 +39,38 @@ header {
   margin-top: 75px;
   height: 150px;
 }
+
+@media (max-width: 767px) {
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+  header {
+    background-image: none;
+    margin-top: 20px;
+    border-top: 1px solid #dd9c4c;
+    border-bottom: 1px solid #dd9c4c;
+    height: 82px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  #navbar {
+    display: none;
+  }
+
+  #headerLogga {
+    height: 48px;
+    margin-top: 0;
+  }
+
+  #hamburgerMenu {
+    height: 36px;
+    width: 36px;
+    background-color: #dd9c4c;
+  }
+}
