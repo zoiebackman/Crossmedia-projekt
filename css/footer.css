@@ -57,3 +57,38 @@ footer {
 #footerAdress a {
   color: white;
 }
+
+@media (max-width: 767px) {
+  footer {
+    width: 90%;
+    height: 900px;
+  }
+
+  #loggaOchLinks {
+    width: 90%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #linksBox {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    padding-top: 20px;
+  }
+
+  #mauGossipLogga {
+    height: 40%;
+    width: 40%;
+    margin-top: 10%;
+  }
+
+  #footerLogga {
+    height: 100%;
+    width: 100%;
+  }
+
+  #footerAdressBox {
+    width: 100%;
+  }
+}

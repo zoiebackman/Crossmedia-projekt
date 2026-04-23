@@ -210,15 +210,16 @@
 
   #selectedPicturesBox {
     width: 100%;
-    margin-left: 20px;
   }
 
   #selectedPicturesText {
     font-size: 24px;
+    margin-left: 20px;
   }
 
   #picturesBox {
     width: 100%;
+    height: 170px;
     display: flex;
     overflow-x: auto;
     overflow-y: hidden;
@@ -230,6 +231,10 @@
   #picture2,
   #picture3 {
     flex: 0 0 auto;
-    width: 260px;
+    width: 145px;
+  }
+
+  #picture1 {
+    margin-left: 20px;
   }
 }
