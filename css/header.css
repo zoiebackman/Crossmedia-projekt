@@ -76,6 +76,7 @@ header {
   }
 
   #hamburgerMenu {
+    display: block;
     height: 36px;
     width: 36px;
     margin-right: 20px;
