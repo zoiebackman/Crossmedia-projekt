@@ -1,0 +1,100 @@
+#loginContainer {
+  background-color: #54312f;
+  border: 1px solid #dd9c4c;
+  border-radius: 10px;
+  width: 80%;
+  margin-bottom: 50px;
+}
+
+/* #logInPopup{
+    display: flex;
+    
+} */
+
+#popupLI {
+  display: flex;
+  padding: 50px;
+}
+
+#loggaLoginIn {
+  width: 50%;
+  margin-left: 50px;
+  margin-top: 50px;
+}
+
+#logga-left,
+#login-right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#username,
+#password {
+  font-size: 20px;
+  font-family: "bodondi72";
+  color: #dd9c4c;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+#input-username,
+#input-password {
+  border: 1px solid #dd9c4c;
+  width: 340px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: #d9d9d9;
+  opacity: 0.3;
+  font-size: 16px;
+}
+
+#login-knappen {
+  width: 120px;
+  height: 47px;
+  background-color: #dd9c4c;
+  border: none;
+  font-family: "didact gothic";
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+#login-knappen:hover {
+  background-color: #f8e1cd;
+}
+
+@media (max-width: 767px) {
+  #loginContainer {
+    margin-top: 20px;
+    background-color: #54312f;
+    width: 90%;
+  }
+
+  #loggaLoginIn {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  #popupLI {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  #input-username,
+  #input-password {
+    width: 100%;
+    height: 60%;
+    margin-bottom: 20px;
+  }
+
+  #login-knappen {
+    width: 100px;
+    height: 40px;
+    background-color: #dd9c4c;
+    border: none;
+    font-family: "didact gothic";
+    border-radius: 10px;
+    font-size: 16px;
+  }
+}

@@ -93,7 +93,7 @@ body {
 }
 
 @media (max-width: 767px) {
-  main {
+  #popUpContainer {
     overflow: auto;
     padding: 20px;
     background-color: #311e29;
