@@ -129,6 +129,10 @@ function welcomeFun() {
   main.append(startButton);
   startButton.id = "startButton";
   startButton.textContent = "Start";
+
+  startButton.addEventListener("click", () => {
+    homePage();
+  });
 }
 //rensa main och visa Alla viskningar
 function goToWhisperPage() {
@@ -143,7 +147,6 @@ function goToWhisperPage() {
 
 welcomeFun();
 
-homePage();
 homeNav.addEventListener("click", () => {
   homePage();
 });
