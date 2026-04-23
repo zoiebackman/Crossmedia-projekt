@@ -1,6 +1,6 @@
 body {
   overflow: scroll;
-}
+} 
 
 main {
   overflow: scroll;
@@ -15,7 +15,7 @@ main {
   border-radius: 10px;
   box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.2);
   display: block;
-}
+} 
 
 #textBox {
   width: 1000px;
@@ -37,16 +37,14 @@ main {
   text-align: left;
 }
 
-#textBox2,
-h3 {
+#textBox2 h3 {
   text-align: left;
   margin-bottom: 0;
   font-family: "didact gothic";
   margin-left: 40px;
 }
 
-#textBox2,
-p {
+#textBox2 p {
   text-align: left;
   margin-top: 0;
   margin-left: 40px;
@@ -54,8 +52,7 @@ p {
   font-size: 16px;
 }
 
-#textBox2,
-ul {
+#textBox2 ul {
   font-size: 16px;
   margin-left: 40px;
   text-align: left;
@@ -96,13 +93,6 @@ ul {
 }
 
 @media (max-width: 767px) {
-  header {
-    display: hidden;
-  }
-
-  footer {
-    display: hidden;
-  }
   main {
     overflow: auto;
     padding: 20px;
@@ -126,7 +116,7 @@ ul {
 
   #imgContainer {
     width: 80%;
-    height: 40vh; 
+    height: 40vh;
     border-radius: 10px;
     background-size: cover;
     margin: 0 auto 10px auto;
@@ -134,31 +124,37 @@ ul {
     background-position: center;
   }
 
-  #textBox,
-  #textBox2,
   #textBox2 ul {
     width: 80%;
     margin-left: 0;
     padding: 5px;
     box-sizing: border-box;
   }
+  #textBox2 {
+    width: 80%;
+    margin-left: 0;
+    padding: 5px;
+    box-sizing: border-box;
+  }
+  #textBox ul {
+    width: 80%;
+    margin-left: 0;
+    padding: 5px;
+    box-sizing: border-box;
+  }
 
-  #howToPlay,
-  h3 {
+  #howToPlay h3 {
     font-size: 14px;
     margin-left: 0px;
   }
 
-  #howToPlay,
-  li,
-  p {
+  #howToPlay li p {
     font-size: 12px;
     width: 80%;
     margin-left: 0px;
   }
 
-  #howToPlay,
-  ul {
+  #howToPlay ul {
     font-size: 12px;
     width: 80%;
     margin-left: -10px;
