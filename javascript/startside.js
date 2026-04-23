@@ -7,6 +7,7 @@ let linksNav = document.querySelectorAll("#navbar .navbarText");
 let main = document.querySelector("main");
 let whisperContainer = document.getElementById("containerGossip");
 let headerLogga = document.getElementById("headerLogga");
+let loginButton = document.getElementById("logIn")
 function homePage() {
   main.style.display = "flex";
   main.style.flexDirection = "column";
@@ -110,21 +111,22 @@ linksNav.forEach((link) => {
   });
 });
 
-///ta startsidan först
-//när du trycker på länkarna så byts sidan till whispers
-  let;
-}
 
 function welcomeFun() {
-  const main = document.querySelector("main");
+  main.innerHTML = ``;
+
+  const welcomeContainer = document.createElement("div");
+  const welcomePopUp = document.createElement("div");
+  welcomePopUp.id = "welcomePopUp"
   const headerText = document.createElement("h1");
   headerText.id = "headerText";
   headerText.textContent = "Välkomna till spelet";
-  main.append(headerText);
+  welcomeContainer.append(welcomePopUp);
+  welcomePopUp.append(headerText)
 
   const textBox = document.createElement("div");
   textBox.id = "textBox";
-  main.append(textBox);
+  welcomePopUp.append(textBox);
 
   const storyText = document.createElement("p");
   storyText.id = "storyText";
@@ -136,9 +138,9 @@ function welcomeFun() {
   textBox2.id = "textBox2";
   const howToPlay = document.createElement("div");
   howToPlay.innerHTML = `
-        <h3>Så här spelar du: </h3>
-        <p>I det här spelet är din mobil och din förmåga att lägga pussel dina viktigaste verktyg. För att rentvå ditt namn och hitta personen bakom skandalbloggen måste du navigera genom följande: </p>
-        <ul>
+        <h3 id ="playRulesTitle">Så här spelar du: </h3>
+        <p id="playRulesP">I det här spelet är din mobil och din förmåga att lägga pussel dina viktigaste verktyg. För att rentvå ditt namn och hitta personen bakom skandalbloggen måste du navigera genom följande: </p>
+        <ul id="playRulesUL">
         <li><strong>Granska sociala medier:</strong> Håll koll på Instagram-stories, inlägg och kommentarer. Varje bild kan innehålla en detalj som andra missat.</li>
         <li><strong>Hitta ledtrådar i verkligheten: </strong> Besök fysiska platser på campus, såsom biblioteket, kaféet och Niagaras tak. Letar du noga kan du hitta allt från kvarglömda böcker till gömda lösenord.</li>
         <li><strong>Infiltration: </strong> Genom att hitta användarnamn och lösenord får du tillgång till privata chattar och dolda sidor. Men var försiktig – det du hittar kan förändra din bild av dina klasskamrater för alltid.</li>
@@ -151,16 +153,56 @@ function welcomeFun() {
   const univeristyTitle = document.createElement("h2");
   univeristyTitle.id = "universityTitle";
   univeristyTitle.textContent = "Fastighetsförmedling ME2024";
-  main.append(univeristyTitle);
+  welcomePopUp.append(univeristyTitle);
 
   const imgContainer = document.createElement("img");
-  main.append(imgContainer);
   imgContainer.id = "imgContainer";
+  welcomePopUp.append(imgContainer);
 
   const startButton = document.createElement("button");
-  main.append(startButton);
   startButton.id = "startButton";
   startButton.textContent = "Start";
+  welcomePopUp.append(startButton);
+
+  main.append(welcomeContainer)
+
+  startButton.addEventListener("click", function () {
+    homePage(); 
+  });
+
 }
 
 welcomeFun();
+
+loginButton.addEventListener("click", function (){
+  main.innerHTML= ``
+  main.innerHTML = `
+  <div id="loginContainer">
+    <div id="logInPopup">
+      <div id="popupLI">
+        <div id="logga-left">
+          <img id="loggaLoginIn" src="../pictures/logga2.png"></img>
+        </div>
+        <div id="login-right">
+          <div class="input-class"> <p id="username">Användarnamn</p>
+            <input id="input-username" type="text"></input>
+          </div>
+          <div class="input-class"> <p id="password">Lösenord</p>
+            <input id="input-password" type="password"></input>
+          </div>
+          <button id="login-knappen">Logga in</button>
+        </div>
+      </div>
+    </div>
+  </div>`
+;
+
+  const loginBtn = document.getElementById("login-knappen");
+  const usernameInput = document.getElementById("input-username");
+  const passwordInput = document.getElementById("input-password");
+
+  loginBtn.addEventListener("click", function () {
+    const username = usernameInput.value;
+    const password = passwordInput.value;
+  })
+})
