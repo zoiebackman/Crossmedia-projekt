@@ -25,7 +25,7 @@ function homePage() {
                     <p id="gossip1Text"></p>
                 </div>
                 </div>
-            <div class="gossips">
+            <div id="gossips2" class="gossips">
                 <div class="gossipsBox">
                     <p id="gossip2"></p>
                     <p id="gossip2Text"></p>
@@ -49,6 +49,8 @@ function homePage() {
     </div>
     <p id="quote">"Det börjar alltid med en viskning"</p>
   `;
+
+  document.body.classList.add("homePage");
 
   let gossip1Title = document.getElementById("gossip1");
   let gossip1Text = document.getElementById("gossip1Text");
