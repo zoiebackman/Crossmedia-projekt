@@ -12,48 +12,51 @@ let hamburgerMenu = document.getElementById("hamburgerMenu");
 let loginButton = document.getElementById("logIn");
 
 function homePage() {
+  footer.style.display = "block";
   main.style.display = "flex";
   main.style.flexDirection = "column";
   main.style.alignItems = "center";
   main.innerHTML = ``;
   main.innerHTML = `
-    <div id="whisperBox">
-        <p id="whisperTitle">Senaste viskningar...</p>
-    </div>
-    <div id="gossipBox">
-        <div id="girlPicture"> 
-            <img src="../pictures/kvinna.png" alt="">
+    <div id="homePageBox">
+        <div id="whisperBox">
+            <p id="whisperTitle">Senaste viskningar...</p>
         </div>
-        <div id="gossipsBox">
-            <div id="gossips1" class="gossips">
-                <div id="gossipsBox1" class="gossipsBox">
-                    <p id="gossip1"></p>
-                    <p id="gossip1Text"></p>
-                </div>
-                </div>
-            <div id="gossips2" class="gossips">
-                <div class="gossipsBox">
-                    <p id="gossip2"></p>
-                    <p id="gossip2Text"></p>
+        <div id="gossipBox">
+            <div id="girlPicture"> 
+                <img src="../pictures/kvinna.png" alt="">
+            </div>
+            <div id="gossipsBox">
+                <div id="gossips1" class="gossips">
+                    <div id="gossipsBox1" class="gossipsBox">
+                        <p id="gossip1"></p>
+                        <p id="gossip1Text"></p>
+                    </div>
+                    </div>
+                <div id="gossips2" class="gossips">
+                    <div class="gossipsBox">
+                        <p id="gossip2"></p>
+                        <p id="gossip2Text"></p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div id="allTipsBox">
-        <p id="allTipsButton" class="allTipsAllPictures">alla gossips</p>
-    </div>
-    <div id="selectedPicturesBox">
-        <p id="selectedPicturesText">Utvalda ögonblick</p>
-    </div>
-    <div id="picturesBox">
-        <div id="picture1"></div>
-        <div id="picture2"></div>
-        <div id="picture3"></div>
-    </div>
-    <div id="allPicturesTextBox">
-        <p id="allPicturesButton" class="allTipsAllPictures">se hela bildgalleriet</p>
-    </div>
-    <p id="quote">"Det börjar alltid med en viskning"</p>
+        <div id="allTipsBox">
+            <p id="allTipsButton" class="allTipsAllPictures">alla gossips</p>
+        </div>
+        <div id="selectedPicturesBox">
+            <p id="selectedPicturesText">Utvalda ögonblick</p>
+        </div>
+        <div id="picturesBox">
+            <div id="picture1"></div>
+            <div id="picture2"></div>
+            <div id="picture3"></div>
+        </div>
+        <div id="allPicturesTextBox">
+            <p id="allPicturesButton" class="allTipsAllPictures">se hela bildgalleriet</p>
+        </div>
+        <p id="quote">"Det börjar alltid med en viskning"</p>
+    </div>  
   `;
 
   document.body.classList.add("homePage");
@@ -76,7 +79,7 @@ function homePage() {
   let allPicturesButton = document.getElementById("allPicturesButton");
 
   alltipsButton.addEventListener("click", () => {
-    // skriv in funktion för att öppna alla tips
+    goToWhisperPage();
   });
 
   alltipsButton.addEventListener("click", () => {
@@ -85,6 +88,7 @@ function homePage() {
 }
 
 function welcomeFun() {
+  footer.style.display = "block";
   main.innerHTML = ``;
 
   const welcomeContainer = document.createElement("div");
@@ -148,6 +152,7 @@ function welcomeFun() {
 }
 //rensa main och visa Alla viskningar
 function goToWhisperPage() {
+  footer.style.display = "block";
   main.innerHTML = ``;
   whisperContainer.style.display = "flex";
   main.appendChild(whisperContainer);
@@ -165,26 +170,47 @@ homeNav.addEventListener("click", () => {
 
 hamburgerMenu.addEventListener("click", () => {
   main.innerHTML = ``;
-  footer.innerHTML = ``;
+  footer.style.display = "none";
   main.innerHTML = `
-    <div #menuBox>
+    <div id=#menuBox">
         <div class="menuBoxChild">
-            <p>Välkommen</p>
+            <p id="hamburgerMenuWelcomeButton">Välkommen</p>
         </div>
         <div class="menuBoxChild">
-            <p>Hem</p>
+            <p id="hamburgerMenuHomeButton">Hem</p>
         </div>
         <div class="menuBoxChild">
-            <p>Alla viskningar</p>
+            <p id="hamburgerMenuWhispersButton">Alla viskningar</p>
         </div>
         <div class="menuBoxChild">
-            <p>Bildgalleri</p>
+            <p id="hamburgerMenuPicturesButton">Bildgalleri</p>
         </div>
         <div class="menuBoxChild">
-            <p>Skicka in tips</p>
+            <p id="hamburgerMenuSendTipsButton">Skicka in tips</p>
         </div>
     </div>
   `;
+  let welcomeButton = document.getElementById("hamburgerMenuWelcomeButton");
+  let homeButton = document.getElementById("hamburgerMenuHomeButton");
+  let whispersButton = document.getElementById("hamburgerMenuWhispersButton");
+  let picturesButton = document.getElementById("hamburgerMenuPicturesButton");
+  let sendTipsButton = document.getElementById("hamburgerMenuSendTipsButton");
+
+  welcomeButton.addEventListener("click", () => {
+    welcomeFun();
+  });
+  homeButton.addEventListener("click", () => {
+    homePage();
+  });
+  whispersButton.addEventListener("click", () => {
+    goToWhisperPage();
+  });
+  picturesButton.addEventListener("click", () => {
+    // picturesPage funktion
+  });
+  sendTipsButton.addEventListener("click", () => {
+    // senTips funktion
+  });
 });
 
 //loopa ingenom
@@ -205,9 +231,10 @@ linksNav.forEach((link) => {
 ///ta startsidan först
 //när du trycker på länkarna så byts sidan till whispers
 
-loginButton.addEventListener("click", function (event){
-  event.preventDefault();   
-  main.innerHTML= ``
+loginButton.addEventListener("click", function (event) {
+  footer.style.display = "block";
+  event.preventDefault();
+  main.innerHTML = ``;
   main.innerHTML = `
   <div id="loginContainer">
     <div id="logInPopup">
@@ -226,8 +253,7 @@ loginButton.addEventListener("click", function (event){
         </div>
       </div>
     </div>
-  </div>`
-;
+  </div>`;
 
   const loginBtn = document.getElementById("login-knappen");
   const usernameInput = document.getElementById("input-username");
@@ -236,5 +262,5 @@ loginButton.addEventListener("click", function (event){
   loginBtn.addEventListener("click", function () {
     const username = usernameInput.value;
     const password = passwordInput.value;
-  })
-})
+  });
+});

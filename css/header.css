@@ -83,7 +83,20 @@ header {
     margin-right: 20px;
   }
 
-  #menuBox{
-    
+  #menuBox {
+    width: 100%;
+  }
+
+  .menuBoxChild {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 75px;
+    width: 300px;
+    border-bottom: 1px solid #dd9c4c;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    font-family: "bodondi72";
   }
 }
