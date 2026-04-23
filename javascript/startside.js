@@ -139,11 +139,10 @@ linksNav.forEach((link) => {
 
 ///ta startsidan först
 //när du trycker på länkarna så byts sidan till whispers
-  let;
-}
 
 function welcomeFun() {
-  const main = document.querySelector("main");
+  main.innerHTML = ``;
+
   const headerText = document.createElement("h1");
   headerText.id = "headerText";
   headerText.textContent = "Välkomna till spelet";
