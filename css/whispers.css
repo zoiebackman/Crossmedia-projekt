@@ -77,3 +77,20 @@
 #pageNum {
     text-decoration: underline;
 }
+
+
+@media (max-width: 500px) {
+    #headerText {
+        font-size: 20px;
+    }
+
+    header {
+        background-image: none;
+    }
+
+    .boxGossip {
+        width: 80%;
+    }
+
+
+}
