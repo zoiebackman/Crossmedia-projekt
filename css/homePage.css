@@ -1,0 +1,240 @@
+#whisperBox,
+#selectedPicturesBox {
+  width: 846px;
+  display: flex;
+  justify-content: start;
+}
+#whisperTitle {
+  font-family: "bodondi72";
+  font-size: 32px;
+  color: #e3820a;
+  letter-spacing: 1.2px;
+  margin-top: 60px;
+  margin-bottom: 5px;
+}
+
+#gossipBox {
+  background-image: url(../pictures/turningtorso.jpg);
+  width: 846px;
+  height: 440px;
+  border: 1px solid #dd9c4c;
+  display: flex;
+}
+
+#allTipsBox,
+#allPicturesTextBox {
+  width: 846px;
+  display: flex;
+  justify-content: end;
+}
+
+.allTipsAllPictures {
+  font-family: "bodondi72";
+  font-size: 16px;
+  color: #e3820a;
+  margin-top: 8px;
+  text-decoration: underline;
+}
+
+#selectedPicturesText {
+  font-family: "bodondi72";
+  font-size: 32px;
+  color: #e3820a;
+  margin-bottom: 10px;
+}
+
+#picturesBox {
+  width: 846px;
+  height: 300px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#picture1,
+#picture2,
+#picture3 {
+  height: 300px;
+  width: 260px;
+  background-color: white;
+}
+
+#quote {
+  font-family: "imperial script";
+  font-size: 36px;
+  color: white;
+  margin-top: 80px;
+  margin-bottom: 120px;
+}
+
+#girlPicture {
+  width: 410px;
+  height: 440px;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+}
+
+#girlPicture img {
+  transform: scaleX(-1);
+  width: 340px;
+}
+
+#gossipsBox {
+  width: 436px;
+  height: 440px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 20px;
+}
+
+.gossips {
+  width: 400px;
+  height: 155px;
+  background-color: #311e29;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#gossips1 {
+  height: 165px;
+}
+
+.gossipsBox {
+  width: 370px;
+  height: 120px;
+}
+
+#gossipsBox1 {
+  height: 130px;
+}
+
+#gossip1,
+#gossip2 {
+  font-family: "bodondi72";
+  color: #997471;
+  font-size: 24px;
+  margin: 0;
+}
+
+#gossip1Text,
+#gossip2Text {
+  color: #e8d6d6;
+  font-size: 14px;
+  font-family: "bodondi";
+}
+
+@media (max-width: 767px) {
+  body.homePage header {
+    position: relative;
+    z-index: 10;
+  }
+
+  #whisperBox {
+    display: none;
+  }
+
+  #gossipBox {
+    position: relative;
+    z-index: 1;
+
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    width: 100%;
+    border: none;
+    height: 408px;
+    margin-top: -34%;
+  }
+
+  #girlPicture {
+    width: 50%;
+    height: 100%;
+  }
+
+  #girlPicture img {
+    width: 100%;
+    height: 35%;
+    margin-left: 10%;
+  }
+
+  #gossipsBox {
+    width: 50%;
+    height: 100%;
+    margin-right: 15%;
+    margin-top: 5%;
+  }
+
+  #gossips1 {
+    width: 215px;
+    height: 109px;
+  }
+
+  #gossips2 {
+    display: none;
+  }
+
+  #gossipsBox1 {
+    width: 90%;
+    height: 90%;
+  }
+
+  #gossip1 {
+    font-size: 14px;
+  }
+
+  #gossip1Text {
+    font-size: 9px;
+    margin-top: 1px;
+  }
+
+  #allTipsBox {
+    width: 100%;
+  }
+
+  .allTipsAllPictures {
+    font-size: 12px;
+    margin-right: 20px;
+  }
+
+  #allPicturesTextBox {
+    width: 100%;
+  }
+
+  #quote {
+    font-size: 32px;
+  }
+
+  #selectedPicturesBox {
+    width: 100%;
+  }
+
+  #selectedPicturesText {
+    font-size: 24px;
+    margin-left: 20px;
+  }
+
+  #picturesBox {
+    width: 100%;
+    height: 170px;
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 12px;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  #picture1,
+  #picture2,
+  #picture3 {
+    flex: 0 0 auto;
+    width: 145px;
+  }
+
+  #picture1 {
+    margin-left: 20px;
+  }
+}

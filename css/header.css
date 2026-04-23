@@ -41,3 +41,43 @@ header {
   margin-top: 75px;
   height: 150px;
 }
+
+#hamburgerMenu {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+  header {
+    background-image: none;
+    margin-top: 50px;
+    border-top: 1px solid #dd9c4c;
+    border-bottom: 1px solid #dd9c4c;
+    height: 82px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  #navbar {
+    display: none;
+  }
+
+  #headerLogga {
+    height: 48px;
+    margin-top: 0;
+    margin-left: 20px;
+  }
+
+  #hamburgerMenu {
+    height: 36px;
+    width: 36px;
+    margin-right: 20px;
+  }
+}
