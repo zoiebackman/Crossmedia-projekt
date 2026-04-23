@@ -82,64 +82,6 @@ function homePage() {
     // skriv in funktion för att öppna alla tips
   });
 }
-//rensa main och visa Alla viskningar
-function goToWhisperPage() {
-  main.innerHTML = ``;
-  whisperContainer.style.display = "flex";
-  main.appendChild(whisperContainer);
-  let headerTextWhisper = document.getElementById("headerText");
-  let header = document.querySelector("header");
-  headerTextWhisper.style.display = "flex";
-  headerLogga.style.display = "none";
-}
-
-homePage();
-homeNav.addEventListener("click", () => {
-  homePage();
-});
-
-hamburgerMenu.addEventListener("click", () => {
-  main.innerHTML = ``;
-  footer.innerHTML = ``;
-  main.innerHTML = `
-    <div #menuBox>
-        <div class="menuBoxChild">
-            <p>Välkommen</p>
-        </div>
-        <div class="menuBoxChild">
-            <p>Hem</p>
-        </div>
-        <div class="menuBoxChild">
-            <p>Alla viskningar</p>
-        </div>
-        <div class="menuBoxChild">
-            <p>Bildgalleri</p>
-        </div>
-        <div class="menuBoxChild">
-            <p>Skicka in tips</p>
-        </div>
-    </div>
-  `;
-});
-
-//loopa ingenom
-linksNav.forEach((link) => {
-  link.addEventListener("click", function (event) {
-    if (event.target.id == "whispers") {
-      goToWhisperPage();
-    } else if (event.target.id == "welcome") {
-      console.log("gå till welcome ");
-    } else if (event.target.id == "pictures") {
-      console.log("gå till pictures ");
-    } else if (event.target.id == "sendTips") {
-      console.log("gå till send tips ");
-    }
-  });
-});
-
-///ta startsidan först
-//när du trycker på länkarna så byts sidan till whispers
-
 function welcomeFun() {
   main.innerHTML = ``;
 
@@ -188,5 +130,62 @@ function welcomeFun() {
   startButton.id = "startButton";
   startButton.textContent = "Start";
 }
+//rensa main och visa Alla viskningar
+function goToWhisperPage() {
+  main.innerHTML = ``;
+  whisperContainer.style.display = "flex";
+  main.appendChild(whisperContainer);
+  let headerTextWhisper = document.getElementById("headerText");
+  let header = document.querySelector("header");
+  headerTextWhisper.style.display = "flex";
+  headerLogga.style.display = "none";
+}
 
 welcomeFun();
+
+homePage();
+homeNav.addEventListener("click", () => {
+  homePage();
+});
+
+hamburgerMenu.addEventListener("click", () => {
+  main.innerHTML = ``;
+  footer.innerHTML = ``;
+  main.innerHTML = `
+    <div #menuBox>
+        <div class="menuBoxChild">
+            <p>Välkommen</p>
+        </div>
+        <div class="menuBoxChild">
+            <p>Hem</p>
+        </div>
+        <div class="menuBoxChild">
+            <p>Alla viskningar</p>
+        </div>
+        <div class="menuBoxChild">
+            <p>Bildgalleri</p>
+        </div>
+        <div class="menuBoxChild">
+            <p>Skicka in tips</p>
+        </div>
+    </div>
+  `;
+});
+
+//loopa ingenom
+linksNav.forEach((link) => {
+  link.addEventListener("click", function (event) {
+    if (event.target.id == "whispers") {
+      goToWhisperPage();
+    } else if (event.target.id == "welcome") {
+      console.log("gå till welcome ");
+    } else if (event.target.id == "pictures") {
+      console.log("gå till pictures ");
+    } else if (event.target.id == "sendTips") {
+      console.log("gå till send tips ");
+    }
+  });
+});
+
+///ta startsidan först
+//när du trycker på länkarna så byts sidan till whispers
