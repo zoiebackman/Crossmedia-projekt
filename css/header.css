@@ -4,11 +4,8 @@ body {
 }
 
 #headerDivLogo {
-  background-image: url(../pictures/logga2.png);
   margin-top: 75px;
   height: 150px;
-  background-size: contain;
-  background-repeat: no-repeat;
   width: 300px;
 }
 
@@ -46,10 +43,9 @@ header {
   letter-spacing: 1.2px;
 }
 
-/* #headerLogga {
-  margin-top: 75px;
+#headerLogga {
   height: 150px;
-} */
+}
 
 #hamburgerMenu {
   display: none;
