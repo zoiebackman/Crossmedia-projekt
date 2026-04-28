@@ -262,5 +262,23 @@ loginButton.addEventListener("click", function (event) {
   loginBtn.addEventListener("click", function () {
     const username = usernameInput.value;
     const password = passwordInput.value;
+
+    const logInData = {
+      username: "mau_gossip",
+      password: "123"
+    }
+
+    if(logInData.username === username && logInData.password === password){
+      main.innerHTML = ``;
+      //anropa nästa funktion
+    } else {
+      alert("Fel användarnamn eller lösenord. Försök igen!");
+      passwordInput.value = "";
+      usernameInput.value = "";
+    }
+
+
+
+
   });
 });
