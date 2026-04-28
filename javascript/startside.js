@@ -188,10 +188,14 @@ function goToWhisperPage() {
 }
 
 function picturesPage() {
+  document.body.classList.remove("homePage");
   headerDivLoggo.innerHTML = `Bild galleri`;
   headerDivLogo.classList.add("headerText");
   main.innerHTML = ``;
   main.innerHTML = `
+  <div id="picturesPageTitlePhone">
+    <p>Bildgalleri</p>
+  </div>
   <div id="picturesGalleryBox">
   </div>
   `;
