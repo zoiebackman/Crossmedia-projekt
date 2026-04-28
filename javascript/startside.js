@@ -82,12 +82,19 @@ function homePage() {
 //rensa main och visa Alla viskningar
 function goToWhisperPage() {
   main.innerHTML = ``;
+  let headerDivLogo = document.getElementById("headerDivLogo")
   whisperContainer.style.display = "flex";
   main.appendChild(whisperContainer);
-  let headerTextWhisper = document.getElementById("headerText");
-  let header = document.querySelector("header");
-  headerTextWhisper.style.display = "flex";
-  headerLogga.style.display = "none";
+  headerDivLogo.innerHTML = `Alla viskningar`;
+  headerDivLogo.style.backgroundImage = "none";
+  headerDivLogo.classList.add("headerText");
+  headerDivLogo.style.width = "auto";
+
+  // headerDivLogo.innerHTML = `Alla Viskningar`;
+  // let headerTextWhisper = document.getElementById("headerText");
+  // let header = document.querySelector("header");
+  // headerTextWhisper.style.display = "flex";
+  // headerLogga.style.display = "none";
 }
 
 homePage();
