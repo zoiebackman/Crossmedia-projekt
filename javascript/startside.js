@@ -21,10 +21,7 @@ const pictures = [
 ];
 
 function homePage() {
-  let headerImg = document.createElement("img");
-  headerImg.src = "../pictures/logga2.png";
   headerDivLoggo.innerHTML = ``;
-
   headerDivLoggo.innerHTML = `
     <img id="headerLogga" src="../pictures/logga2.png" alt="" />
 `;
@@ -222,8 +219,14 @@ function goToWhisperPage() {
 }
 
 function picturesPage() {
+  document.body.classList.remove("homePage");
+  headerDivLoggo.innerHTML = `Bild galleri`;
+  headerDivLogo.classList.add("headerText");
   main.innerHTML = ``;
   main.innerHTML = `
+  <div id="picturesPageTitlePhone">
+    <p>Bildgalleri</p>
+  </div>
   <div id="picturesGalleryBox">
   </div>
   `;

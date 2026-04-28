@@ -13,3 +13,28 @@
   background-size: cover;
   background-position: center;
 }
+
+#picturesPageTitlePhone {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  #picturesGalleryBox {
+    width: 100%;
+    justify-content: center;
+    margin-top: 15px;
+  }
+
+  .pictureGallery {
+    width: 45%;
+    height: 260px;
+  }
+
+  #picturesPageTitlePhone {
+    width: 90%;
+    display: block;
+    font-size: 20px;
+    font-family: "bodondi72";
+    color: #cd9c72;
+  }
+}

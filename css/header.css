@@ -9,6 +9,10 @@ body {
   width: 300px;
 }
 
+#headerLoggaMobil {
+  display: none;
+}
+
 header {
   display: flex;
   flex-direction: column;
@@ -71,11 +75,16 @@ header {
     justify-content: space-between;
   }
 
+  #headerDivLogo {
+    display: none;
+  }
+
   #navbar {
     display: none;
   }
 
-  #headerLogga {
+  #headerLoggaMobil {
+    display: block;
     height: 48px;
     margin-top: 0;
     margin-left: 20px;
