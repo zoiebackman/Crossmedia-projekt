@@ -173,6 +173,12 @@ function welcomeFun() {
 }
 //rensa main och visa Alla viskningar
 function goToWhisperPage() {
+
+  headerDivLogo.innerHTML = `Alla viskningar`;
+  headerDivLogo.style.backgroundImage = "none";
+  headerDivLogo.classList.add("headerText");
+  headerDivLogo.style.width = "auto";
+
   main.innerHTML = `
   <main>
     <div id="containerGossip">
@@ -211,6 +217,7 @@ function goToWhisperPage() {
     </div>
   </main>
   `
+  let containerGossip = document.getElementById("containerGossip")
   containerGossip.style.display = "flex";
 }
 
