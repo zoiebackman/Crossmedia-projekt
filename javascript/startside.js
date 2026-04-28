@@ -51,6 +51,9 @@ function homePage() {
             <div id="picture1"></div>
             <div id="picture2"></div>
             <div id="picture3"></div>
+            <div id="picture4"></div>
+            <div id="picture5"></div>
+            <div id="picture6"></div>
         </div>
         <div id="allPicturesTextBox">
             <p id="allPicturesButton" class="allTipsAllPictures">se hela bildgalleriet</p>
@@ -169,10 +172,11 @@ homeNav.addEventListener("click", () => {
 });
 
 hamburgerMenu.addEventListener("click", () => {
+  document.body.classList.remove("homePage"); // lägg till i era funktioner om det fuckar för er:)
   main.innerHTML = ``;
   footer.style.display = "none";
   main.innerHTML = `
-    <div id=#menuBox">
+    <div id="menuBox">
         <div class="menuBoxChild">
             <p id="hamburgerMenuWelcomeButton">Välkommen</p>
         </div>
