@@ -48,14 +48,12 @@
 
 }
 
-#headerText {
+.headerText {
     margin-top: 75px;
     height: 150px;
     font-size: 120px;
     color: #dd9c4c;
     font-family: "imperial script";
-    display: none;
-
 }
 
 .textGossip {
@@ -76,4 +74,21 @@
 
 #pageNum {
     text-decoration: underline;
+}
+
+
+@media (max-width: 500px) {
+    #headerText {
+        font-size: 20px;
+    }
+
+    header {
+        background-image: none;
+    }
+
+    .boxGossip {
+        width: 80%;
+    }
+
+
 }
