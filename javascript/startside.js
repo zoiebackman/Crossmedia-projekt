@@ -10,6 +10,7 @@ let whisperContainer = document.getElementById("containerGossip");
 let headerLogga = document.getElementById("headerLogga");
 let hamburgerMenu = document.getElementById("hamburgerMenu");
 let loginButton = document.getElementById("logIn");
+let headerDivLoggo = document.getElementById("headerDivLogo");
 const pictures = [
   "../pictures/3f122689-d69e-407d-b248-fa62453dac2e.jpg",
   "../pictures/5b7a83da-e3f3-405a-9a63-dbc5b120c46c.jpg",
@@ -20,6 +21,14 @@ const pictures = [
 ];
 
 function homePage() {
+  let headerImg = document.createElement("img");
+  headerImg.src = "../pictures/logga2.png";
+  headerDivLoggo.innerHTML = ``;
+
+  headerDivLoggo.innerHTML = `
+    <img id="headerLogga" src="../pictures/logga2.png" alt="" />
+`;
+
   footer.style.display = "block";
   main.style.display = "flex";
   main.style.flexDirection = "column";
@@ -166,7 +175,7 @@ function welcomeFun() {
 function goToWhisperPage() {
   footer.style.display = "block";
   main.innerHTML = ``;
-  let headerDivLogo = document.getElementById("headerDivLogo")
+  let headerDivLogo = document.getElementById("headerDivLogo");
   whisperContainer.style.display = "flex";
   main.appendChild(whisperContainer);
   headerDivLogo.innerHTML = `Alla viskningar`;
@@ -304,10 +313,10 @@ loginButton.addEventListener("click", function (event) {
 
     const logInData = {
       username: "mau_gossip",
-      password: "123"
-    }
+      password: "123",
+    };
 
-    if(logInData.username === username && logInData.password === password){
+    if (logInData.username === username && logInData.password === password) {
       main.innerHTML = ``;
       //anropa nästa funktion
     } else {
@@ -315,9 +324,5 @@ loginButton.addEventListener("click", function (event) {
       passwordInput.value = "";
       usernameInput.value = "";
     }
-
-
-
-
   });
 });
