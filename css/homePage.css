@@ -65,6 +65,27 @@
   height: 300px;
   width: 260px;
   background-color: white;
+  background-size: cover;
+  background-position: center;
+}
+
+#picture1 {
+  background-image: url(../pictures/11289e4a-ea1e-4433-9d3a-fd497e8fccd6.jpg);
+}
+#picture2 {
+  background-image: url(../pictures/3f122689-d69e-407d-b248-fa62453dac2e.jpg);
+}
+#picture3 {
+  background-image: url(../pictures/5b7a83da-e3f3-405a-9a63-dbc5b120c46c.jpg);
+}
+#picture4 {
+  background-image: url(../pictures/6d6088c9-d04e-4b29-8143-74988c399890.jpg);
+}
+#picture5 {
+  background-image: url(../pictures/11289e4a-ea1e-4433-9d3a-fd497e8fccd6.jpg);
+}
+#picture6 {
+  background-image: url(../pictures/11289e4a-ea1e-4433-9d3a-fd497e8fccd6.jpg);
 }
 
 #quote {
