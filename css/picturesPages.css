@@ -1,0 +1,15 @@
+#picturesGalleryBox {
+  margin-top: 80px;
+  margin-bottom: 80px;
+  width: 1065px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.pictureGallery {
+  width: 330px;
+  height: 518px;
+  background-size: cover;
+  background-position: center;
+}

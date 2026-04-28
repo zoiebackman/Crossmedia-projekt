@@ -10,6 +10,14 @@ let whisperContainer = document.getElementById("containerGossip");
 let headerLogga = document.getElementById("headerLogga");
 let hamburgerMenu = document.getElementById("hamburgerMenu");
 let loginButton = document.getElementById("logIn");
+const pictures = [
+  "../pictures/3f122689-d69e-407d-b248-fa62453dac2e.jpg",
+  "../pictures/5b7a83da-e3f3-405a-9a63-dbc5b120c46c.jpg",
+  "../pictures/5b7a83da-e3f3-405a-9a63-dbc5b120c46c.jpg",
+  "../pictures/5b7a83da-e3f3-405a-9a63-dbc5b120c46c.jpg",
+  "../pictures/5b7a83da-e3f3-405a-9a63-dbc5b120c46c.jpg",
+  "../pictures/5b7a83da-e3f3-405a-9a63-dbc5b120c46c.jpg",
+];
 
 function homePage() {
   footer.style.display = "block";
@@ -80,13 +88,14 @@ function homePage() {
 
   let alltipsButton = document.getElementById("allTipsButton");
   let allPicturesButton = document.getElementById("allPicturesButton");
+  let picturesBox = document.getElementById("picturesBox");
 
   alltipsButton.addEventListener("click", () => {
     goToWhisperPage();
   });
 
-  alltipsButton.addEventListener("click", () => {
-    // skriv in funktion för att öppna alla tips
+  allPicturesButton.addEventListener("click", () => {
+    picturesPage();
   });
 }
 
@@ -165,6 +174,25 @@ function goToWhisperPage() {
   headerLogga.style.display = "none";
 }
 
+function picturesPage() {
+  main.innerHTML = ``;
+  main.innerHTML = `
+  <div id="picturesGalleryBox">
+  </div>
+  `;
+
+  let picturesBox = document.getElementById("picturesGalleryBox");
+
+  for (let pic of pictures) {
+    console.log(pic);
+    let div = document.createElement("div");
+    div.classList.add("pictureGallery");
+    div.style.backgroundImage = `url(${pic})`;
+
+    picturesBox.append(div);
+  }
+}
+
 homePage();
 
 homeNav.addEventListener("click", () => {
@@ -210,7 +238,7 @@ hamburgerMenu.addEventListener("click", () => {
     goToWhisperPage();
   });
   picturesButton.addEventListener("click", () => {
-    // picturesPage funktion
+    picturesPage();
   });
   sendTipsButton.addEventListener("click", () => {
     // senTips funktion
@@ -225,7 +253,7 @@ linksNav.forEach((link) => {
     } else if (event.target.id == "welcome") {
       console.log("gå till welcome ");
     } else if (event.target.id == "pictures") {
-      console.log("gå till pictures ");
+      picturesPage();
     } else if (event.target.id == "sendTips") {
       console.log("gå till send tips ");
     }
