@@ -274,15 +274,56 @@ loginButton.addEventListener("click", function (event) {
 
     if(logInData.username === username && logInData.password === password){
       main.innerHTML = ``;
-      //anropa nästa funktion
+      loggedInPage()
     } else {
       alert("Fel användarnamn eller lösenord. Försök igen!");
       passwordInput.value = "";
       usernameInput.value = "";
     }
 
-
-
-
   });
 });
+
+
+function loggedInPage (){
+  main.innerHTML = ``;
+  headerLogga.style.display = "none";
+  main.innerHTML = `
+  <div id="momentTruthContainer">
+  <div id="momentTruthWrapper">
+    <p id="momentOfTruth">Sanningens ögonblick...</p>
+    <p id="momentText"> Nu är frågan på allas läppar: vem är egentligen geniet bakom den här bloggen? Jag vet att ni dör av nyfikenhet, men gissningar är inte alltid gratis...Låt gissningsleken börja.</p>
+  </div>
+
+  <div id="whoIsMau">
+    <p id="questionMoment">Vem är MAU Gossip?</p>
+   <input id="questionInputMoment" type=password></input>
+  </div>
+
+  <button id="nextButton">Next</button>
+  </div>
+  `
+
+  const nextButtonMoment = document.getElementById("nextButton");
+  const answerInput = document.getElementById("questionInputMoment")
+
+  nextButtonMoment.addEventListener("click", function (){
+    const answerValue = answerInput.value;
+
+    const answer = {
+      answer: "Lovisa"
+    }
+
+    if(answerValue === answer.answer){
+      main.innerHTML = ``;
+      //vidare funktion
+      console.log("användaren är vidare, det var rätt svar")
+    } else {
+      main.innerHTML = ``;
+      //anropa gameover funktion
+
+      console.log("Game over funktion, fel svar")
+    }
+  })
+}
+

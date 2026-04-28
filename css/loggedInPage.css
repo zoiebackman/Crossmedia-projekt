@@ -1,0 +1,78 @@
+#momentTruthContainer{
+    width: 80%;
+    margin-top: 40px;
+}
+
+#momentTruthWrapper{
+    width: 80%;
+}
+
+#momentOfTruth, #momentText, #questionMoment{
+    font-family: "bondoni72";
+    font-size: 20px;
+    color: white;
+}
+
+#questionMoment{
+    margin-bottom: 5px;
+}
+
+#whoIsMau{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+
+/* #questionMoment{
+
+} */
+
+#questionInputMoment{
+    background-color: #F8E1CD;
+    border-radius: 10px;
+    width: 40%;
+    font-family: "didact gothic";
+    font-size: 28px;
+    margin-bottom: 40px;
+}
+
+#nextButton{
+    width: 120px;
+    height: 47px;
+    background-color: #dd9c4c;
+    border: none;
+    font-family: "didact gothic";
+    border-radius: 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    margin-left: 30%;
+}
+
+#nextButton:hover {
+  background-color: #f8e1cd;
+}
+
+@media (max-width: 767px){
+    #momentTruthContainer{
+        width: 80%;
+        margin-top: 140px;
+    }
+
+    #momentOfTruth, #momentText, #questionMoment{
+        font-size: 18px;
+        width: 100%;
+    }
+
+    #questionInputMoment{
+        width: 80%;
+    }
+
+    #nextButton{
+    margin-left: 145px;
+    }
+
+
+
+}

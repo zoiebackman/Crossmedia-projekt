@@ -64,8 +64,9 @@
 }
 
 @media (max-width: 767px) {
+
   #loginContainer {
-    margin-top: 20px;
+    margin-top: 80px;
     background-color: #54312f;
     width: 90%;
   }
