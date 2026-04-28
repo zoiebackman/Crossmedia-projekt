@@ -51,6 +51,9 @@ function homePage() {
             <div id="picture1"></div>
             <div id="picture2"></div>
             <div id="picture3"></div>
+            <div id="picture4"></div>
+            <div id="picture5"></div>
+            <div id="picture6"></div>
         </div>
         <div id="allPicturesTextBox">
             <p id="allPicturesButton" class="allTipsAllPictures">se hela bildgalleriet</p>
