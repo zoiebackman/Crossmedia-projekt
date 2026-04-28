@@ -1,0 +1,31 @@
+#gameOverContainer{
+    width: 70%;
+}
+
+#gameOverWrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#firstGameover-text, #secondGameover-text, #thirdGameover-text{
+    font-family: "bodondi72";
+    font-size: 20px;
+    color: white;
+    text-align: left;
+}
+
+#thirdGameover-text{
+    margin-bottom: 50px;
+}
+
+@media (max-width: 767px){
+    #gameOverContainer{
+        margin-top: 160px;
+    }
+
+    #firstGameover,#secondGameover-text, #thirdGameover-text{
+        font-size: 16px;
+    }
+
+}
