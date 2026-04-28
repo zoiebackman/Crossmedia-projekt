@@ -3,6 +3,15 @@ body {
   background-color: #311e29;
 }
 
+#headerDivLogo {
+  background-image: url(../pictures/logga2.png);
+  margin-top: 75px;
+  height: 150px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 300px;
+}
+
 header {
   display: flex;
   flex-direction: column;
@@ -37,10 +46,10 @@ header {
   letter-spacing: 1.2px;
 }
 
-#headerLogga {
+/* #headerLogga {
   margin-top: 75px;
   height: 150px;
-}
+} */
 
 #hamburgerMenu {
   display: none;
@@ -54,6 +63,7 @@ header {
   body {
     overflow-x: hidden;
   }
+
   header {
     background-image: none;
     margin-top: 50px;
