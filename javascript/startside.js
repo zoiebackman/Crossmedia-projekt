@@ -6,12 +6,27 @@ let sendTipsNav = document.getElementById("sendTips");
 let linksNav = document.querySelectorAll("#navbar .navbarText");
 let main = document.querySelector("main");
 let footer = document.querySelector("footer");
-let whisperContainer = document.getElementById("containerGossip");
+let containerGossip = document.getElementById("containerGossip");
 let headerLogga = document.getElementById("headerLogga");
 let hamburgerMenu = document.getElementById("hamburgerMenu");
 let loginButton = document.getElementById("logIn");
+let headerDivLoggo = document.getElementById("headerDivLogo");
+const pictures = [
+  "../pictures/3f122689-d69e-407d-b248-fa62453dac2e.jpg",
+  "../pictures/5b7a83da-e3f3-405a-9a63-dbc5b120c46c.jpg",
+  "../pictures/5b7a83da-e3f3-405a-9a63-dbc5b120c46c.jpg",
+  "../pictures/5b7a83da-e3f3-405a-9a63-dbc5b120c46c.jpg",
+  "../pictures/5b7a83da-e3f3-405a-9a63-dbc5b120c46c.jpg",
+  "../pictures/5b7a83da-e3f3-405a-9a63-dbc5b120c46c.jpg",
+];
 
 function homePage() {
+  headerDivLoggo.innerHTML = ``;
+  headerDivLoggo.innerHTML = `
+    <img id="headerLogga" src="../pictures/logga2.png" alt="" />
+`;
+
+  headerDivLoggo.style.width = "300px";
   footer.style.display = "block";
   main.style.display = "flex";
   main.style.flexDirection = "column";
@@ -80,13 +95,14 @@ function homePage() {
 
   let alltipsButton = document.getElementById("allTipsButton");
   let allPicturesButton = document.getElementById("allPicturesButton");
+  let picturesBox = document.getElementById("picturesBox");
 
   alltipsButton.addEventListener("click", () => {
     goToWhisperPage();
   });
 
-  alltipsButton.addEventListener("click", () => {
-    // skriv in funktion för att öppna alla tips
+  allPicturesButton.addEventListener("click", () => {
+    picturesPage();
   });
 }
 
@@ -155,14 +171,71 @@ function welcomeFun() {
 }
 //rensa main och visa Alla viskningar
 function goToWhisperPage() {
-  footer.style.display = "block";
+  main.innerHTML = `
+  <main>
+    <div id="containerGossip">
+      <div class="boxGossip">
+        <p class="dateText"> 24/4/2026</p>
+        <p class="textGossip">“Ibland händer de mest intressanta sakerna mitt framför ögonen på folk… utan att de
+          märker
+          något
+          alls. Vår lilla charmör Leon verkade i alla fall inte särskilt blyg med att sprida leenden, blickar och lite
+          väl närgången energi till mer än en tjej under kvällen.
+          Det märkliga? Hans flickvän var faktiskt där också. Bara några meter bort. Helt ovetande.
+          Så frågan är… är vissa hemligheter skickligare på att gömma sig än andra, eller är vissa bara bättre på att
+          inte vilja se?</p>
+        <p class="xoxoText">XOXO</p>
+      </div>
+
+      <div class="boxGossip">
+        <p class="dateText"> 24/4/2026</p>
+        <p class="textGossip">“Ibland händer de mest intressanta sakerna mitt framför ögonen på folk… utan att de
+          märker
+          något
+          alls. Vår lilla charmör Leon verkade i alla fall inte särskilt blyg med att sprida leenden, blickar och lite
+          väl närgången energi till mer än en tjej under kvällen.
+          Det märkliga? Hans flickvän var faktiskt där också. Bara några meter bort. Helt ovetande.
+          Så frågan är… är vissa hemligheter skickligare på att gömma sig än andra, eller är vissa bara bättre på att
+          inte vilja se?
+
+        </p>
+        <p class="xoxoText">XOXO</p>
+      </div>
+      <div id="containerPages">
+        <p class="textPages">Föregående sida</p>
+        <p class="textPages" id="pageNum">1</p>
+        <p class="textPages">Nästa sida</p>
+      </div>
+    </div>
+  </main>
+  `;
+  containerGossip.style.display = "flex";
+}
+
+function picturesPage() {
+  document.body.classList.remove("homePage");
+  headerDivLoggo.innerHTML = `Bild galleri`;
+  headerDivLogo.classList.add("headerText");
+  headerDivLoggo.style.width = "500px";
   main.innerHTML = ``;
-  whisperContainer.style.display = "flex";
-  main.appendChild(whisperContainer);
-  let headerTextWhisper = document.getElementById("headerText");
-  let header = document.querySelector("header");
-  headerTextWhisper.style.display = "flex";
-  headerLogga.style.display = "none";
+  main.innerHTML = `
+  <div id="picturesPageTitlePhone">
+    <p>Bildgalleri</p>
+  </div>
+  <div id="picturesGalleryBox">
+  </div>
+  `;
+
+  let picturesBox = document.getElementById("picturesGalleryBox");
+
+  for (let pic of pictures) {
+    console.log(pic);
+    let div = document.createElement("div");
+    div.classList.add("pictureGallery");
+    div.style.backgroundImage = `url(${pic})`;
+
+    picturesBox.append(div);
+  }
 }
 
 homePage();
@@ -210,7 +283,7 @@ hamburgerMenu.addEventListener("click", () => {
     goToWhisperPage();
   });
   picturesButton.addEventListener("click", () => {
-    // picturesPage funktion
+    picturesPage();
   });
   sendTipsButton.addEventListener("click", () => {
     // senTips funktion
@@ -225,7 +298,7 @@ linksNav.forEach((link) => {
     } else if (event.target.id == "welcome") {
       console.log("gå till welcome ");
     } else if (event.target.id == "pictures") {
-      console.log("gå till pictures ");
+      picturesPage();
     } else if (event.target.id == "sendTips") {
       console.log("gå till send tips ");
     }
@@ -269,10 +342,10 @@ loginButton.addEventListener("click", function (event) {
 
     const logInData = {
       username: "mau_gossip",
-      password: "123"
-    }
+      password: "123",
+    };
 
-    if(logInData.username === username && logInData.password === password){
+    if (logInData.username === username && logInData.password === password) {
       main.innerHTML = ``;
       loggedInPage()
     } else {

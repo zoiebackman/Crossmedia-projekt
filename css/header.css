@@ -3,6 +3,16 @@ body {
   background-color: #311e29;
 }
 
+#headerDivLogo {
+  margin-top: 75px;
+  height: 150px;
+  width: 300px;
+}
+
+#headerLoggaMobil {
+  display: none;
+}
+
 header {
   display: flex;
   flex-direction: column;
@@ -38,7 +48,6 @@ header {
 }
 
 #headerLogga {
-  margin-top: 75px;
   height: 150px;
 }
 
@@ -54,6 +63,7 @@ header {
   body {
     overflow-x: hidden;
   }
+
   header {
     background-image: none;
     margin-top: 50px;
@@ -65,11 +75,16 @@ header {
     justify-content: space-between;
   }
 
+  #headerDivLogo {
+    display: none;
+  }
+
   #navbar {
     display: none;
   }
 
-  #headerLogga {
+  #headerLoggaMobil {
+    display: block;
     height: 48px;
     margin-top: 0;
     margin-left: 20px;
