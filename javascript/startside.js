@@ -347,11 +347,69 @@ loginButton.addEventListener("click", function (event) {
 
     if (logInData.username === username && logInData.password === password) {
       main.innerHTML = ``;
-      //anropa nästa funktion
+      loggedInPage()
     } else {
       alert("Fel användarnamn eller lösenord. Försök igen!");
       passwordInput.value = "";
       usernameInput.value = "";
     }
+
   });
 });
+
+
+function loggedInPage (){
+  main.innerHTML = ``;
+  headerLogga.style.display = "none";
+  main.innerHTML = `
+  <div id="momentTruthContainer">
+  <div id="momentTruthWrapper">
+    <p id="momentOfTruth">Sanningens ögonblick...</p>
+    <p id="momentText"> Nu är frågan på allas läppar: vem är egentligen geniet bakom den här bloggen? Jag vet att ni dör av nyfikenhet, men gissningar är inte alltid gratis...Låt gissningsleken börja.</p>
+  </div>
+
+  <div id="whoIsMau">
+    <p id="questionMoment">Vem är MAU Gossip?</p>
+   <input id="questionInputMoment" type=password></input>
+  </div>
+
+  <button id="nextButton">Next</button>
+  </div>
+  `
+
+  const nextButtonMoment = document.getElementById("nextButton");
+  const answerInput = document.getElementById("questionInputMoment")
+
+  nextButtonMoment.addEventListener("click", function (){
+    const answerValue = answerInput.value;
+
+    const answer = {
+      answer: "Lovisa"
+    }
+
+    if(answerValue === answer.answer){
+      main.innerHTML = ``;
+      //vidare funktion
+      console.log("användaren är vidare, det var rätt svar")
+    } else {
+      main.innerHTML = ``;
+      gameOver()
+
+      console.log("Game over funktion, fel svar")
+    }
+  })
+}
+
+function gameOver (){
+  main.innerHTML = ``;
+  main.innerHTML = `
+  <div id="gameOverContainer">
+  <div id="gameOverWrapper"></div>
+  <p id ="firstGameover-text">Det verkar som om mysteriet var lite för sofistikerat för vissa. Mau Gossip har spelat spelet fläckfritt – det kan vi alla konstatera med en gnutta avundsjuka.
+Dessvärre (ett ord som låter betydligt lyxigare än ett simpelt tyvärr) räckte din intuition inte hela vägen fram den här gången. Gåtan förblir olöst i dina händer, och vi som verkligen hade hoppats på att du skulle briljera på podiet. Men i den här världen får man inga poäng för att bara försöka.
+Bättre lycka nästa gång. Om det ens finns en nästa gång...</p>
+  <p id ="secondGameover-text">You know you love me. </p>
+  <p id="thirdGameover-text">XOXO</p>
+  </div>
+  `
+}
