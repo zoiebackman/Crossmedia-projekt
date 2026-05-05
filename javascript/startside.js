@@ -26,6 +26,7 @@ function homePage() {
     <img id="headerLogga" src="../pictures/logga2.png" alt="" />
 `;
 
+  headerDivLoggo.style.width = "300px";
   footer.style.display = "block";
   main.style.display = "flex";
   main.style.flexDirection = "column";
@@ -207,7 +208,7 @@ function goToWhisperPage() {
       </div>
     </div>
   </main>
-  `
+  `;
   containerGossip.style.display = "flex";
 }
 
@@ -215,6 +216,7 @@ function picturesPage() {
   document.body.classList.remove("homePage");
   headerDivLoggo.innerHTML = `Bild galleri`;
   headerDivLogo.classList.add("headerText");
+  headerDivLoggo.style.width = "500px";
   main.innerHTML = ``;
   main.innerHTML = `
   <div id="picturesPageTitlePhone">
