@@ -238,6 +238,38 @@ function picturesPage() {
   }
 }
 
+function sendTipsPage() {
+  headerDivLoggo.innerHTML = ``;
+  headerDivLoggo.innerHTML = `
+    Skicka in ett tips
+`;
+  headerDivLogo.classList.add("headerText");
+  headerDivLoggo.style.width = "580px";
+  footer.style.display = "block";
+
+  main.innerHTML = ``;
+  main.innerHTML = `
+  <div id="sendTipsBox">
+    <p id="sendTipsInfo">XOXO… hemligheter stannar aldrig dolda för länge. Sett något? Hört något? Vet du mer än du borde? Lämna ditt tips anonymt. Diskret. Utan spår. I den här världen är information allt.</p>
+
+    <div id="sendTipsForm">
+        <p>Skicka in ett tips</p>
+
+        <textarea id="tipsText"></textarea>
+
+        <button id="sendTipsButton">Skicka</button>
+    </div>
+  </div>
+  `;
+
+  let button = document.getElementById("sendTipsButton");
+  let textFromUser = document.getElementById("tipsText");
+  button.addEventListener("click", () => {
+    textFromUser.value = "";
+    alert("Tack för ditt tips!");
+  });
+}
+
 homePage();
 
 homeNav.addEventListener("click", () => {
@@ -300,7 +332,7 @@ linksNav.forEach((link) => {
     } else if (event.target.id == "pictures") {
       picturesPage();
     } else if (event.target.id == "sendTips") {
-      console.log("gå till send tips ");
+      sendTipsPage();
     }
   });
 });

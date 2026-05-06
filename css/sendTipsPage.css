@@ -1,0 +1,40 @@
+#sendTipsBox {
+  width: 850px;
+  margin-top: 120px;
+  margin-bottom: 300px;
+}
+
+#sendTipsInfo {
+  font-family: "bodondi72";
+  color: white;
+  font-size: 20px;
+  width: 500px;
+}
+
+#sendTipsForm p {
+  color: #dd9c4c;
+  font-size: 20px;
+}
+
+#sendTipsForm textarea {
+  width: 846px;
+  height: 265px;
+  border-radius: 10px;
+  border: 1px solid #dd9c4c;
+  background-color: rgb(217, 217, 217, 0.2);
+}
+
+#sendTipsForm button {
+  width: 300px;
+  height: 60px;
+  font-family: "bodondi72";
+  font-size: 20px;
+  border-radius: 10px;
+  border: 1px solid #dd9c4c;
+  background-color: #cd9c72;
+  margin-top: 35px;
+}
+
+#sendTipsForm button:hover {
+  background-color: #f5bc8a;
+}
