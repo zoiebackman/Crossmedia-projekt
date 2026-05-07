@@ -436,7 +436,7 @@ loginButton.addEventListener("click", function (event) {
 
     if (logInData.username === username && logInData.password === password) {
       main.innerHTML = ``;
-      momentOfTruth()
+      momentOfTruth();
       loggedInPage();
     } else {
       alert("Fel användarnamn eller lösenord. Försök igen!");
@@ -446,8 +446,8 @@ loginButton.addEventListener("click", function (event) {
   });
 });
 
-function momentOfTruth(){
-   const headerLogoMobil = document.getElementById("headerLoggaMobil");
+function momentOfTruth() {
+  const headerLogoMobil = document.getElementById("headerLoggaMobil");
   const headerDivLogo = document.getElementById("headerDivLogo");
 
   if (headerLogoMobil) {
@@ -456,8 +456,10 @@ function momentOfTruth(){
 
   if (headerDivLogo) {
     headerDivLogo.innerHTML = "Sanningens ögonblick";
-    headerDivLogo.classList.add("momentOfTruthText"); 
+    headerDivLogo.classList.add("momentOfTruthText");
   }
+}
+
 function loggedInPage() {
   main.innerHTML = ``;
   main.innerHTML = `
@@ -470,38 +472,37 @@ function loggedInPage() {
    <p id="notCorrectPassword"></p>
    </div>
   </div>
-  <button id="nextButtonMoment">Nästa</button>`
+  <button id="nextButtonMoment">Nästa</button>`;
 
   const nextButtonMoment = document.getElementById("nextButtonMoment");
   const momentInput = document.getElementById("inputMomentAnswer");
-  const notCorrectPassword = document.getElementById("notCorrectPassword")
+  const notCorrectPassword = document.getElementById("notCorrectPassword");
 
-  notCorrectPassword.style.display= "none";
+  notCorrectPassword.style.display = "none";
 
   let attempts = 0;
 
-  nextButtonMoment.addEventListener("click", function (event){
+  nextButtonMoment.addEventListener("click", function (event) {
     const password = momentInput.value.toLowerCase();
     const correctPassword = "lovisa";
 
-    if(password === correctPassword){
-      reveal()
+    if (password === correctPassword) {
+      reveal();
     } else {
-      attempts++
+      attempts++;
     }
 
-
-    if(attempts === 1){
+    if (attempts === 1) {
       notCorrectPassword.style.display = "block";
-      notCorrectPassword.textContent = "Du har en chans till att skriva rätt, annars är det Game Over"
+      notCorrectPassword.textContent =
+        "Du har en chans till att skriva rätt, annars är det Game Over";
       momentInput.value = "";
-      momentInput.focus()
-    } else if(attempts >= 2){
+      momentInput.focus();
+    } else if (attempts >= 2) {
       main.innerHTML = ``;
-      gameOver()
+      gameOver();
     }
-  })
-
+  });
 }
 
 function gameOver() {
@@ -514,11 +515,20 @@ function gameOver() {
 
   if (headerDivLogo) {
     headerDivLogo.innerHTML = "Game Over";
-    headerDivLogo.classList.add("gameOverText"); 
+    headerDivLogo.classList.add("gameOverText");
   }
 
-  <button id="nextButton">Next</button>
+  main.innerHTML = ``;
+  main.innerHTML = `
+  <div id="gameOverContainer">
+    <div id="gameOverWrapper"></div>
+    <h1 id="GameOverTitle">Game Over</h1>
+    <p id ="firstGameover-text">Det verkar som om mysteriet var lite för sofistikerat för vissa. Mau Gossip har spelat spelet fläckfritt – det kan vi alla konstatera med en gnutta avundsjuka. Dessvärre (ett ord som låter betydligt lyxigare än ett simpelt tyvärr) räckte din intuition inte hela vägen fram den här gången. Gåtan förblir olöst i dina händer, och vi som verkligen hade hoppats på att du skulle briljera på podiet. Men i den här världen får man inga poäng för att bara försöka. Bättre lycka nästa gång. Om det ens finns en nästa gång...</p>
+    <p id ="secondGameover-text">You know you love me. </p>
+    <p id="thirdGameover-text">XOXO</p>
+    <button id="nextButton">Next</button>;
   </div>
+    
   `;
 
   const nextButtonMoment = document.getElementById("nextButton");
@@ -544,22 +554,7 @@ function gameOver() {
   });
 }
 
-function gameOver() {
-  main.innerHTML = ``;
-  main.innerHTML = `
-  <div id="gameOverContainer">
-  <div id="gameOverWrapper"></div>
-  <h1 id="GameOverTitle">Game Over</h1>
-  <p id ="firstGameover-text">Det verkar som om mysteriet var lite för sofistikerat för vissa. Mau Gossip har spelat spelet fläckfritt – det kan vi alla konstatera med en gnutta avundsjuka.
-Dessvärre (ett ord som låter betydligt lyxigare än ett simpelt tyvärr) räckte din intuition inte hela vägen fram den här gången. Gåtan förblir olöst i dina händer, och vi som verkligen hade hoppats på att du skulle briljera på podiet. Men i den här världen får man inga poäng för att bara försöka.
-Bättre lycka nästa gång. Om det ens finns en nästa gång...</p>
-  <p id ="secondGameover-text">You know you love me. </p>
-  <p id="thirdGameover-text">XOXO</p>
-  </div>
-  `;
-}
-
-function reveal(){
+function reveal() {
   const headerLogoMobil = document.getElementById("headerLoggaMobil");
   const headerDivLogo = document.getElementById("headerDivLogo");
 
@@ -569,7 +564,7 @@ function reveal(){
 
   if (headerDivLogo) {
     headerDivLogo.innerHTML = "Reveal";
-    headerDivLogo.classList.add("revealText"); 
+    headerDivLogo.classList.add("revealText");
   }
 
   main.innerHTML = ``;
@@ -581,14 +576,14 @@ function reveal(){
   </div>
   <button id="nextButtonReveal">Nästa</button>`;
 
-  const nextButtonReveal = document.getElementById("nextButtonReveal")
+  const nextButtonReveal = document.getElementById("nextButtonReveal");
 
-  nextButtonReveal.addEventListener("click", function (){
-    revealPopup()
-  })
+  nextButtonReveal.addEventListener("click", function () {
+    revealPopup();
+  });
 }
 
-function revealPopup(){
+function revealPopup() {
   const headerLogoMobil = document.getElementById("headerLoggaMobil");
   const headerDivLogo = document.getElementById("headerDivLogo");
 
@@ -598,10 +593,10 @@ function revealPopup(){
 
   if (headerDivLogo) {
     headerDivLogo.innerHTML = "Reveal";
-    headerDivLogo.classList.add("revealPopupText"); 
+    headerDivLogo.classList.add("revealPopupText");
   }
 
-  main.innerHTML= ``;
+  main.innerHTML = ``;
   main.innerHTML = `
   <div id="revealPopupWrapper">
   <div id="wrapperReveal">
@@ -622,19 +617,19 @@ function revealPopup(){
   </div>
   </div>`;
 
- const whiteButton = document.getElementById("whitepopup");
- const redButton = document.getElementById("redpopup");
+  const whiteButton = document.getElementById("whitepopup");
+  const redButton = document.getElementById("redpopup");
 
- whiteButton.addEventListener("click", function (){
-  gameOver()
- })
+  whiteButton.addEventListener("click", function () {
+    gameOver();
+  });
 
- redButton.addEventListener("click", function (){
-  win()
- })
+  redButton.addEventListener("click", function () {
+    win();
+  });
 }
 
-function win(){
+function win() {
   const headerLogoMobil = document.getElementById("headerLoggaMobil");
   const headerDivLogo = document.getElementById("headerDivLogo");
 
@@ -644,11 +639,11 @@ function win(){
 
   if (headerDivLogo) {
     headerDivLogo.innerHTML = "You won";
-    headerDivLogo.classList.add("youWonText"); 
+    headerDivLogo.classList.add("youWonText");
   }
 
   main.innerHTML = ``;
-  main.innerHTML= `
+  main.innerHTML = `
   <div id="winWrapper">
   <h1 id="youWonTitle">You Won</h1>
     <p class="upperWin">Där satt den, Alice.
@@ -673,11 +668,11 @@ Hatten av för en sann vinnare. Men kom ihåg... även om bloggen är borta, fin
 
   const deleteBlogButton = document.getElementById("deleteBlogButton");
 
-  deleteBlogButton.addEventListener("click", function (){
-    deleteWholePage()
-  })
+  deleteBlogButton.addEventListener("click", function () {
+    deleteWholePage();
+  });
 }
 
-function deleteWholePage(){
+function deleteWholePage() {
   document.body.style.display = "none";
 }
