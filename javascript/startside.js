@@ -174,33 +174,7 @@ function goToWhisperPage() {
   footer.style.display = "block";
   main.innerHTML = `
     <div id="containerGossip">
-      <div class="boxGossip">
-        <p class="dateText"> 24/4/2026</p>
-        <p class="textGossip">“Ibland händer de mest intressanta sakerna mitt framför ögonen på folk… utan att de
-          märker
-          något
-          alls. Vår lilla charmör Leon verkade i alla fall inte särskilt blyg med att sprida leenden, blickar och lite
-          väl närgången energi till mer än en tjej under kvällen.
-          Det märkliga? Hans flickvän var faktiskt där också. Bara några meter bort. Helt ovetande.
-          Så frågan är… är vissa hemligheter skickligare på att gömma sig än andra, eller är vissa bara bättre på att
-          inte vilja se?</p>
-        <p class="xoxoText">XOXO</p>
-      </div>
-
-      <div class="boxGossip">
-        <p class="dateText"> 24/4/2026</p>
-        <p class="textGossip">“Ibland händer de mest intressanta sakerna mitt framför ögonen på folk… utan att de
-          märker
-          något
-          alls. Vår lilla charmör Leon verkade i alla fall inte särskilt blyg med att sprida leenden, blickar och lite
-          väl närgången energi till mer än en tjej under kvällen.
-          Det märkliga? Hans flickvän var faktiskt där också. Bara några meter bort. Helt ovetande.
-          Så frågan är… är vissa hemligheter skickligare på att gömma sig än andra, eller är vissa bara bättre på att
-          inte vilja se?
-
-        </p>
-        <p class="xoxoText">XOXO</p>
-      </div>
+      <div class="boxGossip"></div>
       <div id="containerPages">
         <p class="textPages">Föregående sida</p>
         <p class="textPages" id="pageNum">1</p>
