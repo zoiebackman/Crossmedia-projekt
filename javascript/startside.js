@@ -171,6 +171,7 @@ function welcomeFun() {
 }
 //rensa main och visa Alla viskningar
 function goToWhisperPage() {
+  footer.style.display = "block";
   main.innerHTML = `
   <main>
     <div id="containerGossip">
@@ -217,25 +218,42 @@ function picturesPage() {
   headerDivLoggo.innerHTML = `Bild galleri`;
   headerDivLogo.classList.add("headerText");
   headerDivLoggo.style.width = "500px";
+  footer.style.display = "block";
   main.innerHTML = ``;
   main.innerHTML = `
-  <div id="picturesPageTitlePhone">
-    <p>Bildgalleri</p>
-  </div>
-  <div id="picturesGalleryBox">
-  </div>
+        <div id="picturesPageTitlePhone">
+          <p>Bildgalleri</p>
+        </div>
+        <div id="picturesGalleryBox"></div>
   `;
 
   let picturesBox = document.getElementById("picturesGalleryBox");
 
+  let imagePopup = document.createElement("div");
+  imagePopup.id = "imagePopup";
+
+  let popupImage = document.createElement("div");
+  popupImage.id = "popupImage";
+
+  imagePopup.append(popupImage);
+  document.body.append(imagePopup);
+
   for (let pic of pictures) {
-    console.log(pic);
     let div = document.createElement("div");
     div.classList.add("pictureGallery");
     div.style.backgroundImage = `url(${pic})`;
 
+    div.addEventListener("click", () => {
+      popupImage.style.backgroundImage = `url(${pic})`;
+      imagePopup.classList.add("showPopup");
+    });
+
     picturesBox.append(div);
   }
+
+  imagePopup.addEventListener("click", () => {
+    imagePopup.classList.remove("showPopup");
+  });
 }
 
 function sendTipsPage() {
@@ -250,10 +268,13 @@ function sendTipsPage() {
   main.innerHTML = ``;
   main.innerHTML = `
   <div id="sendTipsBox">
+    <p id="sendTipsTitle">Skicka in ett tips</p>
     <p id="sendTipsInfo">XOXO… hemligheter stannar aldrig dolda för länge. Sett något? Hört något? Vet du mer än du borde? Lämna ditt tips anonymt. Diskret. Utan spår. I den här världen är information allt.</p>
 
     <div id="sendTipsForm">
-        <p>Skicka in ett tips</p>
+        <div>
+            <p>Skriv ditt tips</p>
+        </div>    
 
         <textarea id="tipsText"></textarea>
 
@@ -265,8 +286,12 @@ function sendTipsPage() {
   let button = document.getElementById("sendTipsButton");
   let textFromUser = document.getElementById("tipsText");
   button.addEventListener("click", () => {
-    textFromUser.value = "";
-    alert("Tack för ditt tips!");
+    if (textFromUser.value == "") {
+      alert("Du måste skriva något");
+    } else {
+      textFromUser.value = "";
+      alert("Tack för ditt tips!");
+    }
   });
 }
 
@@ -318,7 +343,7 @@ hamburgerMenu.addEventListener("click", () => {
     picturesPage();
   });
   sendTipsButton.addEventListener("click", () => {
-    // senTips funktion
+    sendTipsPage();
   });
 });
 

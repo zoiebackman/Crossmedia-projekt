@@ -38,3 +38,55 @@
 #sendTipsForm button:hover {
   background-color: #f5bc8a;
 }
+
+#sendTipsTitle {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  #sendTipsBox {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 300px;
+  }
+
+  #sendTipsInfo {
+    font-family: "bodondi72";
+    color: white;
+    font-size: 16px;
+    width: 80%;
+    margin-left: 20px;
+  }
+
+  #sendTipsTitle {
+    width: 90%;
+    display: block;
+    font-size: 20px;
+    font-family: "bodondi72";
+    color: #cd9c72;
+    margin-left: 20px;
+  }
+
+  #sendTipsForm {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  #sendTipsForm div {
+    width: 90%;
+    display: flex;
+    justify-content: start;
+  }
+
+  #sendTipsForm p {
+    font-size: 12px;
+  }
+
+  #sendTipsForm textArea {
+    width: 90%;
+  }
+
+  #sendTipsForm button {
+    width: 50%;
+  }
+}

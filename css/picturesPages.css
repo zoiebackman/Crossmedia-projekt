@@ -18,6 +18,28 @@
   display: none;
 }
 
+#imagePopup {
+  display: none;
+}
+
+#imagePopup.showPopup {
+  display: flex;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(35, 15, 25, 0.75);
+  z-index: 999;
+  justify-content: center;
+  align-items: center;
+}
+
+#popupImage {
+  width: 75%;
+  max-width: 330px;
+  height: 390px;
+  background-size: cover;
+  background-position: center;
+}
+
 @media (max-width: 767px) {
   #picturesGalleryBox {
     width: 100%;
@@ -36,5 +58,10 @@
     font-size: 20px;
     font-family: "bodondi72";
     color: #cd9c72;
+  }
+
+  #popupImage {
+    width: 310px;
+    height: 390px;
   }
 }
