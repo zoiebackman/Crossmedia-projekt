@@ -12,6 +12,11 @@ let headerLogga = document.getElementById("headerLogga");
 let hamburgerMenu = document.getElementById("hamburgerMenu");
 let loginButton = document.getElementById("logIn");
 let headerDivLoggo = document.getElementById("headerDivLogo");
+// let currentWhisperCounterIndex = 0;
+
+
+
+
 const pictures = [
   "../pictures/3f122689-d69e-407d-b248-fa62453dac2e.jpg",
   "../pictures/5b7a83da-e3f3-405a-9a63-dbc5b120c46c.jpg",
@@ -173,6 +178,7 @@ function welcomeFun() {
 }
 //rensa main och visa Alla viskningar
 function goToWhisperPage() {
+  let totalWhisperPosts;
 
   headerDivLogo.innerHTML = `Alla viskningar`;
   headerDivLogo.style.backgroundImage = "none";
@@ -184,73 +190,127 @@ function goToWhisperPage() {
   <p id= "mobileOnly">Alla Viskningar</p>
   <div id="containerGossip">
 
-   <div class="boxGossip noGossipPost textGossip">
-   Ingen viskning än så länge..
-  </div>
       
-      <div id="containerPages">
-        <p class="textPages" id="previousPage">Föregående sida</p>
-        <p class="textPages" id="pageNum">1</p>
-        <p class="textPages" id="nextPage">Nästa sida</p>
-      </div>
-    </div>
-
-
+  </div>
+  <div id="containerPages">
+  <p id= "klicka">KLICKAA</p>
+    <p class="textPages" id="previousPage">Föregående sida</p>
+    <p class="textPages" id="pageNum">${currentPage}</p>
+    <p class="textPages" id="nextPage">Nästa sida</p>
+  </div>
   `;
 
   let containerGossip = document.getElementById("containerGossip")
   containerGossip.style.display = "flex";
-
-
   let previousPage = document.getElementById("previousPage");
   let nextPage = document.getElementById("nextPage");
+  let pageNum = document.getElementById("pageNum")
 
-  // nextPage.addEventListener("click", () => {
-  //   if (pageNum != 3) {
-  //     let pageNum = document.getElementById("pageNum");
-  //     let pageNumString = Number(pageNum.textContent)
-  //     pageNum.textContent = pageNumString + 1;
-  //     addGossipToPage();
+  let whisperArrayOnPageLocal =
+    JSON.parse(localStorage.getItem("whisperArrayOnPageLocal")) || [];
+  let currentWhisperCounterIndex = whisperArrayOnPageLocal.length;
 
-  //   }
+  //hämtar localStorage när man kommer tillbaka till sidan. 
+  renderPage(currentPage);
 
-  // })
+  let klicka = document.getElementById("klicka")
 
-  // previousPage.addEventListener("click", () => {
-  //   if (pageNum.textContent != 1) {
-  //     let pageNumString = Number(pageNum.textContent)
-
-  //     pageNum.textContent = pageNum.textContent - 1;
-  //   }
-
-  // })
-  nextPage.addEventListener("click", () => {
-    addGossipToPage();
+  klicka.addEventListener("click", () => {
+    if (currentWhisperCounterIndex < whisperArray.length) {
+      pushToArray(whisperArray[currentWhisperCounterIndex])
+      currentWhisperCounterIndex++;
+    }
   })
 
-  function addGossipToPage() {
-    const containerGossip = document.getElementById("containerGossip");
-    //kolla ifall inga viskningar finns, isåfall ta bort
-    let noGossipPostDiv = document.querySelector(".noGossipPost");
-    if (noGossipPostDiv) {
-      noGossipPostDiv.style.display = "none";
-    }
+  nextPage.addEventListener("click", () => {
 
-    //lägg till ny viskning
+    let maxPage = Math.ceil(whisperArrayOnPageLocal.length / 3);
+
+    if (currentPage < maxPage) {
+      currentPage++;
+      renderPage(currentPage);
+      pageNum.textContent = currentPage;
+    }
+  })
+
+  previousPage.addEventListener("click", () => {
+    if (currentPage > 1) {
+      currentPage--;
+      renderPage(currentPage);
+      pageNum.textContent = currentPage;
+
+    }
+  })
+
+}
+
+function getTodaysDate() {
+  let today = new Date();
+  let todaysDate = today.getDate() + "-" +
+    (today.getMonth() + 1) + "-" +
+    today.getFullYear();
+  return todaysDate;
+}
+
+let whisperArrayOnPageLocal = JSON.parse(localStorage.getItem("whisperArrayOnPageLocal")) || [];
+let currentPage = 1;
+
+
+function pushToArray(whisperArray) {
+  console.log(whisperArray)
+  whisperArrayOnPageLocal.push({
+    date: whisperArray.date,
+    text: whisperArray.text
+  });
+  localStorage.setItem("whisperArrayOnPageLocal", JSON.stringify(whisperArrayOnPageLocal));
+  renderPage(currentPage);
+}
+
+function renderPage(currentPage) {
+  let containerGossip = document.getElementById("containerGossip")
+  containerGossip.innerHTML = "";
+
+  let whisperArrayOnPageLocal =
+    JSON.parse(localStorage.getItem("whisperArrayOnPageLocal")) || [];
+
+  if (whisperArrayOnPageLocal.length === 0) {
+    containerGossip.innerHTML = `
+      <div class="boxGossip noGossipPost textGossip">
+        Ingen viskning än så länge..
+      </div>`;
+    return;
+  }
+
+  //kolla ifall inga viskningar finns, isåfall ta bort
+  let noGossipPostDiv = document.querySelector(".noGossipPost");
+  if (noGossipPostDiv) {
+    noGossipPostDiv.style.display = "none";
+  }
+
+  let allPosts = JSON.parse(localStorage.getItem("whisperArrayOnPageLocal")) || [];
+  let reversed = [...allPosts].reverse();
+
+
+  let start = (currentPage - 1) * 3;
+  let end = start + 3;
+  let postsToShow = reversed.slice(start, end);
+
+  postsToShow.reverse().forEach(post => {
+    // console.log(post)
     let boxGossipDiv = document.createElement("div");
     boxGossipDiv.classList.add("boxGossip");
 
-
     boxGossipDiv.innerHTML = `
-  <p class="dateText">${gossipArray[gossipArray.length - 1].date}</p>
-  <p class="textGossip">${gossipArray[gossipArray.length - 1].text}</p>
-  <p class="xoxoText">XOXO</p>
-`;
+      <p class="dateText">${post.date}</p>
+      <p class="textGossip">${post.text}</p>
+      <p class="xoxoText">XOXO</p>
+    `;
     containerGossip.prepend(boxGossipDiv);
-  }
-
-
+  });
 }
+
+
+
 
 function picturesPage() {
   document.body.classList.remove("homePage");
