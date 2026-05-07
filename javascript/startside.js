@@ -266,18 +266,20 @@ function sendTipsPage() {
 
   main.innerHTML = ``;
   main.innerHTML = `
-  <div id="sendTipsBox">
-    <p id="sendTipsTitle">Skicka in ett tips</p>
-    <p id="sendTipsInfo">XOXO… hemligheter stannar aldrig dolda för länge. Sett något? Hört något? Vet du mer än du borde? Lämna ditt tips anonymt. Diskret. Utan spår. I den här världen är information allt.</p>
+  <div id="sendTipsPageBox">
+    <div id="sendTipsBox">
+      <p id="sendTipsTitle">Skicka in ett tips</p>
+      <p id="sendTipsInfo">XOXO… hemligheter stannar aldrig dolda för länge. Sett något? Hört något? Vet du mer än du borde? Lämna ditt tips anonymt. Diskret. Utan spår. I den här världen är information allt.</p>
 
-    <div id="sendTipsForm">
-        <div>
-            <p>Skriv ditt tips</p>
-        </div>    
+      <div id="sendTipsForm">
+          <div>
+              <p>Skriv ditt tips</p>
+          </div>    
 
-        <textarea id="tipsText"></textarea>
+          <textarea id="tipsText"></textarea>
 
-        <button id="sendTipsButton">Skicka</button>
+          <button id="sendTipsButton">Skicka</button>
+      </div>
     </div>
   </div>
   `;
@@ -434,18 +436,16 @@ loginButton.addEventListener("click", function (event) {
 
     if (logInData.username === username && logInData.password === password) {
       main.innerHTML = ``;
-      loggedInPage()
+      loggedInPage();
     } else {
       alert("Fel användarnamn eller lösenord. Försök igen!");
       passwordInput.value = "";
       usernameInput.value = "";
     }
-
   });
 });
 
-
-function loggedInPage (){
+function loggedInPage() {
   main.innerHTML = ``;
   headerLogga.style.display = "none";
   main.innerHTML = `
@@ -462,32 +462,32 @@ function loggedInPage (){
 
   <button id="nextButton">Next</button>
   </div>
-  `
+  `;
 
   const nextButtonMoment = document.getElementById("nextButton");
-  const answerInput = document.getElementById("questionInputMoment")
+  const answerInput = document.getElementById("questionInputMoment");
 
-  nextButtonMoment.addEventListener("click", function (){
+  nextButtonMoment.addEventListener("click", function () {
     const answerValue = answerInput.value;
 
     const answer = {
-      answer: "Lovisa"
-    }
+      answer: "Lovisa",
+    };
 
-    if(answerValue === answer.answer){
+    if (answerValue === answer.answer) {
       main.innerHTML = ``;
       //vidare funktion
-      console.log("användaren är vidare, det var rätt svar")
+      console.log("användaren är vidare, det var rätt svar");
     } else {
       main.innerHTML = ``;
-      gameOver()
+      gameOver();
 
-      console.log("Game over funktion, fel svar")
+      console.log("Game over funktion, fel svar");
     }
-  })
+  });
 }
 
-function gameOver (){
+function gameOver() {
   main.innerHTML = ``;
   main.innerHTML = `
   <div id="gameOverContainer">
@@ -498,5 +498,5 @@ Bättre lycka nästa gång. Om det ens finns en nästa gång...</p>
   <p id ="secondGameover-text">You know you love me. </p>
   <p id="thirdGameover-text">XOXO</p>
   </div>
-  `
+  `;
 }
