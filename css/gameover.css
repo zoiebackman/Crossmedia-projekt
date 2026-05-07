@@ -10,22 +10,39 @@
 
 #firstGameover-text, #secondGameover-text, #thirdGameover-text{
     font-family: "bodondi72";
-    font-size: 20px;
+    font-size: 16px;
     color: white;
     text-align: left;
+}
+
+.gameOverText{
+    font-family: "imperial script";
+    font-size: 100px;
+    color: #54312F;
+    -webkit-text-stroke: 1px #AE2E30;
 }
 
 #thirdGameover-text{
     margin-bottom: 50px;
 }
 
+#GameOverTitle{
+    display: none;
+}
 @media (max-width: 767px){
     #gameOverContainer{
         margin-top: 160px;
     }
 
-    #firstGameover,#secondGameover-text, #thirdGameover-text{
-        font-size: 16px;
+    #firstGameover-text,#secondGameover-text, #thirdGameover-text{
+        font-size: 14px;
+    }
+
+    #GameOverTitle{
+        color: #AE2E30;
+        font-size: 20px;
+        display: block;
+        font-family: "bodondi72";
     }
 
 }

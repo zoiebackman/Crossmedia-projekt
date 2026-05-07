@@ -1,0 +1,78 @@
+#textWrapperMoment{
+    width: 60%;
+}
+
+#momentH2, #momentTextP, #questionMoment{
+    font-family: "bodondi72";
+    font-size: "24px";
+    color: white;
+}
+
+#momentH2{
+    margin-bottom: 10px;
+}
+
+#questionMoment{
+    margin-bottom: 5px;
+}
+
+#inputMomentAnswer{
+    width: 300px;
+    height: 40px;
+    background-color: #F8E1CD;
+    border-radius: 10px;
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.momentOfTruthText{
+    color: #DD9C4C;
+    font-family: "imperial script";
+    font-size: 100px;
+}
+
+#nextButtonMoment{
+    border-radius: 10px;
+    background-color: #DD9C4C;
+    margin-left: 50%;
+    margin-bottom: 50px;
+    border: none;
+
+    width: 120px;
+  height: 47px;
+  font-family: "didact gothic";
+  font-size: 16px;
+}
+
+#notCorrectPassword{
+    margin-top: 0;
+    color: red;
+    margin-bottom: 50px;
+    
+}
+
+
+#nextButtonMoment:hover{
+    background-color: #F8E1CD;
+    border: none;
+
+}
+
+@media (max-width: 767px){
+    #textWrapperMoment{
+        margin-top: 120px;
+    }
+
+    #inputMomentAnswer{
+        width: 90%;
+    }
+
+    #nextButtonMoment{
+        width: 100px;
+        height: 36px;
+    }
+
+    #momentH2{
+        color: #DD9C4C;
+    }
+}
