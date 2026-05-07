@@ -11,6 +11,9 @@
     flex-direction: column;
     gap: 50px;
     padding: 50px 30px;
+
+
+    width: 100%;
 }
 
 .boxGossip {
@@ -18,6 +21,7 @@
     border-radius: 10px;
     padding: 20px;
     width: 30%;
+
 }
 
 
@@ -91,7 +95,7 @@
         /* color: #dd9c4c;
         font-size: 30px;
         font-family: "bodondi72"; */
-        margin-bottom: 0;
+        /* margin-bottom: 0; */
 
     }
 

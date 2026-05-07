@@ -1,3 +1,4 @@
+
 let welcomeNav = document.getElementById("welcome");
 let homeNav = document.getElementById("home");
 let whispersNav = document.getElementById("whispers");
@@ -19,6 +20,7 @@ const pictures = [
   "../pictures/5b7a83da-e3f3-405a-9a63-dbc5b120c46c.jpg",
   "../pictures/5b7a83da-e3f3-405a-9a63-dbc5b120c46c.jpg",
 ];
+
 
 function homePage() {
   headerDivLoggo.innerHTML = ``;
@@ -178,46 +180,76 @@ function goToWhisperPage() {
   headerDivLogo.style.width = "auto";
 
   main.innerHTML = `
-  <main>
-  <div id="containerGossip">
+
   <p id= "mobileOnly">Alla Viskningar</p>
-      <div class="boxGossip">
-        <p class="dateText"> 24/4/2026</p>
-        <p class="textGossip">“Ibland händer de mest intressanta sakerna mitt framför ögonen på folk… utan att de
-          märker
-          något
-          alls. Vår lilla charmör Leon verkade i alla fall inte särskilt blyg med att sprida leenden, blickar och lite
-          väl närgången energi till mer än en tjej under kvällen.
-          Det märkliga? Hans flickvän var faktiskt där också. Bara några meter bort. Helt ovetande.
-          Så frågan är… är vissa hemligheter skickligare på att gömma sig än andra, eller är vissa bara bättre på att
-          inte vilja se?</p>
-        <p class="xoxoText">XOXO</p>
-      </div>
+  <div id="containerGossip">
 
-      <div class="boxGossip">
-        <p class="dateText"> 24/4/2026</p>
-        <p class="textGossip">“Ibland händer de mest intressanta sakerna mitt framför ögonen på folk… utan att de
-          märker
-          något
-          alls. Vår lilla charmör Leon verkade i alla fall inte särskilt blyg med att sprida leenden, blickar och lite
-          väl närgången energi till mer än en tjej under kvällen.
-          Det märkliga? Hans flickvän var faktiskt där också. Bara några meter bort. Helt ovetande.
-          Så frågan är… är vissa hemligheter skickligare på att gömma sig än andra, eller är vissa bara bättre på att
-          inte vilja se?
-
-        </p>
-        <p class="xoxoText">XOXO</p>
-      </div>
+   <div class="boxGossip noGossipPost textGossip">
+   Ingen viskning än så länge..
+  </div>
+      
       <div id="containerPages">
-        <p class="textPages">Föregående sida</p>
+        <p class="textPages" id="previousPage">Föregående sida</p>
         <p class="textPages" id="pageNum">1</p>
-        <p class="textPages">Nästa sida</p>
+        <p class="textPages" id="nextPage">Nästa sida</p>
       </div>
     </div>
-  </main>
+
+
   `;
+
   let containerGossip = document.getElementById("containerGossip")
   containerGossip.style.display = "flex";
+
+
+  let previousPage = document.getElementById("previousPage");
+  let nextPage = document.getElementById("nextPage");
+
+  // nextPage.addEventListener("click", () => {
+  //   if (pageNum != 3) {
+  //     let pageNum = document.getElementById("pageNum");
+  //     let pageNumString = Number(pageNum.textContent)
+  //     pageNum.textContent = pageNumString + 1;
+  //     addGossipToPage();
+
+  //   }
+
+  // })
+
+  // previousPage.addEventListener("click", () => {
+  //   if (pageNum.textContent != 1) {
+  //     let pageNumString = Number(pageNum.textContent)
+
+  //     pageNum.textContent = pageNum.textContent - 1;
+  //   }
+
+  // })
+  nextPage.addEventListener("click", () => {
+    addGossipToPage();
+  })
+
+  function addGossipToPage() {
+    const containerGossip = document.getElementById("containerGossip");
+    //kolla ifall inga viskningar finns, isåfall ta bort
+    let noGossipPostDiv = document.querySelector(".noGossipPost");
+    if (noGossipPostDiv) {
+      noGossipPostDiv.style.display = "none";
+    }
+
+    //lägg till ny viskning
+    let boxGossipDiv = document.createElement("div");
+    boxGossipDiv.classList.add("boxGossip");
+
+
+    boxGossipDiv.innerHTML = `
+  <p class="dateText">${gossipArray[gossipArray.length - 1].date}</p>
+  <p class="textGossip">${gossipArray[gossipArray.length - 1].text}</p>
+  <p class="xoxoText">XOXO</p>
+`;
+    containerGossip.prepend(boxGossipDiv);
+  }
+
+
 }
 
 function picturesPage() {
