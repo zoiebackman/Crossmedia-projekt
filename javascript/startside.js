@@ -223,7 +223,6 @@ function welcomeFun() {
     homePage();
   });
 }
-//rensa main och visa Alla viskningar
 
 function goToWhisperPage() {
   document.body.classList.remove("homePage");
@@ -278,8 +277,13 @@ function goToWhisperPage() {
   let num = 1;
 
   nextSide.addEventListener("click", () => {
-    num += 1;
-    pageNum.textContent = num;
+    let maxNum = Math.ceil(gossips.length / 3);
+    if (num >= maxNum) {
+      pageNum.textContent = maxNum;
+    } else {
+      num += 1;
+      pageNum.textContent = num;
+    }
     gossipBox.innerHTML = ``;
     c1 += 3;
     c2 += 3;
@@ -304,8 +308,13 @@ function goToWhisperPage() {
   });
 
   lastSide.addEventListener("click", () => {
-    num -= 1;
-    pageNum.textContent = num;
+    if (num <= 1) {
+      num = 1;
+      pageNum.textContent = num;
+    } else {
+      num -= 1;
+      pageNum.textContent = num;
+    }
     gossipBox.innerHTML = ``;
     c1 -= 3;
     c2 -= 3;
