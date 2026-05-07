@@ -75,10 +75,24 @@
     text-decoration: underline;
 }
 
+#mobileOnly {
+    display: none;
+}
 
 @media (max-width: 500px) {
-    #headerText {
+
+    #mobileOnly {
+        display: initial;
         font-size: 20px;
+        font-family: "bodondi72";
+        color: #cd9c72;
+        width: 90%;
+
+        /* color: #dd9c4c;
+        font-size: 30px;
+        font-family: "bodondi72"; */
+        margin-bottom: 0;
+
     }
 
     header {
@@ -88,6 +102,16 @@
     .boxGossip {
         width: 80%;
     }
+
+    #containerPages {
+        width: 100%;
+    }
+
+    #containerGossip {
+        padding: 10px 10px;
+    }
+
+
 
 
 }

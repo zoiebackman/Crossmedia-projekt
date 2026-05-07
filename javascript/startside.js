@@ -178,7 +178,8 @@ function goToWhisperPage() {
 
   main.innerHTML = `
   <main>
-    <div id="containerGossip">
+  <div id="containerGossip">
+  <p id= "mobileOnly">Alla Viskningar</p>
       <div class="boxGossip">
         <p class="dateText"> 24/4/2026</p>
         <p class="textGossip">“Ibland händer de mest intressanta sakerna mitt framför ögonen på folk… utan att de
