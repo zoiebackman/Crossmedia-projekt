@@ -11,6 +11,8 @@ let headerLogga = document.getElementById("headerLogga");
 let hamburgerMenu = document.getElementById("hamburgerMenu");
 let loginButton = document.getElementById("logIn");
 let headerDivLoggo = document.getElementById("headerDivLogo");
+let menuIsOpen = false;
+let wasHomePageBeforeMenu = false;
 const pictures = [
   "../pictures/3f122689-d69e-407d-b248-fa62453dac2e.jpg",
   "../pictures/5b7a83da-e3f3-405a-9a63-dbc5b120c46c.jpg",
@@ -28,9 +30,6 @@ function homePage() {
 
   headerDivLoggo.style.width = "300px";
   footer.style.display = "block";
-  main.style.display = "flex";
-  main.style.flexDirection = "column";
-  main.style.alignItems = "center";
   main.innerHTML = ``;
   main.innerHTML = `
     <div id="homePageBox">
@@ -171,8 +170,9 @@ function welcomeFun() {
 }
 //rensa main och visa Alla viskningar
 function goToWhisperPage() {
+  document.body.classList.remove("homePage");
+  footer.style.display = "block";
   main.innerHTML = `
-  <main>
     <div id="containerGossip">
       <div class="boxGossip">
         <p class="dateText"> 24/4/2026</p>
@@ -207,9 +207,7 @@ function goToWhisperPage() {
         <p class="textPages">Nästa sida</p>
       </div>
     </div>
-  </main>
   `;
-  containerGossip.style.display = "flex";
 }
 
 function picturesPage() {
@@ -217,25 +215,83 @@ function picturesPage() {
   headerDivLoggo.innerHTML = `Bild galleri`;
   headerDivLogo.classList.add("headerText");
   headerDivLoggo.style.width = "500px";
+  footer.style.display = "block";
   main.innerHTML = ``;
   main.innerHTML = `
-  <div id="picturesPageTitlePhone">
-    <p>Bildgalleri</p>
-  </div>
-  <div id="picturesGalleryBox">
-  </div>
+    <div id="picturePageBox">
+        <div id="picturesPageTitlePhone">
+            <p>Bildgalleri</p>
+        </div>
+        <div id="picturesGalleryBox"></div>
+    </div>
   `;
 
   let picturesBox = document.getElementById("picturesGalleryBox");
 
+  let imagePopup = document.createElement("div");
+  imagePopup.id = "imagePopup";
+
+  let popupImage = document.createElement("div");
+  popupImage.id = "popupImage";
+
+  imagePopup.append(popupImage);
+  document.body.append(imagePopup);
+
   for (let pic of pictures) {
-    console.log(pic);
     let div = document.createElement("div");
     div.classList.add("pictureGallery");
     div.style.backgroundImage = `url(${pic})`;
 
+    div.addEventListener("click", () => {
+      popupImage.style.backgroundImage = `url(${pic})`;
+      imagePopup.classList.add("showPopup");
+    });
+
     picturesBox.append(div);
   }
+
+  imagePopup.addEventListener("click", () => {
+    imagePopup.classList.remove("showPopup");
+  });
+}
+
+function sendTipsPage() {
+  headerDivLoggo.innerHTML = ``;
+  headerDivLoggo.innerHTML = `
+    Skicka in ett tips
+`;
+  headerDivLogo.classList.add("headerText");
+  headerDivLoggo.style.width = "580px";
+  footer.style.display = "block";
+
+  main.innerHTML = ``;
+  main.innerHTML = `
+  <div id="sendTipsBox">
+    <p id="sendTipsTitle">Skicka in ett tips</p>
+    <p id="sendTipsInfo">XOXO… hemligheter stannar aldrig dolda för länge. Sett något? Hört något? Vet du mer än du borde? Lämna ditt tips anonymt. Diskret. Utan spår. I den här världen är information allt.</p>
+
+    <div id="sendTipsForm">
+        <div>
+            <p>Skriv ditt tips</p>
+        </div>    
+
+        <textarea id="tipsText"></textarea>
+
+        <button id="sendTipsButton">Skicka</button>
+    </div>
+  </div>
+  `;
+
+  let button = document.getElementById("sendTipsButton");
+  let textFromUser = document.getElementById("tipsText");
+  button.addEventListener("click", () => {
+    if (textFromUser.value == "") {
+      alert("Du måste skriva något");
+    } else {
+      textFromUser.value = "";
+      alert("Tack för ditt tips!");
+    }
+  });
 }
 
 homePage();
@@ -245,28 +301,49 @@ homeNav.addEventListener("click", () => {
 });
 
 hamburgerMenu.addEventListener("click", () => {
-  document.body.classList.remove("homePage"); // lägg till i era funktioner om det fuckar för er:)
-  main.innerHTML = ``;
+  let oldMenu = document.getElementById("menuBox");
+
+  if (oldMenu) {
+    oldMenu.remove();
+    footer.style.display = "block";
+    menuIsOpen = false;
+
+    if (wasHomePageBeforeMenu) {
+      document.body.classList.add("homePage");
+    }
+
+    return;
+  }
+
+  wasHomePageBeforeMenu = document.body.classList.contains("homePage");
+  document.body.classList.remove("homePage");
+
   footer.style.display = "none";
-  main.innerHTML = `
-    <div id="menuBox">
-        <div class="menuBoxChild">
-            <p id="hamburgerMenuWelcomeButton">Välkommen</p>
-        </div>
-        <div class="menuBoxChild">
-            <p id="hamburgerMenuHomeButton">Hem</p>
-        </div>
-        <div class="menuBoxChild">
-            <p id="hamburgerMenuWhispersButton">Alla viskningar</p>
-        </div>
-        <div class="menuBoxChild">
-            <p id="hamburgerMenuPicturesButton">Bildgalleri</p>
-        </div>
-        <div class="menuBoxChild">
-            <p id="hamburgerMenuSendTipsButton">Skicka in tips</p>
-        </div>
+  menuIsOpen = true;
+
+  let menuBox = document.createElement("div");
+  menuBox.id = "menuBox";
+
+  menuBox.innerHTML = `
+    <div class="menuBoxChild">
+      <p id="hamburgerMenuWelcomeButton">Välkommen</p>
+    </div>
+    <div class="menuBoxChild">
+      <p id="hamburgerMenuHomeButton">Hem</p>
+    </div>
+    <div class="menuBoxChild">
+      <p id="hamburgerMenuWhispersButton">Alla viskningar</p>
+    </div>
+    <div class="menuBoxChild">
+      <p id="hamburgerMenuPicturesButton">Bildgalleri</p>
+    </div>
+    <div class="menuBoxChild">
+      <p id="hamburgerMenuSendTipsButton">Skicka in tips</p>
     </div>
   `;
+
+  document.body.append(menuBox);
+
   let welcomeButton = document.getElementById("hamburgerMenuWelcomeButton");
   let homeButton = document.getElementById("hamburgerMenuHomeButton");
   let whispersButton = document.getElementById("hamburgerMenuWhispersButton");
@@ -274,19 +351,29 @@ hamburgerMenu.addEventListener("click", () => {
   let sendTipsButton = document.getElementById("hamburgerMenuSendTipsButton");
 
   welcomeButton.addEventListener("click", () => {
+    menuBox.remove();
+    footer.style.display = "block";
     welcomeFun();
   });
   homeButton.addEventListener("click", () => {
+    menuBox.remove();
+    footer.style.display = "block";
     homePage();
   });
   whispersButton.addEventListener("click", () => {
+    menuBox.remove();
+    footer.style.display = "block";
     goToWhisperPage();
   });
   picturesButton.addEventListener("click", () => {
+    menuBox.remove();
+    footer.style.display = "block";
     picturesPage();
   });
   sendTipsButton.addEventListener("click", () => {
-    // senTips funktion
+    menuBox.remove();
+    footer.style.display = "block";
+    sendTipsPage();
   });
 });
 
@@ -300,7 +387,7 @@ linksNav.forEach((link) => {
     } else if (event.target.id == "pictures") {
       picturesPage();
     } else if (event.target.id == "sendTips") {
-      console.log("gå till send tips ");
+      sendTipsPage();
     }
   });
 });
