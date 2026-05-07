@@ -164,7 +164,7 @@ function welcomeFun() {
   startButton.textContent = "Start";
   popUpContainer.append(startButton);
 
-  startButton.addEventListener("click", () => {
+  startButton.addEventListener("click", function () {
     homePage();
   });
 }
@@ -249,6 +249,10 @@ homePage();
 homeNav.addEventListener("click", () => {
   homePage();
 });
+
+welcomeNav.addEventListener("click", function (){
+  welcomeFun()
+})
 
 hamburgerMenu.addEventListener("click", () => {
   document.body.classList.remove("homePage"); // lägg till i era funktioner om det fuckar för er:)
