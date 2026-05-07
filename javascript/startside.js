@@ -397,7 +397,7 @@ linksNav.forEach((link) => {
 ///ta startsidan först
 //när du trycker på länkarna så byts sidan till whispers
 
-loginButton.addEventListener("click", function (event) {
+/* loginButton.addEventListener("click", function (event) {
   footer.style.display = "block";
   event.preventDefault();
   main.innerHTML = ``;
@@ -676,3 +676,4 @@ Hatten av för en sann vinnare. Men kom ihåg... även om bloggen är borta, fin
 function deleteWholePage() {
   document.body.style.display = "none";
 }
+ */
