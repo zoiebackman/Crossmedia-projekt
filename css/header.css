@@ -99,6 +99,13 @@ header {
   }
 
   #menuBox {
+    position: fixed;
+    top: 132px;
+    left: 0;
+    min-height: calc(100vh - 132px);
+    background-color: #311e29;
+    z-index: 9999;
+
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -110,7 +117,7 @@ header {
     align-items: center;
     justify-content: center;
     height: 75px;
-    width: 300px;
+    width: 70%;
     border-bottom: 1px solid #dd9c4c;
     text-align: center;
     color: white;
