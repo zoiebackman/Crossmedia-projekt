@@ -14,12 +14,67 @@ let headerDivLoggo = document.getElementById("headerDivLogo");
 let menuIsOpen = false;
 let wasHomePageBeforeMenu = false;
 const pictures = [
-  "../pictures/3f122689-d69e-407d-b248-fa62453dac2e.jpg",
-  "../pictures/5b7a83da-e3f3-405a-9a63-dbc5b120c46c.jpg",
-  "../pictures/5b7a83da-e3f3-405a-9a63-dbc5b120c46c.jpg",
-  "../pictures/5b7a83da-e3f3-405a-9a63-dbc5b120c46c.jpg",
-  "../pictures/5b7a83da-e3f3-405a-9a63-dbc5b120c46c.jpg",
-  "../pictures/5b7a83da-e3f3-405a-9a63-dbc5b120c46c.jpg",
+  "../pictures/picturesPage/1.png",
+  "../pictures/picturesPage/2.png",
+  "../pictures/picturesPage/3.png",
+  "../pictures/picturesPage/4.png",
+  "../pictures/picturesPage/5.png",
+  "../pictures/picturesPage/6.png",
+  "../pictures/picturesPage/7.png",
+  "../pictures/picturesPage/8.png",
+  "../pictures/picturesPage/9.png",
+  "../pictures/picturesPage/10.png",
+  "../pictures/picturesPage/11.png",
+  "../pictures/picturesPage/12.png",
+  "../pictures/picturesPage/13.png",
+  "../pictures/picturesPage/14.png",
+  "../pictures/picturesPage/15.png",
+  "../pictures/picturesPage/16.png",
+  "../pictures/picturesPage/17.png",
+  "../pictures/picturesPage/18.png",
+];
+
+const gossips = [
+  {
+    date: "2025/02/02",
+    gossip: "det ryktas om att leon flörta lite med ni vet vem",
+    sender: "XOXO",
+  },
+  {
+    date: "2025/02/02",
+    gossip: "hej",
+    sender: "XOXO",
+  },
+  {
+    date: "2025/02/02",
+    gossip: "hola",
+    sender: "XOXO",
+  },
+  {
+    date: "2025/02/02",
+    gossip: "queTal",
+    sender: "XOXO",
+  },
+  {
+    date: "2025/02/02",
+    gossip: "korvStrg",
+    sender: "XOXO",
+  },
+  {
+    date: "2025/02/02",
+    gossip: "halloj",
+    sender: "XOXO",
+  },
+  {
+    date: "2025/02/02",
+    gossip: "det ryktas om att leon flörta lite med ni vet vem",
+    sender: "XOXO",
+  },
+  {
+    date: "2025/02/02",
+    gossip: "det ryktas om att leon flörta lite med ni vet vem",
+    sender: "XOXO",
+  },
 ];
 
 function homePage() {
@@ -169,19 +224,106 @@ function welcomeFun() {
   });
 }
 //rensa main och visa Alla viskningar
+
 function goToWhisperPage() {
   document.body.classList.remove("homePage");
+  headerDivLoggo.innerHTML = `Alla viskningar`;
+  headerDivLogo.classList.add("headerText");
+  headerDivLoggo.style.width = "700px";
   footer.style.display = "block";
   main.innerHTML = `
-    <div id="containerGossip">
-      <div class="boxGossip"></div>
+    <div id="allGossipsContainer">
+      <div id="boxGossip"></div>
       <div id="containerPages">
-        <p class="textPages">Föregående sida</p>
+        <p id="lastSide" class="textPages">Föregående sida</p>
         <p class="textPages" id="pageNum">1</p>
-        <p class="textPages">Nästa sida</p>
+        <p id="nextSide" class="textPages">Nästa sida</p>
       </div>
     </div>
   `;
+
+  let gossipBox = document.getElementById("boxGossip");
+  let lastSide = document.getElementById("lastSide");
+  let nextSide = document.getElementById("nextSide");
+  let pageNum = document.getElementById("pageNum");
+  let c1 = 0;
+  let c2 = 1;
+  let c3 = 2;
+
+  function createDiv(index) {
+    let div = document.createElement("div");
+    let dateText = document.createElement("p");
+    let gossipText = document.createElement("p");
+    let senderText = document.createElement("p");
+
+    div.classList.add("whisperGossipsBox");
+    dateText.classList.add("dateText");
+    gossipText.classList.add("gossipText");
+    senderText.classList.add("senderText");
+
+    dateText.textContent = gossips[index].date;
+    gossipText.textContent = gossips[index].gossip;
+    senderText.textContent = gossips[index].sender;
+
+    div.append(dateText);
+    div.append(gossipText);
+    div.append(senderText);
+
+    gossipBox.append(div);
+  }
+
+  let div1 = createDiv(c1);
+  let div2 = createDiv(c2);
+  let div3 = createDiv(c3);
+  let num = 1;
+
+  nextSide.addEventListener("click", () => {
+    num += 1;
+    pageNum.textContent = num;
+    gossipBox.innerHTML = ``;
+    c1 += 3;
+    c2 += 3;
+    c3 += 3;
+
+    if (
+      c1 > gossips.length - 1 ||
+      c2 > gossips.length - 1 ||
+      c3 > gossips.length - 1
+    ) {
+      c1 = gossips.length - 3;
+      c2 = gossips.length - 2;
+      c3 = gossips.length - 1;
+      div1 = createDiv(c1);
+      div2 = createDiv(c2);
+      div3 = createDiv(c3);
+    } else {
+      div1 = createDiv(c1);
+      div2 = createDiv(c2);
+      div3 = createDiv(c3);
+    }
+  });
+
+  lastSide.addEventListener("click", () => {
+    num -= 1;
+    pageNum.textContent = num;
+    gossipBox.innerHTML = ``;
+    c1 -= 3;
+    c2 -= 3;
+    c3 -= 3;
+
+    if (c1 < 0) {
+      c1 = 0;
+      c2 = 1;
+      c3 = 2;
+      div1 = createDiv(c1);
+      div2 = createDiv(c2);
+      div3 = createDiv(c3);
+    } else {
+      div1 = createDiv(c1);
+      div2 = createDiv(c2);
+      div3 = createDiv(c3);
+    }
+  });
 }
 
 function picturesPage() {
