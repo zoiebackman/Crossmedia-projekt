@@ -218,10 +218,12 @@ function picturesPage() {
   footer.style.display = "block";
   main.innerHTML = ``;
   main.innerHTML = `
+    <div id="picturePageBox">
         <div id="picturesPageTitlePhone">
-          <p>Bildgalleri</p>
+            <p>Bildgalleri</p>
         </div>
         <div id="picturesGalleryBox"></div>
+    </div>
   `;
 
   let picturesBox = document.getElementById("picturesGalleryBox");
