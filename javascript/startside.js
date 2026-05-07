@@ -232,12 +232,13 @@ function goToWhisperPage() {
   footer.style.display = "block";
   main.innerHTML = `
     <div id="allGossipsContainer">
-      <div id="boxGossip"></div>
-      <div id="containerPages">
-        <p id="lastSide" class="textPages">Föregående sida</p>
-        <p class="textPages" id="pageNum">1</p>
-        <p id="nextSide" class="textPages">Nästa sida</p>
-      </div>
+        <p id="whisperPageTitle">Alla viskningar</p>
+        <div id="boxGossip"></div>
+        <div id="containerPages">
+            <p id="lastSide" class="textPages">Föregående sida</p>
+            <p class="textPages" id="pageNum">1</p>
+            <p id="nextSide" class="textPages">Nästa sida</p>
+        </div>
     </div>
   `;
 
