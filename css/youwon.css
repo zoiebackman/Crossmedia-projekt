@@ -1,0 +1,67 @@
+#winWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width: 80%;
+}
+
+.upperWin,
+.downWin {
+  font-family: "bodondi72";
+  font-size: 16px;
+  color: white;
+}
+
+#xoxoWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#deleteBlogButton {
+  background-color: #ae2e30;
+  border-radius: 10px;
+  margin-left: 50%;
+  margin-bottom: 50px;
+  border: none;
+
+  width: 120px;
+  height: 47px;
+  font-family: "didact gothic";
+  font-size: 16px;
+}
+
+#deleteBlogButton:hover {
+  background-color: #54312f;
+}
+
+#youWonTitle {
+  display: none;
+}
+
+.youWonText {
+  color: #dd9c4c;
+  font-family: "imperial script";
+  font-size: 100px;
+}
+
+@media (max-width: 767px) {
+  #winWrapper {
+    margin-top: 140px;
+  }
+
+  #youWonTitle {
+    display: block;
+    color: #dd9c4c;
+    font-family: "imperial script";
+    margin-bottom: 5px;
+  }
+
+  #deleteBlogButton {
+    width: 100px;
+    height: 36px;
+  }
+}
