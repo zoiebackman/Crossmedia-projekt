@@ -48,6 +48,14 @@
 }
 
 @media (max-width: 767px) {
+  #whisperPageTitle {
+    width: 90%;
+    display: block;
+    font-size: 20px;
+    font-family: "bodondi72";
+    color: #cd9c72;
+    margin-left: 20px;
+  }
   .whisperGossipsBox {
     width: 90%;
   }
@@ -56,9 +64,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 20px;
   }
 
   #containerPages {
     width: 90%;
+    margin-bottom: 150px;
   }
 }
