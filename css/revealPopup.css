@@ -92,8 +92,11 @@
 }
 
 @media (max-width: 767px) {
+  #headerLoggaMobil{
+    display: block;
+  }
   #revealPopupWrapper{
-    margin-top: 140px;
+    margin-top: 40px;
     width: 90%;
   }
 

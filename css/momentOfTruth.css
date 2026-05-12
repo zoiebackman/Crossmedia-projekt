@@ -8,6 +8,7 @@
     color: white;
 }
 
+
 #momentH2{
     margin-bottom: 10px;
 }
@@ -60,8 +61,12 @@
 }
 
 @media (max-width: 767px){
+    #headerLoggaMobil{
+        display: block;
+    }
+
     #textWrapperMoment{
-        margin-top: 120px;
+        margin-top: 40px;
     }
 
     #inputMomentAnswer{
@@ -69,6 +74,7 @@
     }
 
     #nextButtonMoment{
+        margin-top: 10px;
         width: 100px;
         height: 36px;
     }
