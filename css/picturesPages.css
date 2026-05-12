@@ -50,8 +50,11 @@
 }
 
 #popupImageTextBox {
-  font-family: "bodondi72";
-  height: 20px;
+  background-image: url(../pictures/picturesPage/Niagaragrupprum.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 50px;
   width: 355px;
   background-color: white;
   padding: 20px;

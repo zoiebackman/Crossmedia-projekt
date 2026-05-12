@@ -40,6 +40,7 @@ const pictures = [
   "../pictures/picturesPage/20.png",
   "../pictures/picturesPage/28.jpg",
   "../pictures/picturesPage/21.png",
+  "../pictures/picturesPage/shifferKodBILD.jpeg",
   "../pictures/picturesPage/22.png",
   "../pictures/picturesPage/24.png",
   "../pictures/picturesPage/24.jpg",
@@ -48,8 +49,6 @@ const pictures = [
   "../pictures/picturesPage/27.png",
   "../pictures/picturesPage/28.png",
 ];
-
-
 
 function homePage() {
   headerDivLoggo.innerHTML = ``;
@@ -212,7 +211,6 @@ function goToWhisperPage() {
 
   let klicka = document.getElementById("klicka");
 
-
   klicka.addEventListener("click", () => {
     // if (currentWhisperCounterIndex < whisperArray.length) {
     //   pushToArray(whisperArray[currentWhisperCounterIndex])
@@ -242,7 +240,6 @@ function goToWhisperPage() {
       } else if (timeWhenStart == 0) {
         clearInterval(intervalId);
         timerIsActivated = false;
-
       }
     }, 1000);
   });
@@ -359,8 +356,8 @@ function picturesPage() {
     </div>
   `;
 
-  let textBox = document.createElement("div");
-  textBox.id = "";
+  /*   let textBox = document.createElement("div");
+  textBox.id = ""; */
   let picturesBox = document.getElementById("picturesGalleryBox");
 
   let imagePopup = document.createElement("div");
@@ -380,14 +377,15 @@ function picturesPage() {
     div.addEventListener("click", () => {
       popupImage.style.backgroundImage = `url(${pic})`;
       imagePopup.classList.add("showPopup");
-      if (
-        popupImage.style.backgroundImage ===
-        `url("../pictures/picturesPage/23.jpg")`
-      ) {
-        console.log("hej");
+
+      if (pic === "../pictures/picturesPage/23.jpg") {
+        let textBox = document.createElement("div");
         textBox.id = "popupImageTextBox";
-        textBox.textContent = "NI:A0414";
         popupImage.append(textBox);
+      }
+
+      if (pic === "../pictures/picturesPage/shifferKodBILD.jpeg") {
+        popupImage.style.backgroundImage = `url("../pictures/picturesPage/chifferkod.png")`;
       }
     });
 
@@ -396,8 +394,7 @@ function picturesPage() {
 
   imagePopup.addEventListener("click", () => {
     imagePopup.classList.remove("showPopup");
-    textBox.textContent = "";
-    textBox.id = "";
+    popupImage.innerHTML = "";
   });
 }
 
