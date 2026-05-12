@@ -36,6 +36,7 @@
 
 #deleteBlogButton:hover {
   background-color: #54312f;
+  cursor: pointer;
 }
 
 #youWonTitle {

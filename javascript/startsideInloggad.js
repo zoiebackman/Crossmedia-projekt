@@ -222,7 +222,7 @@ function revealPopup() {
   const redButton = document.getElementById("redpopup");
 
   whiteButton.addEventListener("click", function () {
-    gameOver();
+    gameOver2();
   });
 
   redButton.addEventListener("click", function () {
@@ -276,4 +276,31 @@ Hatten av för en sann vinnare. Men kom ihåg... även om bloggen är borta, fin
 
 function deleteWholePage() {
   document.body.style.display = "none";
+}
+
+
+function gameOver2() {
+  const headerLogoMobil = document.getElementById("headerLoggaMobil");
+  const headerDivLogo = document.getElementById("headerDivLogo");
+
+  if (headerLogoMobil) {
+    headerLogoMobil.style.display = "none";
+  }
+
+  if (headerDivLogo) {
+    headerDivLogo.innerHTML = "Game Over";
+    headerDivLogo.id = "gameOverTextId";
+  }
+
+  main.innerHTML = ``;
+  main.innerHTML = `
+  <div id="gameOverContainer">
+    <div id="gameOverWrapper"></div>
+    <h1 id="GameOverTitle">Game Over</h1>
+    <p id ="firstGameover-text">Det verkar som om mysteriet var lite för sofistikerat för vissa. Mau Gossip har spelat spelet fläckfritt – det kan vi alla konstatera med en gnutta avundsjuka. Dessvärre (ett ord som låter betydligt lyxigare än ett simpelt tyvärr) räckte din intuition inte hela vägen fram den här gången. Gåtan förblir olöst i dina händer, och vi som verkligen hade hoppats på att du skulle briljera på podiet. Men i den här världen får man inga poäng för att bara försöka. Bättre lycka nästa gång. Om det ens finns en nästa gång...</p>
+    <p id ="secondGameover-text">You know you love me. </p>
+    <p id="thirdGameover-text">XOXO</p>
+  </div>
+    
+  `;
 }

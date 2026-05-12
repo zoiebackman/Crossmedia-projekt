@@ -72,6 +72,7 @@
 
 #whitepopup:hover{
     background-color: #dd9c4c;
+    cursor: pointer;
 }
 
 #redpopup {
@@ -81,6 +82,7 @@
 #redpopup:hover{
     background-color:#dd9c4c ;
     border:none;
+    cursor: pointer;
 }
 
 .revealPopupText {

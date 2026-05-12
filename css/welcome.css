@@ -65,6 +65,7 @@
 #startButton:hover {
   background-color: #f8e1cd;
   border: none;
+  cursor: pointer;
 }
 
 @media (max-width: 767px) {
