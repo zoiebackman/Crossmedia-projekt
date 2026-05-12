@@ -134,7 +134,7 @@ function homePage() {
   });
 }
 
-welcomeNav.addEventListener("click", welcomeFun)
+welcomeNav.addEventListener("click", welcomeFun);
 
 function welcomeFun() {
   main.innerHTML = ``;
@@ -173,17 +173,12 @@ function welcomeFun() {
 function goToWhisperPage() {
   document.body.classList.remove("homePage"); //ifall den fuckas i mobilvy med att den hoppar upp!!
   let totalWhisperPosts;
-<<<<<<< Updated upstream
   currentPage = 1;
-  // document.body.classList.remove("homePage"); /////?????
-=======
->>>>>>> Stashed changes
 
   headerDivLogo.innerHTML = `Alla viskningar`;
   headerDivLogo.style.backgroundImage = "none";
   headerDivLogo.classList.add("headerText");
   headerDivLogo.style.width = "auto";
-
 
   main.innerHTML = `
 
@@ -205,7 +200,7 @@ function goToWhisperPage() {
   containerGossip.style.display = "flex";
   let previousPage = document.getElementById("previousPage");
   let nextPage = document.getElementById("nextPage");
-  let pageNum = document.getElementById("pageNum")
+  let pageNum = document.getElementById("pageNum");
 
   let whisperArrayOnPageLocal =
     JSON.parse(localStorage.getItem("whisperArrayOnPageLocal")) || [];
@@ -242,13 +237,9 @@ function goToWhisperPage() {
           pushToArray(whisperArray[currentWhisperCounterIndex]);
           currentWhisperCounterIndex++;
         }
-      }
-
-      else if (timeWhenStart == 0) {
+      } else if (timeWhenStart == 0) {
         clearInterval(intervalId);
       }
-
-
     }, 1000);
   });
 
@@ -284,28 +275,29 @@ function goToWhisperPage() {
 
 function getTodaysDate() {
   let today = new Date();
-  let todaysDate = today.getDate() + "-" +
-    (today.getMonth() + 1) + "-" +
-    today.getFullYear();
+  let todaysDate =
+    today.getDate() + "-" + (today.getMonth() + 1) + "-" + today.getFullYear();
   return todaysDate;
 }
-
 
 function pushToArray(whisperArray) {
   let whisperArrayOnPageLocal =
     JSON.parse(localStorage.getItem("whisperArrayOnPageLocal")) || [];
 
-  console.log(whisperArray)
+  console.log(whisperArray);
   whisperArrayOnPageLocal.push({
     date: whisperArray.date,
-    text: whisperArray.text
+    text: whisperArray.text,
   });
-  localStorage.setItem("whisperArrayOnPageLocal", JSON.stringify(whisperArrayOnPageLocal));
+  localStorage.setItem(
+    "whisperArrayOnPageLocal",
+    JSON.stringify(whisperArrayOnPageLocal),
+  );
   renderPage(currentPage);
 }
 
 function renderPage(currentPage) {
-  let containerGossip = document.getElementById("containerGossip")
+  let containerGossip = document.getElementById("containerGossip");
   containerGossip.innerHTML = "";
 
   let whisperArrayOnPageLocal =
@@ -325,15 +317,15 @@ function renderPage(currentPage) {
     noGossipPostDiv.style.display = "none";
   }
 
-  let allPosts = JSON.parse(localStorage.getItem("whisperArrayOnPageLocal")) || [];
+  let allPosts =
+    JSON.parse(localStorage.getItem("whisperArrayOnPageLocal")) || [];
   let reversed = [...allPosts].reverse();
-
 
   let start = (currentPage - 1) * 3;
   let end = start + 3;
   let postsToShow = reversed.slice(start, end);
 
-  postsToShow.reverse().forEach(post => {
+  postsToShow.reverse().forEach((post) => {
     // console.log(post)
     let boxGossipDiv = document.createElement("div");
     boxGossipDiv.classList.add("boxGossip");
@@ -346,9 +338,6 @@ function renderPage(currentPage) {
     containerGossip.prepend(boxGossipDiv);
   });
 }
-
-
-
 
 function picturesPage() {
   document.body.classList.remove("homePage");
