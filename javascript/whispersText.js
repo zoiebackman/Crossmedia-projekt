@@ -102,4 +102,4 @@ Detta får en att undra…
   },
 ];
 
-let whisperArrayOnPage = [];
+/* let whisperArrayOnPage = []; */

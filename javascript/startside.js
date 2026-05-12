@@ -171,9 +171,13 @@ function welcomeFun() {
 
 //rensa main och visa Alla viskningar
 function goToWhisperPage() {
+  document.body.classList.remove("homePage"); //ifall den fuckas i mobilvy med att den hoppar upp!!
   let totalWhisperPosts;
+<<<<<<< Updated upstream
   currentPage = 1;
   // document.body.classList.remove("homePage"); /////?????
+=======
+>>>>>>> Stashed changes
 
   headerDivLogo.innerHTML = `Alla viskningar`;
   headerDivLogo.style.backgroundImage = "none";
