@@ -179,6 +179,7 @@ function welcomeFun() {
 //rensa main och visa Alla viskningar
 function goToWhisperPage() {
   let totalWhisperPosts;
+  // document.body.classList.remove("homePage"); /////?????
 
   headerDivLogo.innerHTML = `Alla viskningar`;
   headerDivLogo.style.backgroundImage = "none";
@@ -188,6 +189,7 @@ function goToWhisperPage() {
   main.innerHTML = `
 
   <p id= "mobileOnly">Alla Viskningar</p>
+  <div id="countdownDiv"></div>
   <div id="containerGossip">
 
       
@@ -216,11 +218,46 @@ function goToWhisperPage() {
   let klicka = document.getElementById("klicka")
 
   klicka.addEventListener("click", () => {
-    if (currentWhisperCounterIndex < whisperArray.length) {
-      pushToArray(whisperArray[currentWhisperCounterIndex])
-      currentWhisperCounterIndex++;
-    }
+    // if (currentWhisperCounterIndex < whisperArray.length) {
+    //   pushToArray(whisperArray[currentWhisperCounterIndex])
+    //   currentWhisperCounterIndex++;
+
+    let countdownDiv = document.getElementById("countdownDiv");
+    countdownDiv.innerHTML += `
+    <p> <span id ="timeMin"> 10 </span> : <span id ="timeSec"> 00 </span>  </p> 
+    `
+    countdownDiv.style.position = "absolute";
+
+    let timeWhenStart = 600; //10 min 
+    setInterval(() => {
+      timeWhenStart--;
+      console.log("Timer körs")
+      console.log(timeWhenStart)
+      changeTime(timeWhenStart);
+
+      if (timeWhenStart % 10 === 0) {
+        if (currentWhisperCounterIndex < whisperArray.length) {
+          pushToArray(whisperArray[currentWhisperCounterIndex])
+          currentWhisperCounterIndex++;
+        }
+      }
+
+
+    }, 1000);
+
   })
+
+  function changeTime(totalSeconds) {
+    let minutes = Math.floor(totalSeconds / 60);
+    let seconds = totalSeconds % 60;
+
+    let timeMin = document.getElementById("timeMin")
+    let timeSec = document.getElementById("timeSec")
+    let countdownDiv = document.getElementById("countdownDiv")
+    timeMin.textContent = minutes;
+    timeSec.textContent = seconds.toString().padStart(2, "0");;
+
+  }
 
   nextPage.addEventListener("click", () => {
 
