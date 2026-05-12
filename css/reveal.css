@@ -37,7 +37,7 @@
 
 @media (max-width: 767px) {
     #revealTextWrapper{
-        margin-top: 140px;
+        margin-top: 40px;
     }
 
     #revealUpperText, #revealMiddleText, #revealLastText{
