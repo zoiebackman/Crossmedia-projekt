@@ -404,12 +404,11 @@ function picturesPage() {
       imagePopup.classList.add("showPopup");
       if (
         popupImage.style.backgroundImage ===
-        `url("../pictures/picturesPage/24.jpg")`
+        `url("../pictures/picturesPage/23.jpg")`
       ) {
         console.log("hej");
         textBox.id = "popupImageTextBox";
-        textBox.textContent =
-          "ledtråd här som handlar om blabla bla bla bla bla bla";
+        textBox.textContent = "NI:A0414";
         popupImage.append(textBox);
       }
     });
