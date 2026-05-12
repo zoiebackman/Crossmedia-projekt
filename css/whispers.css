@@ -140,6 +140,10 @@
 
 @media (max-width: 500px) {
 
+    body.homePage header {
+        position: initial;
+    }
+
     #mobileOnly {
         display: initial;
         font-size: 20px;
@@ -153,6 +157,7 @@
         /* margin-bottom: 0; */
 
     }
+
 
     header {
         background-image: none;
