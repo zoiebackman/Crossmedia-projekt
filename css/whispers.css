@@ -125,6 +125,7 @@
 }
 
 #countdownDiv {
+    display: none;
     padding: 0px 30px;
     background-color: #F8E1CD;
     right: 30px;
