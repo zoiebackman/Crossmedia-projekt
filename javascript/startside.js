@@ -186,6 +186,9 @@ function goToWhisperPage() {
   headerDivLogo.classList.add("headerText");
   headerDivLogo.style.width = "auto";
 
+  let whisperArrayOnPageLocal = JSON.parse(localStorage.getItem("whisperArrayOnPageLocal")) || [];
+  let currentPage = 1;
+
   main.innerHTML = `
 
   <p id= "mobileOnly">Alla Viskningar</p>
@@ -208,8 +211,8 @@ function goToWhisperPage() {
   let nextPage = document.getElementById("nextPage");
   let pageNum = document.getElementById("pageNum")
 
-  let whisperArrayOnPageLocal =
-    JSON.parse(localStorage.getItem("whisperArrayOnPageLocal")) || [];
+
+
   let currentWhisperCounterIndex = whisperArrayOnPageLocal.length;
 
   //hämtar localStorage när man kommer tillbaka till sidan. 
@@ -222,7 +225,8 @@ function goToWhisperPage() {
     //   pushToArray(whisperArray[currentWhisperCounterIndex])
     //   currentWhisperCounterIndex++;
 
-    if (interval) clearInterval(intervalId);
+    let intervalId;
+    if (intervalId) clearInterval(intervalId);
 
     let countdownDiv = document.getElementById("countdownDiv");
     countdownDiv.innerHTML += `
@@ -231,7 +235,6 @@ function goToWhisperPage() {
     countdownDiv.style.position = "absolute";
 
 
-    let intervalId;
     let timeWhenStart = 600; //10 min 
 
     intervalId = setInterval(() => {
@@ -245,6 +248,10 @@ function goToWhisperPage() {
           pushToArray(whisperArray[currentWhisperCounterIndex])
           currentWhisperCounterIndex++;
         }
+      }
+
+      else if (timeWhenStart == 0) {
+        clearInterval(intervalId);
       }
 
 
@@ -284,74 +291,71 @@ function goToWhisperPage() {
     }
   })
 
-}
 
-function getTodaysDate() {
-  let today = new Date();
-  let todaysDate = today.getDate() + "-" +
-    (today.getMonth() + 1) + "-" +
-    today.getFullYear();
-  return todaysDate;
-}
-
-let whisperArrayOnPageLocal = JSON.parse(localStorage.getItem("whisperArrayOnPageLocal")) || [];
-let currentPage = 1;
+  function getTodaysDate() {
+    let today = new Date();
+    let todaysDate = today.getDate() + "-" +
+      (today.getMonth() + 1) + "-" +
+      today.getFullYear();
+    return todaysDate;
+  }
 
 
-function pushToArray(whisperArray) {
-  console.log(whisperArray)
-  whisperArrayOnPageLocal.push({
-    date: whisperArray.date,
-    text: whisperArray.text
-  });
-  localStorage.setItem("whisperArrayOnPageLocal", JSON.stringify(whisperArrayOnPageLocal));
-  renderPage(currentPage);
-}
 
-function renderPage(currentPage) {
-  let containerGossip = document.getElementById("containerGossip")
-  containerGossip.innerHTML = "";
+  function pushToArray(whisperArray) {
+    console.log(whisperArray)
+    whisperArrayOnPageLocal.push({
+      date: whisperArray.date,
+      text: whisperArray.text
+    });
+    localStorage.setItem("whisperArrayOnPageLocal", JSON.stringify(whisperArrayOnPageLocal));
+    renderPage(currentPage);
+  }
 
-  let whisperArrayOnPageLocal =
-    JSON.parse(localStorage.getItem("whisperArrayOnPageLocal")) || [];
+  function renderPage(currentPage) {
+    let containerGossip = document.getElementById("containerGossip")
+    containerGossip.innerHTML = "";
 
-  if (whisperArrayOnPageLocal.length === 0) {
-    containerGossip.innerHTML = `
+    let whisperArrayOnPageLocal =
+      JSON.parse(localStorage.getItem("whisperArrayOnPageLocal")) || [];
+
+    if (whisperArrayOnPageLocal.length === 0) {
+      containerGossip.innerHTML = `
       <div class="boxGossip noGossipPost textGossip">
         Ingen viskning än så länge..
       </div>`;
-    return;
-  }
+      return;
+    }
 
-  //kolla ifall inga viskningar finns, isåfall ta bort
-  let noGossipPostDiv = document.querySelector(".noGossipPost");
-  if (noGossipPostDiv) {
-    noGossipPostDiv.style.display = "none";
-  }
+    //kolla ifall inga viskningar finns, isåfall ta bort
+    let noGossipPostDiv = document.querySelector(".noGossipPost");
+    if (noGossipPostDiv) {
+      noGossipPostDiv.style.display = "none";
+    }
 
-  let allPosts = JSON.parse(localStorage.getItem("whisperArrayOnPageLocal")) || [];
-  let reversed = [...allPosts].reverse();
+    let allPosts = JSON.parse(localStorage.getItem("whisperArrayOnPageLocal")) || [];
+    let reversed = [...allPosts].reverse();
 
 
-  let start = (currentPage - 1) * 3;
-  let end = start + 3;
-  let postsToShow = reversed.slice(start, end);
+    let start = (currentPage - 1) * 3;
+    let end = start + 3;
+    let postsToShow = reversed.slice(start, end);
 
-  postsToShow.reverse().forEach(post => {
-    // console.log(post)
-    let boxGossipDiv = document.createElement("div");
-    boxGossipDiv.classList.add("boxGossip");
+    postsToShow.reverse().forEach(post => {
+      // console.log(post)
+      let boxGossipDiv = document.createElement("div");
+      boxGossipDiv.classList.add("boxGossip");
 
-    boxGossipDiv.innerHTML = `
+      boxGossipDiv.innerHTML = `
       <p class="dateText">${post.date}</p>
       <p class="textGossip">${post.text}</p>
       <p class="xoxoText">XOXO</p>
     `;
-    containerGossip.prepend(boxGossipDiv);
-  });
+      containerGossip.prepend(boxGossipDiv);
+    });
+  }
+
 }
-
-
 
 
 function picturesPage() {
