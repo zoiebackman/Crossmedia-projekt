@@ -133,10 +133,9 @@ function homePage() {
   });
 }
 
-welcomeNav.addEventListener("click", welcomeFun)
+welcomeNav.addEventListener("click", welcomeFun);
 
 function welcomeFun() {
-
   main.innerHTML = ``;
   main.innerHTML = `
    <div id="welcomeContainer">
@@ -164,9 +163,9 @@ function welcomeFun() {
 
   const startButton = document.getElementById("startButton");
 
-  startButton.addEventListener("click", function (){
-    homePage()
-  })
+  startButton.addEventListener("click", function () {
+    homePage();
+  });
 }
 
 //rensa main och visa Alla viskningar
@@ -531,6 +530,8 @@ linksNav.forEach((link) => {
       picturesPage();
     } else if (event.target.id == "sendTips") {
       sendTipsPage();
+    } else if (event.target.id == "welcome") {
+      welcomeFun();
     }
   });
 });
