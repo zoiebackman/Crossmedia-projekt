@@ -50,15 +50,8 @@ function logIn() {
 function momentOfTruth() {
   const headerLogoMobil = document.getElementById("headerLoggaMobil");
   const headerDivLogo = document.getElementById("headerDivLogo");
-
-  if (headerLogoMobil) {
-    headerLogoMobil.style.display = "none";
-  }
-
-  if (headerDivLogo) {
-    headerDivLogo.innerHTML = "Sanningens ögonblick";
-    headerDivLogo.classList.add("momentOfTruthText");
-  }
+  headerDivLogo.innerHTML = "Sanningens ögonblick"
+  headerDivLogo.classList.add("momentOfTruthText");
 }
 
 function loggedInPage() {
@@ -109,15 +102,8 @@ function loggedInPage() {
 function gameOver() {
   const headerLogoMobil = document.getElementById("headerLoggaMobil");
   const headerDivLogo = document.getElementById("headerDivLogo");
-
-  if (headerLogoMobil) {
-    headerLogoMobil.style.display = "none";
-  }
-
-  if (headerDivLogo) {
-    headerDivLogo.innerHTML = "Game Over";
-    headerDivLogo.classList.add("gameOverText");
-  }
+  headerDivLogo.innerHTML = "Game Over";
+  headerDivLogo.id = "gameOverTextId";
 
   main.innerHTML = ``;
   main.innerHTML = `
@@ -127,46 +113,17 @@ function gameOver() {
     <p id ="firstGameover-text">Det verkar som om mysteriet var lite för sofistikerat för vissa. Mau Gossip har spelat spelet fläckfritt – det kan vi alla konstatera med en gnutta avundsjuka. Dessvärre (ett ord som låter betydligt lyxigare än ett simpelt tyvärr) räckte din intuition inte hela vägen fram den här gången. Gåtan förblir olöst i dina händer, och vi som verkligen hade hoppats på att du skulle briljera på podiet. Men i den här världen får man inga poäng för att bara försöka. Bättre lycka nästa gång. Om det ens finns en nästa gång...</p>
     <p id ="secondGameover-text">You know you love me. </p>
     <p id="thirdGameover-text">XOXO</p>
-    <button id="nextButton">Next</button>;
   </div>
     
   `;
-
-  const nextButtonMoment = document.getElementById("nextButton");
-  const answerInput = document.getElementById("questionInputMoment");
-
-  nextButtonMoment.addEventListener("click", function () {
-    const answerValue = answerInput.value;
-
-    const answer = {
-      answer: "Lovisa",
-    };
-
-    if (answerValue === answer.answer) {
-      main.innerHTML = ``;
-      //vidare funktion
-      console.log("användaren är vidare, det var rätt svar");
-    } else {
-      main.innerHTML = ``;
-      gameOver();
-
-      console.log("Game over funktion, fel svar");
-    }
-  });
 }
 
 function reveal() {
+ 
   const headerLogoMobil = document.getElementById("headerLoggaMobil");
   const headerDivLogo = document.getElementById("headerDivLogo");
-
-  if (headerLogoMobil) {
-    headerLogoMobil.style.display = "none";
-  }
-
-  if (headerDivLogo) {
-    headerDivLogo.innerHTML = "Reveal";
-    headerDivLogo.classList.add("revealText");
-  }
+  headerDivLogo.innerHTML = "Reveal";
+  headerDivLogo.classList.add("revealText");
 
   main.innerHTML = ``;
   main.innerHTML = `
@@ -187,15 +144,8 @@ function reveal() {
 function revealPopup() {
   const headerLogoMobil = document.getElementById("headerLoggaMobil");
   const headerDivLogo = document.getElementById("headerDivLogo");
-
-  if (headerLogoMobil) {
-    headerLogoMobil.style.display = "none";
-  }
-
-  if (headerDivLogo) {
-    headerDivLogo.innerHTML = "Reveal";
-    headerDivLogo.classList.add("revealPopupText");
-  }
+  headerDivLogo.innerHTML = "Reveal";
+  headerDivLogo.classList.add("revealPopupText");
 
   main.innerHTML = ``;
   main.innerHTML = `
@@ -222,7 +172,7 @@ function revealPopup() {
   const redButton = document.getElementById("redpopup");
 
   whiteButton.addEventListener("click", function () {
-    gameOver2();
+    gameOver();
   });
 
   redButton.addEventListener("click", function () {
@@ -233,15 +183,8 @@ function revealPopup() {
 function win() {
   const headerLogoMobil = document.getElementById("headerLoggaMobil");
   const headerDivLogo = document.getElementById("headerDivLogo");
-
-  if (headerLogoMobil) {
-    headerLogoMobil.style.display = "none";
-  }
-
-  if (headerDivLogo) {
-    headerDivLogo.innerHTML = "You won";
-    headerDivLogo.classList.add("youWonText");
-  }
+  headerDivLogo.innerHTML = "You Won";
+  headerDivLogo.classList.add("youWonText");
 
   main.innerHTML = ``;
   main.innerHTML = `
@@ -276,31 +219,4 @@ Hatten av för en sann vinnare. Men kom ihåg... även om bloggen är borta, fin
 
 function deleteWholePage() {
   document.body.style.display = "none";
-}
-
-
-function gameOver2() {
-  const headerLogoMobil = document.getElementById("headerLoggaMobil");
-  const headerDivLogo = document.getElementById("headerDivLogo");
-
-  if (headerLogoMobil) {
-    headerLogoMobil.style.display = "none";
-  }
-
-  if (headerDivLogo) {
-    headerDivLogo.innerHTML = "Game Over";
-    headerDivLogo.id = "gameOverTextId";
-  }
-
-  main.innerHTML = ``;
-  main.innerHTML = `
-  <div id="gameOverContainer">
-    <div id="gameOverWrapper"></div>
-    <h1 id="GameOverTitle">Game Over</h1>
-    <p id ="firstGameover-text">Det verkar som om mysteriet var lite för sofistikerat för vissa. Mau Gossip har spelat spelet fläckfritt – det kan vi alla konstatera med en gnutta avundsjuka. Dessvärre (ett ord som låter betydligt lyxigare än ett simpelt tyvärr) räckte din intuition inte hela vägen fram den här gången. Gåtan förblir olöst i dina händer, och vi som verkligen hade hoppats på att du skulle briljera på podiet. Men i den här världen får man inga poäng för att bara försöka. Bättre lycka nästa gång. Om det ens finns en nästa gång...</p>
-    <p id ="secondGameover-text">You know you love me. </p>
-    <p id="thirdGameover-text">XOXO</p>
-  </div>
-    
-  `;
 }

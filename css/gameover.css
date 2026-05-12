@@ -41,7 +41,7 @@
 }
 @media (max-width: 767px) {
   #gameOverContainer {
-    margin-top: 160px;
+    margin-top: 20px;
   }
 
   #firstGameover-text,
@@ -50,10 +50,14 @@
     font-size: 14px;
   }
 
+  #gameOverTextId{
+    display: none;
+  }
+  
   #GameOverTitle {
     color: #ae2e30;
-    font-size: 20px;
+    font-size: 60px;
     display: block;
-    font-family: "bodondi72";
+    font-family: "imperial script";
   }
 }
