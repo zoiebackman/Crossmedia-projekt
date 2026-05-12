@@ -126,13 +126,20 @@
 
 #countdownDiv {
     display: none;
-    padding: 0px 30px;
     background-color: #F8E1CD;
     right: 30px;
     top: 140px;
     border-radius: 10px;
     border: 1px solid black;
     font-family: "didact gothic";
+    position: absolute;
+    z-index: 10;
+    padding: 10px 30px;
+    font-size: 20px;
+}
+
+#countdownDiv p {
+    display: inline;
 }
 
 #klicka {
