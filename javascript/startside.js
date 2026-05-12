@@ -385,7 +385,7 @@ function picturesPage() {
       }
 
       if (pic === "../pictures/picturesPage/shifferKodBILD.jpeg") {
-        popupImage.style.backgroundImage = `url("../pictures/picturesPage/chifferkod.png")`;
+        popupImage.style.backgroundImage = `url("../pictures/picturesPage/shifferKod2.jpeg")`;
       }
     });
 
