@@ -366,6 +366,7 @@ function picturesPage() {
   `;
 
   let textBox = document.createElement("div");
+  textBox.id = "";
   let picturesBox = document.getElementById("picturesGalleryBox");
 
   let imagePopup = document.createElement("div");
@@ -403,6 +404,7 @@ function picturesPage() {
   imagePopup.addEventListener("click", () => {
     imagePopup.classList.remove("showPopup");
     textBox.textContent = "";
+    textBox.id = "";
   });
 }
 
