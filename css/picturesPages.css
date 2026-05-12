@@ -44,6 +44,17 @@
   height: 500px;
   background-size: cover;
   background-position: center;
+
+  display: flex;
+  align-items: end;
+}
+
+#popupImageTextBox {
+  font-family: "bodondi72";
+  height: 70px;
+  width: 355px;
+  background-color: white;
+  padding: 20px;
 }
 
 @media (max-width: 767px) {
@@ -70,5 +81,14 @@
   #popupImage {
     width: 310px;
     height: 390px;
+
+    display: flex;
+    align-items: end;
+  }
+
+  #popupImageTextBox {
+    height: 100px;
+    width: 310px;
+    background-color: white;
   }
 }

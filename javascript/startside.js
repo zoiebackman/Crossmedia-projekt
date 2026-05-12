@@ -365,6 +365,7 @@ function picturesPage() {
     </div>
   `;
 
+  let textBox = document.createElement("div");
   let picturesBox = document.getElementById("picturesGalleryBox");
 
   let imagePopup = document.createElement("div");
@@ -384,6 +385,16 @@ function picturesPage() {
     div.addEventListener("click", () => {
       popupImage.style.backgroundImage = `url(${pic})`;
       imagePopup.classList.add("showPopup");
+      if (
+        popupImage.style.backgroundImage ===
+        `url("../pictures/picturesPage/24.jpg")`
+      ) {
+        console.log("hej");
+        textBox.id = "popupImageTextBox";
+        textBox.textContent =
+          "ledtråd här som handlar om blabla bla bla bla bla bla";
+        popupImage.append(textBox);
+      }
     });
 
     picturesBox.append(div);
@@ -391,6 +402,7 @@ function picturesPage() {
 
   imagePopup.addEventListener("click", () => {
     imagePopup.classList.remove("showPopup");
+    textBox.textContent = "";
   });
 }
 
