@@ -1,4 +1,3 @@
-
 let welcomeNav = document.getElementById("welcome");
 let homeNav = document.getElementById("home");
 let whispersNav = document.getElementById("whispers");
@@ -14,18 +13,39 @@ let loginButton = document.getElementById("logIn");
 let headerDivLoggo = document.getElementById("headerDivLogo");
 // let currentWhisperCounterIndex = 0;
 
-
-
-
 const pictures = [
-  "../pictures/3f122689-d69e-407d-b248-fa62453dac2e.jpg",
-  "../pictures/5b7a83da-e3f3-405a-9a63-dbc5b120c46c.jpg",
-  "../pictures/5b7a83da-e3f3-405a-9a63-dbc5b120c46c.jpg",
-  "../pictures/5b7a83da-e3f3-405a-9a63-dbc5b120c46c.jpg",
-  "../pictures/5b7a83da-e3f3-405a-9a63-dbc5b120c46c.jpg",
-  "../pictures/5b7a83da-e3f3-405a-9a63-dbc5b120c46c.jpg",
+  "../pictures/picturesPage/1.png",
+  "../pictures/picturesPage/2.png",
+  "../pictures/picturesPage/3.png",
+  "../pictures/picturesPage/4.png",
+  "../pictures/picturesPage/5.png",
+  "../pictures/picturesPage/6.png",
+  "../pictures/picturesPage/7.png",
+  "../pictures/picturesPage/8.png",
+  "../pictures/picturesPage/9.png",
+  "../pictures/picturesPage/10.png",
+  "../pictures/picturesPage/26.jpg",
+  "../pictures/picturesPage/11.png",
+  "../pictures/picturesPage/12.png",
+  "../pictures/picturesPage/13.png",
+  "../pictures/picturesPage/23.jpg",
+  "../pictures/picturesPage/14.png",
+  "../pictures/picturesPage/15.png",
+  "../pictures/picturesPage/16.png",
+  "../pictures/picturesPage/17.png",
+  "../pictures/picturesPage/18.png",
+  "../pictures/picturesPage/19.png",
+  "../pictures/picturesPage/20.png",
+  "../pictures/picturesPage/28.jpg",
+  "../pictures/picturesPage/21.png",
+  "../pictures/picturesPage/22.png",
+  "../pictures/picturesPage/24.png",
+  "../pictures/picturesPage/24.jpg",
+  "../pictures/picturesPage/25.png",
+  "../pictures/picturesPage/26.png",
+  "../pictures/picturesPage/27.png",
+  "../pictures/picturesPage/28.png",
 ];
-
 
 function homePage() {
   headerDivLoggo.innerHTML = ``;
@@ -114,68 +134,38 @@ function homePage() {
 }
 
 function welcomeFun() {
-  footer.style.display = "block";
   main.innerHTML = ``;
+  main.innerHTML = `
+   <div id="welcomeContainer">
+   <div id="welcomeWrapper">
+        <h1 id="WelcomeText">Välkommen till spelet</h1>
+        <p id="introText">Terminen har precis börjat på Malmö universitet, men istället för att fokusera på fastighetsrätt och kundmöten har du vaknat upp till din värsta mardröm. Baksmällan från gårdagens fest på Niagaras takvåning är ingenting jämfört med den ångest som sköljer över dig när du ser ditt namn pryda rubrikerna på MAU Gossip. Du är Alice. Du brukar hålla dig i bakgrunden, men nu är du indragen i ett nät av lögner, hemligheter och maktspel som styrs av Malmös absoluta elit. Ditt rykte och din framtida karriär står på spel.</p>
 
-  const welcomeContainer = document.createElement("div");
-  welcomeContainer.id = "container";
+        <div id="welcomeSection1">
+            <h2 id="howToPlay">Så här spelar du:</h2>
+            <p id="welcomeInstructions">I det här spelet är din mobil och din förmåga att lägga pussel dina viktigaste verktyg. För att rentvå ditt namn och hitta personen bakom skandalbloggen måste du navigera genom följande:</p>
 
-  const popUpContainer = document.createElement("div");
-  popUpContainer.id = "popUpContainer";
+            <ul>
+                <li><strong>Granska sociala medier:</strong> Håll koll på Instagram-stories, inlägg och kommentarer. Varje bild kan innehålla en detalj som andra missat.</li>
+                <li><strong>Hitta ledtrådar i verkligheten: </strong> Besök fysiska platser på campus, såsom biblioteket, kaféet och Niagaras tak. Letar du noga kan du hitta allt från kvarglömda böcker till gömda lösenord.</li>
+                <li><strong>:Kartläggning </strong> Genom att hitta användarnamn och lösenord får du tillgång till privata chattar och dolda sidor. Men var försiktig – det du hittar kan förändra din bild av dina klasskamrater för alltid.</li>
+                <li>strong>Dra slutsatser: </strong> Koppla ihop koordinater, trasiga fotografier och anonyma tips för att lista ut vem som egentligen pratar med vem – och varför.</li>
+            </ul>
+        </div>
+          <h3 id="universityTitle">Fastighetsförmedling ME2024</h3>
+        <div id="imgContainer"></div>
+        <button id="startButton">Start</button>
+        </div>
+    </div>
+  `;
 
-  const headerText = document.createElement("h1");
-  headerText.id = "headerText";
-  headerText.textContent = "Välkomna till spelet";
-  popUpContainer.append(headerText);
-  main.append(welcomeContainer);
-  welcomeContainer.append(popUpContainer);
-
-  const textBox = document.createElement("div");
-  textBox.id = "textBox";
-  popUpContainer.append(textBox);
-
-  const storyText = document.createElement("p");
-  storyText.id = "storyText";
-  storyText.textContent =
-    "Terminen har precis börjat på Malmö universitet, men istället för att fokusera på fastighetsrätt och kundmöten har du vaknat upp till din värsta mardröm. Baksmällan från gårdagens fest på Niagaras takvåning är ingenting jämfört med den ångest som sköljer över dig när du ser ditt namn pryda rubrikerna på MAU Gossip. Du är Alice. Du brukar hålla dig i bakgrunden, men nu är du indragen i ett nät av lögner, hemligheter och maktspel som styrs av Malmös absoluta elit. Ditt rykte och din framtida karriär står på spel.";
-  textBox.append(storyText);
-
-  const textBox2 = document.createElement("div");
-  textBox2.id = "textBox2";
-  const howToPlay = document.createElement("div");
-  howToPlay.innerHTML = `
-      <div id="playRules">
-        <h3>Så här spelar du: </h3>
-      </div>
-        <p>I det här spelet är din mobil och din förmåga att lägga pussel dina viktigaste verktyg. För att rentvå ditt namn och hitta personen bakom skandalbloggen måste du navigera genom följande: </p>
-        <ul>
-          <li><strong>Granska sociala medier:</strong> Håll koll på Instagram-stories, inlägg och kommentarer. Varje bild kan innehålla en detalj som andra missat.</li>
-          <li><strong>Hitta ledtrådar i verkligheten: </strong> Besök fysiska platser på campus, såsom biblioteket, kaféet och Niagaras tak. Letar du noga kan du hitta allt från kvarglömda böcker till gömda lösenord.</li>
-          <li><strong>Infiltration: </strong> Genom att hitta användarnamn och lösenord får du tillgång till privata chattar och dolda sidor. Men var försiktig – det du hittar kan förändra din bild av dina klasskamrater för alltid.</li>
-          <li><strong>Dra slutsatser: </strong> Koppla ihop koordinater, trasiga fotografier och anonyma tips för att lista ut vem som egentligen pratar med vem – och varför.</li>
-        </ul>`;
-
-  textBox.append(howToPlay);
-  textBox.append(textBox2);
-
-  const univeristyTitle = document.createElement("h2");
-  univeristyTitle.id = "universityTitle";
-  univeristyTitle.textContent = "Fastighetsförmedling ME2024";
-  popUpContainer.append(univeristyTitle);
-
-  const imgContainer = document.createElement("img");
-  imgContainer.id = "imgContainer";
-  popUpContainer.append(imgContainer);
-
-  const startButton = document.createElement("button");
-  startButton.id = "startButton";
-  startButton.textContent = "Start";
-  popUpContainer.append(startButton);
+  const startButton = document.getElementById("startButton");
 
   startButton.addEventListener("click", function () {
     homePage();
   });
 }
+
 //rensa main och visa Alla viskningar
 function goToWhisperPage() {
   let totalWhisperPosts;
@@ -205,20 +195,20 @@ function goToWhisperPage() {
   </div>
   `;
 
-  let containerGossip = document.getElementById("containerGossip")
+  let containerGossip = document.getElementById("containerGossip");
   containerGossip.style.display = "flex";
   let previousPage = document.getElementById("previousPage");
   let nextPage = document.getElementById("nextPage");
   let pageNum = document.getElementById("pageNum")
 
-
-
+  let whisperArrayOnPageLocal =
+    JSON.parse(localStorage.getItem("whisperArrayOnPageLocal")) || [];
   let currentWhisperCounterIndex = whisperArrayOnPageLocal.length;
 
-  //hämtar localStorage när man kommer tillbaka till sidan. 
+  //hämtar localStorage när man kommer tillbaka till sidan.
   renderPage(currentPage);
 
-  let klicka = document.getElementById("klicka")
+  let klicka = document.getElementById("klicka");
 
   klicka.addEventListener("click", () => {
     // if (currentWhisperCounterIndex < whisperArray.length) {
@@ -231,21 +221,20 @@ function goToWhisperPage() {
     let countdownDiv = document.getElementById("countdownDiv");
     countdownDiv.innerHTML += `
     <p> <span id ="timeMin"> 10 </span> : <span id ="timeSec"> 00 </span>  </p> 
-    `
+    `;
     countdownDiv.style.position = "absolute";
 
-
-    let timeWhenStart = 600; //10 min 
+    let timeWhenStart = 600; //10 min
 
     intervalId = setInterval(() => {
       timeWhenStart--;
-      console.log("Timer körs")
-      console.log(timeWhenStart)
+      console.log("Timer körs");
+      console.log(timeWhenStart);
       changeTime(timeWhenStart);
 
       if (timeWhenStart % 10 === 0) {
         if (currentWhisperCounterIndex < whisperArray.length) {
-          pushToArray(whisperArray[currentWhisperCounterIndex])
+          pushToArray(whisperArray[currentWhisperCounterIndex]);
           currentWhisperCounterIndex++;
         }
       }
@@ -256,23 +245,20 @@ function goToWhisperPage() {
 
 
     }, 1000);
-
-  })
+  });
 
   function changeTime(totalSeconds) {
     let minutes = Math.floor(totalSeconds / 60);
     let seconds = totalSeconds % 60;
 
-    let timeMin = document.getElementById("timeMin")
-    let timeSec = document.getElementById("timeSec")
-    let countdownDiv = document.getElementById("countdownDiv")
+    let timeMin = document.getElementById("timeMin");
+    let timeSec = document.getElementById("timeSec");
+    let countdownDiv = document.getElementById("countdownDiv");
     timeMin.textContent = minutes;
-    timeSec.textContent = seconds.toString().padStart(2, "0");;
-
+    timeSec.textContent = seconds.toString().padStart(2, "0");
   }
 
   nextPage.addEventListener("click", () => {
-
     let maxPage = Math.ceil(whisperArrayOnPageLocal.length / 3);
 
     if (currentPage < maxPage) {
@@ -280,80 +266,79 @@ function goToWhisperPage() {
       renderPage(currentPage);
       pageNum.textContent = currentPage;
     }
-  })
+  });
 
   previousPage.addEventListener("click", () => {
     if (currentPage > 1) {
       currentPage--;
       renderPage(currentPage);
       pageNum.textContent = currentPage;
-
     }
-  })
+  });
+}
+
+function getTodaysDate() {
+  let today = new Date();
+  let todaysDate = today.getDate() + "-" +
+    (today.getMonth() + 1) + "-" +
+    today.getFullYear();
+  return todaysDate;
+}
 
 
-  function getTodaysDate() {
-    let today = new Date();
-    let todaysDate = today.getDate() + "-" +
-      (today.getMonth() + 1) + "-" +
-      today.getFullYear();
-    return todaysDate;
-  }
 
+function pushToArray(whisperArray) {
+  console.log(whisperArray)
+  whisperArrayOnPageLocal.push({
+    date: whisperArray.date,
+    text: whisperArray.text
+  });
+  localStorage.setItem("whisperArrayOnPageLocal", JSON.stringify(whisperArrayOnPageLocal));
+  renderPage(currentPage);
+}
 
+function renderPage(currentPage) {
+  let containerGossip = document.getElementById("containerGossip")
+  containerGossip.innerHTML = "";
 
-  function pushToArray(whisperArray) {
-    console.log(whisperArray)
-    whisperArrayOnPageLocal.push({
-      date: whisperArray.date,
-      text: whisperArray.text
-    });
-    localStorage.setItem("whisperArrayOnPageLocal", JSON.stringify(whisperArrayOnPageLocal));
-    renderPage(currentPage);
-  }
+  let whisperArrayOnPageLocal =
+    JSON.parse(localStorage.getItem("whisperArrayOnPageLocal")) || [];
 
-  function renderPage(currentPage) {
-    let containerGossip = document.getElementById("containerGossip")
-    containerGossip.innerHTML = "";
-
-    let whisperArrayOnPageLocal =
-      JSON.parse(localStorage.getItem("whisperArrayOnPageLocal")) || [];
-
-    if (whisperArrayOnPageLocal.length === 0) {
-      containerGossip.innerHTML = `
+  if (whisperArrayOnPageLocal.length === 0) {
+    containerGossip.innerHTML = `
       <div class="boxGossip noGossipPost textGossip">
         Ingen viskning än så länge..
       </div>`;
-      return;
-    }
+    return;
+  }
 
-    //kolla ifall inga viskningar finns, isåfall ta bort
-    let noGossipPostDiv = document.querySelector(".noGossipPost");
-    if (noGossipPostDiv) {
-      noGossipPostDiv.style.display = "none";
-    }
+  //kolla ifall inga viskningar finns, isåfall ta bort
+  let noGossipPostDiv = document.querySelector(".noGossipPost");
+  if (noGossipPostDiv) {
+    noGossipPostDiv.style.display = "none";
+  }
 
-    let allPosts = JSON.parse(localStorage.getItem("whisperArrayOnPageLocal")) || [];
-    let reversed = [...allPosts].reverse();
+  let allPosts = JSON.parse(localStorage.getItem("whisperArrayOnPageLocal")) || [];
+  let reversed = [...allPosts].reverse();
 
 
-    let start = (currentPage - 1) * 3;
-    let end = start + 3;
-    let postsToShow = reversed.slice(start, end);
+  let start = (currentPage - 1) * 3;
+  let end = start + 3;
+  let postsToShow = reversed.slice(start, end);
 
-    postsToShow.reverse().forEach(post => {
-      // console.log(post)
-      let boxGossipDiv = document.createElement("div");
-      boxGossipDiv.classList.add("boxGossip");
+  postsToShow.reverse().forEach(post => {
+    // console.log(post)
+    let boxGossipDiv = document.createElement("div");
+    boxGossipDiv.classList.add("boxGossip");
 
-      boxGossipDiv.innerHTML = `
+    boxGossipDiv.innerHTML = `
       <p class="dateText">${post.date}</p>
       <p class="textGossip">${post.text}</p>
       <p class="xoxoText">XOXO</p>
     `;
-      containerGossip.prepend(boxGossipDiv);
-    });
-  }
+    containerGossip.prepend(boxGossipDiv);
+  });
+}
 
 }
 
@@ -363,25 +348,98 @@ function picturesPage() {
   headerDivLoggo.innerHTML = `Bild galleri`;
   headerDivLogo.classList.add("headerText");
   headerDivLoggo.style.width = "500px";
+  footer.style.display = "block";
   main.innerHTML = ``;
   main.innerHTML = `
-  <div id="picturesPageTitlePhone">
-    <p>Bildgalleri</p>
-  </div>
-  <div id="picturesGalleryBox">
-  </div>
+    <div id="picturePageBox">
+        <div id="picturesPageTitlePhone">
+            <p>Bildgalleri</p>
+        </div>
+        <div id="picturesGalleryBox"></div>
+    </div>
   `;
 
+  let textBox = document.createElement("div");
+  textBox.id = "";
   let picturesBox = document.getElementById("picturesGalleryBox");
 
+  let imagePopup = document.createElement("div");
+  imagePopup.id = "imagePopup";
+
+  let popupImage = document.createElement("div");
+  popupImage.id = "popupImage";
+
+  imagePopup.append(popupImage);
+  document.body.append(imagePopup);
+
   for (let pic of pictures) {
-    console.log(pic);
     let div = document.createElement("div");
     div.classList.add("pictureGallery");
     div.style.backgroundImage = `url(${pic})`;
 
+    div.addEventListener("click", () => {
+      popupImage.style.backgroundImage = `url(${pic})`;
+      imagePopup.classList.add("showPopup");
+      if (
+        popupImage.style.backgroundImage ===
+        `url("../pictures/picturesPage/23.jpg")`
+      ) {
+        console.log("hej");
+        textBox.id = "popupImageTextBox";
+        textBox.textContent = "NI:A0414";
+        popupImage.append(textBox);
+      }
+    });
+
     picturesBox.append(div);
   }
+
+  imagePopup.addEventListener("click", () => {
+    imagePopup.classList.remove("showPopup");
+    textBox.textContent = "";
+    textBox.id = "";
+  });
+}
+
+function sendTipsPage() {
+  headerDivLoggo.innerHTML = ``;
+  headerDivLoggo.innerHTML = `
+    Skicka in ett tips
+`;
+  headerDivLogo.classList.add("headerText");
+  headerDivLoggo.style.width = "580px";
+  footer.style.display = "block";
+
+  main.innerHTML = ``;
+  main.innerHTML = `
+  <div id="sendTipsPageBox">
+    <div id="sendTipsBox">
+      <p id="sendTipsTitle">Skicka in ett tips</p>
+      <p id="sendTipsInfo">XOXO… hemligheter stannar aldrig dolda för länge. Sett något? Hört något? Vet du mer än du borde? Lämna ditt tips anonymt. Diskret. Utan spår. I den här världen är information allt.</p>
+
+      <div id="sendTipsForm">
+          <div>
+              <p>Skriv ditt tips</p>
+          </div>    
+
+          <textarea id="tipsText"></textarea>
+
+          <button id="sendTipsButton">Skicka</button>
+      </div>
+    </div>
+  </div>
+  `;
+
+  let button = document.getElementById("sendTipsButton");
+  let textFromUser = document.getElementById("tipsText");
+  button.addEventListener("click", () => {
+    if (textFromUser.value == "") {
+      alert("Du måste skriva något");
+    } else {
+      textFromUser.value = "";
+      alert("Tack för ditt tips!");
+    }
+  });
 }
 
 homePage();
@@ -390,33 +448,50 @@ homeNav.addEventListener("click", () => {
   homePage();
 });
 
-welcomeNav.addEventListener("click", function () {
-  welcomeFun()
-})
-
 hamburgerMenu.addEventListener("click", () => {
-  document.body.classList.remove("homePage"); // lägg till i era funktioner om det fuckar för er:)
-  main.innerHTML = ``;
+  let oldMenu = document.getElementById("menuBox");
+
+  if (oldMenu) {
+    oldMenu.remove();
+    footer.style.display = "block";
+    menuIsOpen = false;
+
+    if (wasHomePageBeforeMenu) {
+      document.body.classList.add("homePage");
+    }
+
+    return;
+  }
+
+  wasHomePageBeforeMenu = document.body.classList.contains("homePage");
+  document.body.classList.remove("homePage");
+
   footer.style.display = "none";
-  main.innerHTML = `
-    <div id="menuBox">
-        <div class="menuBoxChild">
-            <p id="hamburgerMenuWelcomeButton">Välkommen</p>
-        </div>
-        <div class="menuBoxChild">
-            <p id="hamburgerMenuHomeButton">Hem</p>
-        </div>
-        <div class="menuBoxChild">
-            <p id="hamburgerMenuWhispersButton">Alla viskningar</p>
-        </div>
-        <div class="menuBoxChild">
-            <p id="hamburgerMenuPicturesButton">Bildgalleri</p>
-        </div>
-        <div class="menuBoxChild">
-            <p id="hamburgerMenuSendTipsButton">Skicka in tips</p>
-        </div>
+  menuIsOpen = true;
+
+  let menuBox = document.createElement("div");
+  menuBox.id = "menuBox";
+
+  menuBox.innerHTML = `
+    <div class="menuBoxChild">
+      <p id="hamburgerMenuWelcomeButton">Välkommen</p>
+    </div>
+    <div class="menuBoxChild">
+      <p id="hamburgerMenuHomeButton">Hem</p>
+    </div>
+    <div class="menuBoxChild">
+      <p id="hamburgerMenuWhispersButton">Alla viskningar</p>
+    </div>
+    <div class="menuBoxChild">
+      <p id="hamburgerMenuPicturesButton">Bildgalleri</p>
+    </div>
+    <div class="menuBoxChild">
+      <p id="hamburgerMenuSendTipsButton">Skicka in tips</p>
     </div>
   `;
+
+  document.body.append(menuBox);
+
   let welcomeButton = document.getElementById("hamburgerMenuWelcomeButton");
   let homeButton = document.getElementById("hamburgerMenuHomeButton");
   let whispersButton = document.getElementById("hamburgerMenuWhispersButton");
@@ -424,19 +499,29 @@ hamburgerMenu.addEventListener("click", () => {
   let sendTipsButton = document.getElementById("hamburgerMenuSendTipsButton");
 
   welcomeButton.addEventListener("click", () => {
+    menuBox.remove();
+    footer.style.display = "block";
     welcomeFun();
   });
   homeButton.addEventListener("click", () => {
+    menuBox.remove();
+    footer.style.display = "block";
     homePage();
   });
   whispersButton.addEventListener("click", () => {
+    menuBox.remove();
+    footer.style.display = "block";
     goToWhisperPage();
   });
   picturesButton.addEventListener("click", () => {
+    menuBox.remove();
+    footer.style.display = "block";
     picturesPage();
   });
   sendTipsButton.addEventListener("click", () => {
-    // senTips funktion
+    menuBox.remove();
+    footer.style.display = "block";
+    sendTipsPage();
   });
 });
 
@@ -450,116 +535,9 @@ linksNav.forEach((link) => {
     } else if (event.target.id == "pictures") {
       picturesPage();
     } else if (event.target.id == "sendTips") {
-      console.log("gå till send tips ");
+      sendTipsPage();
+    } else if (event.target.id == "welcome") {
+      welcomeFun();
     }
   });
 });
-
-///ta startsidan först
-//när du trycker på länkarna så byts sidan till whispers
-
-loginButton.addEventListener("click", function (event) {
-  footer.style.display = "block";
-  event.preventDefault();
-  main.innerHTML = ``;
-  main.innerHTML = `
-  <div id="loginContainer">
-    <div id="logInPopup">
-      <div id="popupLI">
-        <div id="logga-left">
-          <img id="loggaLoginIn" src="../pictures/logga2.png"></img>
-        </div>
-        <div id="login-right">
-          <div class="input-class"> <p id="username">Användarnamn</p>
-            <input id="input-username" type="text"></input>
-          </div>
-          <div class="input-class"> <p id="password">Lösenord</p>
-            <input id="input-password" type="password"></input>
-          </div>
-          <button id="login-knappen">Logga in</button>
-        </div>
-      </div>
-    </div>
-  </div>`;
-
-  const loginBtn = document.getElementById("login-knappen");
-  const usernameInput = document.getElementById("input-username");
-  const passwordInput = document.getElementById("input-password");
-
-  loginBtn.addEventListener("click", function () {
-    const username = usernameInput.value;
-    const password = passwordInput.value;
-
-    const logInData = {
-      username: "mau_gossip",
-      password: "123",
-    };
-
-    if (logInData.username === username && logInData.password === password) {
-      main.innerHTML = ``;
-      loggedInPage()
-    } else {
-      alert("Fel användarnamn eller lösenord. Försök igen!");
-      passwordInput.value = "";
-      usernameInput.value = "";
-    }
-
-  });
-});
-
-
-function loggedInPage() {
-  main.innerHTML = ``;
-  headerLogga.style.display = "none";
-  main.innerHTML = `
-  <div id="momentTruthContainer">
-  <div id="momentTruthWrapper">
-    <p id="momentOfTruth">Sanningens ögonblick...</p>
-    <p id="momentText"> Nu är frågan på allas läppar: vem är egentligen geniet bakom den här bloggen? Jag vet att ni dör av nyfikenhet, men gissningar är inte alltid gratis...Låt gissningsleken börja.</p>
-  </div>
-
-  <div id="whoIsMau">
-    <p id="questionMoment">Vem är MAU Gossip?</p>
-   <input id="questionInputMoment" type=password></input>
-  </div>
-
-  <button id="nextButton">Next</button>
-  </div>
-  `
-
-  const nextButtonMoment = document.getElementById("nextButton");
-  const answerInput = document.getElementById("questionInputMoment")
-
-  nextButtonMoment.addEventListener("click", function () {
-    const answerValue = answerInput.value;
-
-    const answer = {
-      answer: "Lovisa"
-    }
-
-    if (answerValue === answer.answer) {
-      main.innerHTML = ``;
-      //vidare funktion
-      console.log("användaren är vidare, det var rätt svar")
-    } else {
-      main.innerHTML = ``;
-      gameOver()
-
-      console.log("Game over funktion, fel svar")
-    }
-  })
-}
-
-function gameOver() {
-  main.innerHTML = ``;
-  main.innerHTML = `
-  <div id="gameOverContainer">
-  <div id="gameOverWrapper"></div>
-  <p id ="firstGameover-text">Det verkar som om mysteriet var lite för sofistikerat för vissa. Mau Gossip har spelat spelet fläckfritt – det kan vi alla konstatera med en gnutta avundsjuka.
-Dessvärre (ett ord som låter betydligt lyxigare än ett simpelt tyvärr) räckte din intuition inte hela vägen fram den här gången. Gåtan förblir olöst i dina händer, och vi som verkligen hade hoppats på att du skulle briljera på podiet. Men i den här världen får man inga poäng för att bara försöka.
-Bättre lycka nästa gång. Om det ens finns en nästa gång...</p>
-  <p id ="secondGameover-text">You know you love me. </p>
-  <p id="thirdGameover-text">XOXO</p>
-  </div>
-  `
-}

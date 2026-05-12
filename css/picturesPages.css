@@ -51,7 +51,7 @@
 
 #popupImageTextBox {
   font-family: "bodondi72";
-  height: 70px;
+  height: 20px;
   width: 355px;
   background-color: white;
   padding: 20px;
@@ -87,7 +87,8 @@
   }
 
   #popupImageTextBox {
-    height: 100px;
+    padding: 20px;
+    height: 20px;
     width: 310px;
     background-color: white;
   }
