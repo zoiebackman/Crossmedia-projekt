@@ -11,6 +11,7 @@ let headerLogga = document.getElementById("headerLogga");
 let hamburgerMenu = document.getElementById("hamburgerMenu");
 let loginButton = document.getElementById("logIn");
 let headerDivLoggo = document.getElementById("headerDivLogo");
+let currentPage;
 // let currentWhisperCounterIndex = 0;
 
 const pictures = [
@@ -171,6 +172,7 @@ function welcomeFun() {
 //rensa main och visa Alla viskningar
 function goToWhisperPage() {
   let totalWhisperPosts;
+  currentPage = 1;
   // document.body.classList.remove("homePage"); /////?????
 
   headerDivLogo.innerHTML = `Alla viskningar`;
@@ -178,7 +180,6 @@ function goToWhisperPage() {
   headerDivLogo.classList.add("headerText");
   headerDivLogo.style.width = "auto";
 
-  let currentPage = 1;
 
   main.innerHTML = `
 
@@ -217,7 +218,6 @@ function goToWhisperPage() {
     //   currentWhisperCounterIndex++;
 
     let intervalId;
-    if (intervalId) clearInterval(intervalId);
 
     let countdownDiv = document.getElementById("countdownDiv");
     countdownDiv.innerHTML += `
@@ -287,8 +287,10 @@ function getTodaysDate() {
 }
 
 
-
 function pushToArray(whisperArray) {
+  let whisperArrayOnPageLocal =
+    JSON.parse(localStorage.getItem("whisperArrayOnPageLocal")) || [];
+
   console.log(whisperArray)
   whisperArrayOnPageLocal.push({
     date: whisperArray.date,
