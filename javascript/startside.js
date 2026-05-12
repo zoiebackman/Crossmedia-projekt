@@ -176,7 +176,6 @@ function goToWhisperPage() {
   headerDivLogo.classList.add("headerText");
   headerDivLogo.style.width = "auto";
 
-  let whisperArrayOnPageLocal = JSON.parse(localStorage.getItem("whisperArrayOnPageLocal")) || [];
   let currentPage = 1;
 
   main.innerHTML = `
@@ -340,7 +339,7 @@ function renderPage(currentPage) {
   });
 }
 
-}
+
 
 
 function picturesPage() {
