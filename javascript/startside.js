@@ -133,6 +133,8 @@ function homePage() {
   });
 }
 
+welcomeNav.addEventListener("click", welcomeFun)
+
 function welcomeFun() {
   main.innerHTML = ``;
   main.innerHTML = `
