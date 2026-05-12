@@ -30,19 +30,6 @@ hur länge de håller sig hemliga?
 `,
   },
   {
-    date: "1/4/2026",
-    text: `Alla älskar någon som lyckas ta sig uppåt.
-Från bibliotekets tysta hörn till stadens lite mer… exklusiva bord.
-Vår ambitiösa vän Calle verkar ha utvecklat en ganska imponerande livsstil på sistone.
-Dyra middagar.
-Privata bord.
-Och bilder från platser där vissa människor väntar månader på att ens få en reservation.
-Frågan är bara…
-Kommer framgången före pengarna, eller kommer pengarna före historien?
-XOXO
-`,
-  },
-  {
     date: "27/3/2026",
     text: `Det är alltid fascinerande hur vissa människor lyckas vara på exakt rätt plats… lite för ofta.
 Vår annars så diskreta Alice verkar ha haft en ganska intressant kväll på Niagara.
@@ -58,6 +45,19 @@ Frågan är bara hur länge sådana små studiegrupper brukar hålla sig hemliga
 `,
   },
   {
+    date: "1/4/2026",
+    text: `Alla älskar någon som lyckas ta sig uppåt.
+Från bibliotekets tysta hörn till stadens lite mer… exklusiva bord.
+Vår ambitiösa vän Calle verkar ha utvecklat en ganska imponerande livsstil på sistone.
+Dyra middagar.
+Privata bord.
+Och bilder från platser där vissa människor väntar månader på att ens få en reservation.
+Frågan är bara…
+Kommer framgången före pengarna, eller kommer pengarna före historien?
+XOXO
+`,
+  },
+  {
     date: "27/3/2026",
     text: `Alla historier börjar någonstans.
 Vissa börjar på takvåningar och studentfester.
@@ -66,6 +66,7 @@ Vår ambitiösa vän Calle spenderar mycket tid där. Och ibland… verkar han o
 Frågan är bara…
 vad exakt är det han jobbar på så sent om kvällarna?
 `,
+    picUrl: "../pictures/picturesPage/gossipinlägg6bild.jpg",
   },
   {
     date: "27/3/2026",
@@ -99,6 +100,15 @@ Vår kära Alice har bevisat att hon inte kan hålla sina fingrar i styr…
 Detta får en att undra…
 Är det bara charm, eller en diskret förmåga att villigt skapa kaos?
 `,
+  },
+  {
+    date: "27/3/2026",
+    text: `Vissa människor verkar ha väldigt svårt att förstå skillnaden mellan nyfikenhet… och att lägga sig i sådant som aldrig angått dem från början.
+Vår kära Alice verkar i alla fall ha gjort det till sitt lilla kvällsnöje att springa runt och leta efter hemligheter där det kanske inte ens finns några. Frågor ställs lite för ofta. Blickar dröjer lite för länge. Och plötsligt känns det som att varje konversation förvandlas till ett förhör.
+Det märkliga?
+De som letar hårdast efter andras problem brukar vara de som försöker fly från sina egna.
+För säg mig, Alice… vad exakt hoppas du hitta när du river i historier som inte tillhör dig?
+Och ännu viktigare — vad händer den dagen någon börjar gräva tillbaka?`,
   },
 ];
 
