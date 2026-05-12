@@ -18,23 +18,26 @@
   flex-direction: column;
   align-items: center;
   overflow: scroll;
+  padding: 20px;
 }
 
 #WelcomeText,
 #introText,
-#welcomeSection1,
+#welcomeSection1, #welcomeSection3, #welcomeSection2, #welcomeSection4,
 #universityTitle {
   color: #dd9c4c;
+  font-family: "didact gothic";
+
 }
 
 #WelcomeText {
   font-family: "imperial script";
+  font-size: 38px;
 }
 
-#introText,
-#welcomeSection1,
-#universityTitle {
-  font-family: "didact gothic";
+#howToPlay, #universityTitle{
+  font-family: "bodondiItalic";
+  font-size: 24px;
 }
 
 #imgContainer {
@@ -66,6 +69,10 @@
   background-color: #f8e1cd;
   border: none;
   cursor: pointer;
+}
+
+.instagramPasswordAlice{
+  color: rgb(228, 127, 4);
 }
 
 @media (max-width: 767px) {
