@@ -55,6 +55,7 @@
 #nextButtonMoment:hover{
     background-color: #F8E1CD;
     border: none;
+    cursor: pointer;
 
 }
 

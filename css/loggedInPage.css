@@ -52,6 +52,7 @@
 
 #nextButton:hover {
   background-color: #f8e1cd;
+  cursor: pointer;
 }
 
 @media (max-width: 767px){
