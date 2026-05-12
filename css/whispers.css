@@ -1,140 +1,147 @@
 #allGossipsContainer {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #boxGossip {
-  margin-top: 90px;
+    margin-top: 90px;
 }
 
 .whisperGossipsBox {
-  background-color: #f8e1cd;
-  padding: 20px 40px;
-  margin-bottom: 10px;
-  border-radius: 10px;
-  width: 630px;
+    background-color: #f8e1cd;
+    padding: 20px 40px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    width: 630px;
 }
 
 #containerGossip {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 50px;
-  padding: 50px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+    padding: 50px 30px;
 
-  width: 100%;
+    width: 100%;
 }
 
 .boxGossip {
-  background-color: #f8e1cd;
-  border-radius: 10px;
-  padding: 20px;
-  width: 30%;
+    background-color: #f8e1cd;
+    border-radius: 10px;
+    padding: 20px;
+    width: 30%;
 }
 
 .textGossip {
-  font-family: "bodondi72";
+    font-family: "bodondi72";
 }
 
 .xoxoText {
-  font-family: "imperial script";
+    font-family: "imperial script";
 }
 
 #containerPages {
-  display: flex;
-  justify-content: space-between;
-  width: 30%;
-  align-items: center;
-  margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
 .textPages {
-  display: block;
-  color: #dd9c4c;
-  font-family: "bodondi72";
-  width: 33%;
-  text-align: center;
+    display: block;
+    color: #dd9c4c;
+    font-family: "bodondi72";
+    width: 33%;
+    text-align: center;
 }
 
 .dateText {
-  text-align: end;
-  font-family: "didact gothic";
-  font-size: 11px;
-  color: #67635e;
+    text-align: end;
+    font-family: "didact gothic";
+    font-size: 11px;
+    color: #67635e;
 }
 
 .gossipText {
-  font-family: "bodondi";
+    font-family: "bodondi";
 }
 
 .senderText {
-  font-family: "imperial script";
+    font-family: "imperial script";
 }
 
 #containerPages {
-  display: flex;
-  width: 630px;
-  color: #dd9c4c;
-  justify-content: space-between;
-  align-items: center;
-  font-family: "bodondi72";
-  margin-bottom: 250px;
-  margin-top: 40px;
+    display: flex;
+    width: 630px;
+    color: #dd9c4c;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "bodondi72";
+    margin-bottom: 250px;
+    margin-top: 40px;
 }
 
 #whisperPageTitle {
-  display: none;
+    display: none;
 }
 
 #mobileOnly {
-  display: none;
+    display: none;
 }
 
 #countdownDiv {
-  display: none;
-  padding: 0px 30px;
-  background-color: #f8e1cd;
-  right: 30px;
-  top: 140px;
-  border-radius: 10px;
-  border: 1px solid black;
-  font-family: "didact gothic";
+    display: none;
+    background-color: #F8E1CD;
+    right: 30px;
+    top: 140px;
+    border-radius: 10px;
+    border: 1px solid black;
+    font-family: "didact gothic";
+    position: absolute;
+    z-index: 10;
+    padding: 10px 30px;
+    font-size: 20px;
+}
+
+#countdownDiv p {
+    display: inline;
 }
 
 #klicka {
-  color: aqua;
+    color: aqua;
 }
 
 @media (max-width: 767px) {
-  #mobileOnly {
-    display: initial;
-    font-size: 20px;
-    font-family: "bodondi72";
-    color: #cd9c72;
-    width: 90%;
+    #mobileOnly {
+        display: initial;
+        font-size: 20px;
+        font-family: "bodondi72";
+        color: #cd9c72;
+        width: 90%;
 
-    /* color: #dd9c4c;
+        /* color: #dd9c4c;
         font-size: 30px;
         font-family: "bodondi72"; */
-    /* margin-bottom: 0; */
-  }
+        /* margin-bottom: 0; */
+    }
 
-  header {
-    background-image: none;
-  }
+    header {
+        background-image: none;
+    }
 
-  .boxGossip {
-    width: 80%;
-  }
+    .boxGossip {
+        width: 80%;
+    }
 
-  #containerPages {
-    width: 100%;
-  }
+    #containerPages {
+        width: 100%;
+    }
 
-  #containerGossip {
-    padding: 10px 10px;
-  }
+    #containerGossip {
+        padding: 10px 10px;
+    }
 }

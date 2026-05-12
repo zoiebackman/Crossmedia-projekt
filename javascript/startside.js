@@ -12,6 +12,7 @@ let hamburgerMenu = document.getElementById("hamburgerMenu");
 let loginButton = document.getElementById("logIn");
 let headerDivLoggo = document.getElementById("headerDivLogo");
 let currentPage;
+let timerIsActivated = false;
 // let currentWhisperCounterIndex = 0;
 
 const pictures = [
@@ -47,6 +48,8 @@ const pictures = [
   "../pictures/picturesPage/27.png",
   "../pictures/picturesPage/28.png",
 ];
+
+
 
 function homePage() {
   headerDivLoggo.innerHTML = ``;
@@ -132,9 +135,11 @@ function homePage() {
   allPicturesButton.addEventListener("click", () => {
     picturesPage();
   });
-}
 
-welcomeNav.addEventListener("click", welcomeFun);
+  if (timerIsActivated == true) {
+    countdownDiv.style.display = "inital";
+  }
+}
 
 function welcomeFun() {
   main.innerHTML = ``;
@@ -149,10 +154,10 @@ function welcomeFun() {
             <p id="welcomeInstructions">I det här spelet är din mobil och din förmåga att lägga pussel dina viktigaste verktyg. För att rentvå ditt namn och hitta personen bakom skandalbloggen måste du navigera genom följande:</p>
 
             <ul>
-                <li><strong>Granska sociala medier: </strong> Håll koll på Instagram-stories, inlägg och kommentarer. Varje bild kan innehålla en detalj som andra missat.</li>
+                <li><strong>Granska sociala medier:</strong> Håll koll på Instagram-stories, inlägg och kommentarer. Varje bild kan innehålla en detalj som andra missat.</li>
                 <li><strong>Hitta ledtrådar i verkligheten: </strong> Besök fysiska platser på campus, såsom biblioteket, kaféet och Niagaras tak. Letar du noga kan du hitta allt från kvarglömda böcker till gömda lösenord.</li>
-                <li><strong>Kartläggning: </strong> Genom att hitta användarnamn och lösenord får du tillgång till privata chattar och dolda sidor. Men var försiktig – det du hittar kan förändra din bild av dina klasskamrater för alltid.</li>
-                <li><strong>Dra slutsatser: </strong> Koppla ihop koordinater, trasiga fotografier och anonyma tips för att lista ut vem som egentligen pratar med vem – och varför.</li>
+                <li><strong>:Kartläggning </strong> Genom att hitta användarnamn och lösenord får du tillgång till privata chattar och dolda sidor. Men var försiktig – det du hittar kan förändra din bild av dina klasskamrater för alltid.</li>
+                <li>strong>Dra slutsatser: </strong> Koppla ihop koordinater, trasiga fotografier och anonyma tips för att lista ut vem som egentligen pratar med vem – och varför.</li>
             </ul>
         </div>
           <h3 id="universityTitle">Fastighetsförmedling ME2024</h3>
@@ -181,12 +186,8 @@ function goToWhisperPage() {
   headerDivLogo.style.width = "auto";
 
   main.innerHTML = `
-
   <p id= "mobileOnly">Alla Viskningar</p>
-  <div id="countdownDiv"></div>
   <div id="containerGossip">
-
-      
   </div>
   <div id="containerPages">
   <p id= "klicka">KLICKAA</p>
@@ -211,18 +212,19 @@ function goToWhisperPage() {
 
   let klicka = document.getElementById("klicka");
 
+
   klicka.addEventListener("click", () => {
     // if (currentWhisperCounterIndex < whisperArray.length) {
     //   pushToArray(whisperArray[currentWhisperCounterIndex])
     //   currentWhisperCounterIndex++;
-
+    timerIsActivated = true;
     let intervalId;
 
     let countdownDiv = document.getElementById("countdownDiv");
     countdownDiv.innerHTML += `
     <p> <span id ="timeMin"> 10 </span> : <span id ="timeSec"> 00 </span>  </p> 
     `;
-    countdownDiv.style.position = "absolute";
+    countdownDiv.style.display = "initial";
 
     let timeWhenStart = 600; //10 min
 
@@ -239,6 +241,8 @@ function goToWhisperPage() {
         }
       } else if (timeWhenStart == 0) {
         clearInterval(intervalId);
+        timerIsActivated = false;
+
       }
     }, 1000);
   });
