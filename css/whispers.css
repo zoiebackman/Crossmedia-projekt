@@ -37,6 +37,14 @@
 
 }
 
+.textGossip {
+    font-family: "bodondi72";
+}
+
+.xoxoText {
+    font-family: "imperial script";
+}
+
 
 #containerPages {
     display: flex;
