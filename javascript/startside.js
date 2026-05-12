@@ -149,16 +149,76 @@ function welcomeFun() {
         <p id="introText">Terminen har precis börjat på Malmö universitet, men istället för att fokusera på fastighetsrätt och kundmöten har du vaknat upp till din värsta mardröm. Baksmällan från gårdagens fest på Niagaras takvåning är ingenting jämfört med den ångest som sköljer över dig när du ser ditt namn pryda rubrikerna på MAU Gossip. Du är Alice. Du brukar hålla dig i bakgrunden, men nu är du indragen i ett nät av lögner, hemligheter och maktspel som styrs av Malmös absoluta elit. Ditt rykte och din framtida karriär står på spel.</p>
 
         <div id="welcomeSection1">
-            <h2 id="howToPlay">Så här spelar du:</h2>
-            <p id="welcomeInstructions">I det här spelet är din mobil och din förmåga att lägga pussel dina viktigaste verktyg. För att rentvå ditt namn och hitta personen bakom skandalbloggen måste du navigera genom följande:</p>
+            <h2 id="howToPlay">Du som spelare är Alice </h2>
+            <p id="welcomeInstructions">Du heter Alice, är 24 år gammal och går på fastighetsförmedlingsprogrammet på Malmö universitet.
+              Du valde utbildningen för att skapa en stabil framtid. Du tar dina studier på allvar, jobbar extra vid sidan av och hoppas på att få en riktigt bra praktikplats efter terminen.
+            </p>
+            <p class="welcomeTextInfo">Till skillnad från många andra i din klass kommer du inte från pengar, kontakter eller en självklar plats i det sociala spelet.
+              Du håller dig mest för dig själv.
+              Observerar mer än du pratar.<br><br>
+
+              Och det har alltid fungerat.<br><br>
+
+              Du kommer att få tillgång till din (Alice) instagram:</p>
+
+            <p class="instagramPasswordAlice"><strong>Användarnamn: alicemagdalenabjorklund <br>Lösenord: Hej123456</strong> </p>
+        </div>
+
+        <div id="welcomeSection2">
+          <h2 id="howToPlay">Malmö Universitets Elit</h2>
+          <p id="welcomeInstructions">På utbildningen finns en grupp som alla känner till.  
+            De kallas, halvt på skämt och halvt på allvar, för - <strong>“Malmö Universitets Elit"</strong>.
+            De styr inte bara stämningen i klassen, de styr vad folk tycker, vem som passar in och vem som inte gör det.
+          </p>
 
             <ul>
-                <li><strong>Granska sociala medier:</strong> Håll koll på Instagram-stories, inlägg och kommentarer. Varje bild kan innehålla en detalj som andra missat.</li>
-                <li><strong>Hitta ledtrådar i verkligheten: </strong> Besök fysiska platser på campus, såsom biblioteket, kaféet och Niagaras tak. Letar du noga kan du hitta allt från kvarglömda böcker till gömda lösenord.</li>
-                <li><strong>:Kartläggning </strong> Genom att hitta användarnamn och lösenord får du tillgång till privata chattar och dolda sidor. Men var försiktig – det du hittar kan förändra din bild av dina klasskamrater för alltid.</li>
-                <li>strong>Dra slutsatser: </strong> Koppla ihop koordinater, trasiga fotografier och anonyma tips för att lista ut vem som egentligen pratar med vem – och varför.</li>
+              <li><strong>Maja</strong> - 23 år gammal och går mäklar-linjen på Malmö universitet. Den populära tjejen i klassen, alla på skolan vet vem hon är och är dessutom dotter till ägaren av Trianon.</li>
+              <li><strong>Lovisa</strong> - 23 år gammal och är en populär tjej, men inte lika populär som sin bästa vän Maja. Hon går mäklar-linjen på Malmö universitet och är dotter till ägaren av SBB. </li>
+              <li><strong>Leon</strong> - 24 år gammal och är den charmiga och självsäkra killen i klassen som älskar uppmärksamhet, även om det är från andra tjejer än sin flickvän Maja. Leon går också på mäklar-linjen och är son till ägaren av Volito.</li>
+              <li><strong>Calle</strong> - 23 år gammal och går på mäklar-linjen på Malmö universitet. Han är bästa vän med Leon och älskar att festa.</li>
             </ul>
-        </div>
+
+            <p id="welcomeInstructions">Utåt sett är de perfekta. Men alla har något att dölja. 
+              Och någon… vet vad de döljer…
+            </p>
+            </div>
+
+            <div id="welcomeSection3">
+          <h2 id="howToPlay">Där spelet börjar</h2>
+           <p id="welcomeInstructions">En ny sida har dykt upp:
+            <strong>MAU Gossip</strong> <br><br> En anonym blogg där någon publicerar rykten om studenter på universitetet.
+              Du vet en sak:
+              Om du inte tar reda på sanningen kommer någon annan att skriva den åt dig.
+            </p>
+            </div>
+            <div id="welcomeSection4">
+            <h2 id="howToPlay">Regler / Rekommendationer </h2>
+            <p id="welcomeInstructions">Det här är en berättelse som utspelar sig på flera plattformar.
+              Två av dem kommer vara viktigast för dig:
+            </p>
+
+            <ul>
+            <li><strong>Instagram</strong> - där du lär känna karaktärerna, deras relationer och hur de vill framstå</li>
+            <li><strong>MAU Gossip</strong> - där rykten, hemligheter och anonyma tips publiceras</li>
+            </ul>
+
+            <p id="welcomeInstructions">Men sanningen finns aldrig bara på ett ställe.
+              För att förstå vad som faktiskt har hänt behöver du också vara uppmärksam på annat:
+            </p>
+            
+            <ul>
+              <li>Bilder från festen</li>
+              <li>Kommentarer och gamla inlägg</li>
+              <li>Privata meddelanden</li>
+              <li>Lösenord och användarnamn du hittar</li>
+              <li>Små detaljer som inte verkar viktiga vid första anblick</li>
+            </ul>
+
+            <p id="welcomeInstructions">Ta inte med någon av ledtrådarna från platsen. Låt dem ligga kvar där du hittade dem så att nästa person också kan genomföra spelet. Om du vill får du gärna fotografera dem istället. <br><br>
+              Ibland säger det som saknas mer än det som syns… 
+            </p>
+               <p id="welcomeInstructions"><strong>XOXO… </strong></p>
+            </div>
           <h3 id="universityTitle">Fastighetsförmedling ME2024</h3>
         <div id="imgContainer"></div>
         <button id="startButton">Start</button>
