@@ -1,179 +1,111 @@
-body {
-  overflow: scroll;
-} 
-
-#popUpContainer {
-  overflow: scroll;
-  width: 1200px;
-  height: 100vh;
+#welcomeContainer {
+  width: 80%;
   background-color: #311e29;
-  position: fixed;
-  top: 20px;
-  left: 40px;
-  right: 40px;
-  z-index: 1000;
   border-radius: 10px;
-  box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.2);
-  display: block;
-} 
 
-#textBox {
-  width: 1000px;
-  margin-left: 80px;
-  color: #dd9c4c;
-  font-family: "didact gothic";
-  font-size: 18px;
+  position: absolute;
+  top: 20px;
+  left: 80px;
+  padding: 50px;
+
+  box-shadow: 0 10px 30px rgba(140, 135, 135, 0.5);
+
+  overflow: scroll;
 }
 
-#headerText {
-  margin-bottom: 5px;
+#welcomeWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: scroll;
+}
+
+#WelcomeText,
+#introText,
+#welcomeSection1,
+#universityTitle {
+  color: #dd9c4c;
+}
+
+#WelcomeText {
   font-family: "imperial script";
-  color: #dd9c4c;
-  text-align: center;
-  font-size: 48px;
 }
 
-#storyText {
-  text-align: left;
-}
-
-#textBox2 h3 {
-  text-align: left;
-  margin-bottom: 0;
+#introText,
+#welcomeSection1,
+#universityTitle {
   font-family: "didact gothic";
-  margin-left: 40px;
-}
-
-#textBox2 p {
-  text-align: left;
-  margin-top: 0;
-  margin-left: 40px;
-  font-family: "didact gothic";
-  font-size: 16px;
-}
-
-#textBox2 ul {
-  font-size: 16px;
-  margin-left: 40px;
-  text-align: left;
-  font-family: "didact gothic";
-  width: 800px;
 }
 
 #imgContainer {
   background-image: url(../pictures/Gemini_Generated_Image_xfggrnxfggrnxfgg.png);
+  background-position: contain;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 600px;
-  height: 300px;
-  margin-left: 300px;
-  border-radius: 5px;
-  margin-bottom: 80px;
-}
+  border-radius: 10px;
 
-#universityTitle {
-  color: #dd9c4c;
-  text-align: center;
-  font-family: "didact gothic";
-  margin-bottom: 10px;
+  width: 80%; /* Eller t.ex. 300px */
+  height: 400px; /* Justera höjden efter behov */
+  margin: 20px 0;
 }
 
 #startButton {
-  width: 128px;
+  margin-left: 80%;
+  margin-bottom: 50px;
+  border: none;
+  width: 120px;
   height: 47px;
   background-color: #dd9c4c;
-  color: "didact gothic";
-  border: none;
+  font-family: "didact gothic";
   border-radius: 10px;
-  margin-bottom: 80px;
+  font-size: 16px;
+  margin-top: 20px;
 }
 
 #startButton:hover {
   background-color: #f8e1cd;
+  border: none;
 }
 
 @media (max-width: 767px) {
-  #popUpContainer {
-    overflow: auto;
-    padding: 20px;
-    background-color: #311e29;
-    width: 100%;
-    margin: 0;
-    position: relative;
-    /* top: 20px;
-    bottom: 20px;
-    left: 20px;
-    right: 20px; */
-    box-shadow: none;
+  #welcomeContainer {
+    width: 90%;
+    margin-top: 50px;
+
+    position: absolute;
+    left: 15px;
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+
+    box-shadow: 0 10px 30px rgba(140, 135, 135, 0.5);
   }
 
-  #headerText {
-    font-size: 24px;
-    font-family: "imperial script";
-    text-align: center;
-    margin-bottom: 5px;
+  #WelcomeText {
+    font-size: 20px;
+  }
+
+  #introText,
+  #welcomeSection1,
+  #universityTitle,
+  #howToPlay {
+    font-size: 14px;
   }
 
   #imgContainer {
-    width: 80%;
-    height: 40vh;
-    border-radius: 10px;
-    background-size: cover;
-    margin: 0 auto 10px auto;
     background-repeat: no-repeat;
-    background-position: center;
-  }
+    background-size: cover;
+    border-radius: 10px;
 
-  #textBox2 ul {
     width: 80%;
-    margin-left: 0;
-    padding: 5px;
-    box-sizing: border-box;
-  }
-  #textBox2 {
-    width: 80%;
-    margin-left: 0;
-    padding: 5px;
-    box-sizing: border-box;
-  }
-  #textBox ul {
-    width: 80%;
-    margin-left: 0;
-    padding: 5px;
-    box-sizing: border-box;
-  }
-
-  #howToPlay h3 {
-    font-size: 14px;
-    margin-left: 0px;
-  }
-
-  #howToPlay li p {
-    font-size: 12px;
-    width: 80%;
-    margin-left: 0px;
-  }
-
-  #howToPlay ul {
-    font-size: 12px;
-    width: 90%;
-    margin-left: -10px;
-  }
-
-  #storyText {
-    font-size: 14px;
-    font-family: "didact gothic";
-    margin: 0;
-  }
-
-  #universityTitle {
-    font-size: 14px;
-    text-align: left;
-    margin-left: 50px;
+    height: 80px;
   }
 
   #startButton {
     width: 100px;
-    margin-top: 20px;
+    height: 36px;
+    margin-top: 10px;
+    margin-left: 5%;
   }
 }
