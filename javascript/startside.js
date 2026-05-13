@@ -350,10 +350,20 @@ function pushToArray(whisperArray) {
     JSON.parse(localStorage.getItem("whisperArrayOnPageLocal")) || [];
 
   console.log(whisperArray);
-  whisperArrayOnPageLocal.push({
-    date: whisperArray.date,
-    text: whisperArray.text,
-  });
+  if (whisperArray.picUrl) {
+    whisperArrayOnPageLocal.push({
+      date: whisperArray.date,
+      text: whisperArray.text,
+      picUrl: whisperArray.picUrl
+    });
+  } else {
+    whisperArrayOnPageLocal.push({
+      date: whisperArray.date,
+      text: whisperArray.text,
+    });
+
+  }
+
   localStorage.setItem(
     "whisperArrayOnPageLocal",
     JSON.stringify(whisperArrayOnPageLocal),
@@ -398,11 +408,10 @@ function renderPage(currentPage) {
     boxGossipDiv.innerHTML = `
       <p class="dateText">${post.date}</p>
       <p class="textGossip">${post.text}</p>
-      <p class="xoxoText">XOXO</p>
        ${post.picUrl ? `<img id="imgGossip" src="${post.picUrl}" alt="" />` : ""}
   <p class="xoxoText">XOXO</p>
-
     `;
+    console.log(post.picUrl)
     containerGossip.prepend(boxGossipDiv);
   });
 }
