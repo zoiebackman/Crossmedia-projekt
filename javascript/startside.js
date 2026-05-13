@@ -184,6 +184,10 @@ function goToWhisperPage() {
   headerDivLogo.style.backgroundImage = "none";
   headerDivLogo.classList.add("headerText");
   headerDivLogo.style.width = "auto";
+  headerDivLoggo.innerHTML = `Alla viskningar`;
+  headerDivLoggo.style.backgroundImage = "none";
+  headerDivLoggo.classList.add("headerText");
+  headerDivLoggo.style.width = "auto";
 
   main.innerHTML = `
   <p id= "mobileOnly">Alla Viskningar</p>
@@ -338,6 +342,9 @@ function renderPage(currentPage) {
       <p class="dateText">${post.date}</p>
       <p class="textGossip">${post.text}</p>
       <p class="xoxoText">XOXO</p>
+       ${post.picUrl ? `<img id="imgGossip" src="${post.picUrl}" alt="" />` : ""}
+  <p class="xoxoText">XOXO</p>
+
     `;
     containerGossip.prepend(boxGossipDiv);
   });
