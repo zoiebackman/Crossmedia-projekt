@@ -35,6 +35,12 @@
     width: 30%;
 }
 
+.titleBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 .textGossip {
     font-family: "bodondi72";
 }
@@ -81,7 +87,7 @@
     justify-content: space-between;
     align-items: center;
     font-family: "bodondi72";
-    margin-bottom: 250px;
+    /* margin-bottom: 250px; */
     margin-top: 40px;
 }
 
@@ -93,23 +99,75 @@
     display: none;
 }
 
-#countdownDiv {
+#lockDiv {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 50%;
+    background-color: #54312f;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #dd9c4c;
+    margin-top: 10px;
+
+
+}
+
+.shown {
+    display: flex;
+}
+
+#lockDiv.hidden {
     display: none;
-    background-color: #F8E1CD;
-    right: 30px;
-    top: 140px;
+}
+
+#lockMessage {
+    color: red;
+    margin: 0px;
+    font-family: "bodondi72";
+    font-size: 13px;
+}
+
+#groupLock {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#passwordInput {
     border-radius: 10px;
     border: 1px solid black;
     font-family: "didact gothic";
-    position: absolute;
-    z-index: 10;
-    padding: 10px 30px;
-    font-size: 20px;
+    padding: 10px 10px;
+    font-size: 15px;
+    text-align: start;
+    border: 1px solid #dd9c4c;
+    background-color: #d9d9d9;
+    opacity: 0.3;
 }
 
-#countdownDiv p {
+#unlockButton {
+    background-color: #DD9C4C;
     display: inline;
+    padding: 5px 10px;
+    border-radius: 5px;
+    width: 40%;
+    text-align: center;
+    color: black;
+    font-family: "bodondi72";
+    font-size: 15px;
 }
+
+#lockText {
+    font-family: "imperial script";
+    font-size: 31px;
+    margin: 0px;
+    color: red;
+    color: #dd9c4c;
+}
+
+
 
 #klicka {
     color: aqua;
@@ -119,6 +177,19 @@
     height: 400px;
     width: 300px;
     object-fit: contain;
+}
+
+#imgLock {
+    height: 70px;
+    object-fit: contain;
+}
+
+#containerDown {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
 }
 
 @media (max-width: 767px) {

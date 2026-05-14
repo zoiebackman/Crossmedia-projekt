@@ -1,5 +1,6 @@
 let whisperArray = [
     {
+        id: 1,
         date: getTodaysDate(),
         text: `Ibland händer de mest intressanta sakerna mitt framför ögonen på folk… utan att de märker något alls. Festen på  <strong>Niagaras takterrass </strong> igår kväll verkade bli en hit hos de flesta…
 
@@ -9,6 +10,7 @@ Så frågan är… är vissa hemligheter skickligare på att gömma sig än andr
         password: ""
     },
     {
+        id: 2,
         date: getTodaysDate(),
         text: `Det verkar som att någon i lärarrummet kanske borde läsa igenom skolans regler en gång till. En viss lärare, låt oss kalla honom “Mr. B”, har tydligen blivit lite för populär hos en elev.
 
@@ -19,6 +21,7 @@ Men i korridorer där rykten rör sig snabbare än schemabyten… undrar man bar
         password: "HJKA"
     },
     {
+        id: 3,
         date: getTodaysDate(),
         text: `Det är alltid spännande när någon lite… äldre dyker upp på studentfester.
 Speciellt när personen verkar känna sig väldigt bekväm.
@@ -33,6 +36,7 @@ hur länge de håller sig hemliga?
         password: "HJKA"
     },
     {
+        id: 4,
         date: getTodaysDate(),
         text: `Det är alltid fascinerande hur vissa människor lyckas vara på exakt rätt plats… lite för ofta.
 Vår annars så diskreta Alice verkar ha haft en ganska intressant kväll på Niagara.
@@ -50,6 +54,7 @@ XOXO” (Gå till NI:A0606 för nästa viskning)
         password: "UTRC"
     },
     {
+        id: 5,
         date: getTodaysDate(),
         text: `Alla älskar någon som lyckas ta sig uppåt.
 Från bibliotekets tysta hörn till stadens lite mer… exklusiva bord.
@@ -64,6 +69,7 @@ XOXO” (Gå till NI:A0322 för nästa viskning)
         password: "GLBN"
     },
     {
+        id: 6,
         date: getTodaysDate(),
         text: `Alla historier börjar någonstans.
 Vissa börjar på takvåningar och studentfester.
@@ -76,6 +82,7 @@ vad exakt är det han jobbar på så sent om kvällarna?
         picUrl: `../pictures/gissipinlägg6bild.jpg`,
     },
     {
+        id: 7,
         date: getTodaysDate(),
         text: `Det är inte alltid så smart att veta allas privatliv… Speciellt när man själv bär på hemligheter och har mycket att förlora.
 Frågan är bara…
@@ -84,6 +91,7 @@ Frågan är bara…
         password: "CCJD"
     },
     {
+        id: 8,
         date: getTodaysDate(),
         text: `Vissa tror att sanningen försvinner lika lätt som att papper går sönder… men i den här staden har minnen en tendens att överleva ändå.
 En bild som rivs sönder i små bitar lite för snabbt, lite för aggressivt,
@@ -96,6 +104,7 @@ Så säg mig… försökte någon gömma ett misstag — eller undanröja en hem
         password: "XWSH"
     },
     {
+        id: 9,
         date: getTodaysDate(),
         text: `Vissa människor tror att de kan smälta in…
  men vissa kvällar bevisar att de verkligen inte alls kan hålla sig i bakgrunden.
@@ -112,6 +121,7 @@ Detta får en att undra…
         password: "CBCB"
     },
     {
+        id: 10,
         date: getTodaysDate(),
         text: `Vissa människor verkar ha väldigt svårt att förstå skillnaden mellan nyfikenhet… och att lägga sig i sådant som aldrig angått dem från början.
 Vår kära Alice verkar i alla fall ha gjort det till sitt lilla kvällsnöje att springa runt och leta efter hemligheter där det kanske inte ens finns några. Frågor ställs lite för ofta. Blickar dröjer lite för länge. Och plötsligt känns det som att varje konversation förvandlas till ett förhör.

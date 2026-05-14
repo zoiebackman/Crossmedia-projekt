@@ -12,7 +12,6 @@ let hamburgerMenu = document.getElementById("hamburgerMenu");
 let loginButton = document.getElementById("logIn");
 let headerDivLoggo = document.getElementById("headerDivLogo");
 let currentPage;
-let timerIsActivated = false;
 // let currentWhisperCounterIndex = 0;
 
 const pictures = [
@@ -135,9 +134,7 @@ function homePage() {
     picturesPage();
   });
 
-  if (timerIsActivated == true) {
-    countdownDiv.style.display = "inital";
-  }
+
 }
 
 function welcomeFun() {
@@ -248,44 +245,109 @@ function goToWhisperPage() {
   let currentWhisperCounterIndex = whisperArrayOnPageLocal.length;
   console.log(whisperArrayOnPageLocal)
 
+  let correctPasswordArrayLocal =
+    JSON.parse(localStorage.getItem("correctPasswordArrayLocal")) || [];
+
+
+
   main.innerHTML = `
   <p id= "mobileOnly">Alla Viskningar</p>
   <div id="containerGossip">
   <div class = "boxGossip"> 
+    <div class = "titleBox"> 
+   <p class="dateText"> ${getTodaysDate()}</p>
+   <p class="dateText"> Viskning ${whisperArray[0].id} </p>
+   </div>
              ${currentWhisperCounterIndex == 0 ? ` <p class = "textGossip"> ${whisperArray[0].text}</p> alt="" />` : ""}
-   <p class = "textGossip"> hej</p>
    <p class="xoxoText"> XOXO</p>
   </div>
   </div>
+  <div id=containerDown> 
   <div id="containerPages">
-  <p id= "klicka">KLICKAA</p>
     <p class="textPages" id="previousPage">Föregående sida</p>
     <p class="textPages" id="pageNum">${currentPage}</p>
     <p class="textPages" id="nextPage">Nästa sida</p>
+    </div>
+    <img id="imgLock" src="../pictures/lockpic.png"
   </div>
   `;
 
-  renderPage(currentPage);
 
   if (currentWhisperCounterIndex == 0) {
     pushToArray(whisperArray[currentWhisperCounterIndex]);
     currentWhisperCounterIndex++;
   }
+  console.log(whisperArrayOnPageLocal.length)
+  renderPage(currentPage);
+  console.log(whisperArrayOnPageLocal.length)
 
   let containerGossip = document.getElementById("containerGossip");
   containerGossip.style.display = "flex";
   let previousPage = document.getElementById("previousPage");
   let nextPage = document.getElementById("nextPage");
   let pageNum = document.getElementById("pageNum");
-  let klicka = document.getElementById("klicka");
+  let whisperLock = document.getElementById("imgLock")
+  let containerDown = document.getElementById("containerDown");
 
-  klicka.addEventListener("click", () => {
-    pushToArray(whisperArray[currentWhisperCounterIndex]);
-    currentWhisperCounterIndex++;
-    renderPage(currentPage);
-  })
+  whisperLock.addEventListener("click", () => {
+    let lockDiv = document.getElementById("lockDiv");
+
+    // Om div-en INTE finns i HTML-dokumentet, skapa den nu
+    if (!lockDiv) {
+      showLockDiv();
+    } else {
+      // Om den redan finns, bara växla (toggle) klassen
+      lockDiv.classList.toggle("hidden");
+    }
+  });
+
+  function showLockDiv() {
+    let lockDiv = document.createElement("div");
+    lockDiv.id = "lockDiv";
+
+    lockDiv.innerHTML = `
+    <p id="lockText">Lås upp nästa viskning..</p>
+    <input id="passwordInput" type="text" placeholder="Lösenord..." />
+    <div id="groupLock"> 
+      <button id="unlockButton">Lås upp</button>
+      <p id="lockMessage"></p>
+    </div>
+  `;
+    containerDown.appendChild(lockDiv);
 
 
+    let passwordInput = document.getElementById("passwordInput");
+    let unlockButton = document.getElementById("unlockButton");
+    let errorMessage = document.getElementById("lockMessage");
+
+    unlockButton.addEventListener("click", () => {
+      let currentCorrectPassword = whisperArray[currentWhisperCounterIndex].password;
+
+      if (passwordInput.value != currentCorrectPassword) {
+        errorMessage.textContent = "Fel kod tyvärr, fortsätt leta."
+      }
+      else {
+        errorMessage.textContent = ""
+        lockDiv.classList.toggle("hidden");
+
+        if (whisperArray[currentWhisperCounterIndex].id == 2) {
+          pushToArray(whisperArray[currentWhisperCounterIndex]);
+          currentWhisperCounterIndex++;
+
+          renderPage(currentPage);
+
+          pushToArray(whisperArray[currentWhisperCounterIndex]);
+          currentWhisperCounterIndex++;
+        }
+        else {
+          pushToArray(whisperArray[currentWhisperCounterIndex]);
+          currentWhisperCounterIndex++;
+        }
+        renderPage(currentPage);
+
+      }
+    })
+  }
 
   nextPage.addEventListener("click", () => {
     let maxPage = Math.ceil(whisperArrayOnPageLocal.length / 3);
@@ -317,9 +379,11 @@ function pushToArray(whisper) {
     JSON.parse(localStorage.getItem("whisperArrayOnPageLocal")) || [];
 
   whisperArrayOnPageLocal.push({
+    id: whisper.id,
     date: whisper.date,
     text: whisper.text,
-    picUrl: whisper.picUrl || null
+    picUrl: whisper.picUrl || null,
+    password: whisper.password
   });
 
 
@@ -329,6 +393,9 @@ function pushToArray(whisper) {
     JSON.stringify(whisperArrayOnPageLocal),
   );
   renderPage(currentPage);
+
+  console.log(whisperArrayOnPageLocal.length)
+
 }
 
 function renderPage(currentPage) {
@@ -347,9 +414,12 @@ function renderPage(currentPage) {
     // console.log(post)
     let boxGossipDiv = document.createElement("div");
     boxGossipDiv.classList.add("boxGossip");
-
+    console.log(post)
     boxGossipDiv.innerHTML = `
+    <div class = "titleBox"> 
+       <p class="dateText"> Viskning ${post.id} </p>
       <p class="dateText">${post.date}</p>
+      </div>
       <p class="textGossip">${post.text}</p>
        ${post.picUrl ? `<img id="imgGossip" src="${post.picUrl}" alt="" />` : ""}
   <p class="xoxoText">XOXO</p>
