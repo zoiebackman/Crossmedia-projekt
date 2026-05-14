@@ -238,19 +238,28 @@ function goToWhisperPage() {
   document.body.classList.remove("homePage"); //ifall den fuckas i mobilvy med att den hoppar upp!!
   let totalWhisperPosts;
   currentPage = 1;
+  let currentPostIndex = 0;
 
-  headerDivLogo.innerHTML = `Alla viskningar`;
-  headerDivLogo.style.backgroundImage = "none";
-  headerDivLogo.classList.add("headerText");
-  headerDivLogo.style.width = "auto";
+
+
   headerDivLoggo.innerHTML = `Alla viskningar`;
   headerDivLoggo.style.backgroundImage = "none";
   headerDivLoggo.classList.add("headerText");
   headerDivLoggo.style.width = "auto";
 
+  let whisperArrayOnPageLocal =
+    JSON.parse(localStorage.getItem("whisperArrayOnPageLocal")) || [];
+  let currentWhisperCounterIndex = whisperArrayOnPageLocal.length;
+  console.log(whisperArrayOnPageLocal)
+
   main.innerHTML = `
   <p id= "mobileOnly">Alla Viskningar</p>
   <div id="containerGossip">
+  <div class = "boxGossip"> 
+             ${currentWhisperCounterIndex == 0 ? ` <p class = "textGossip"> ${whisperArray[0].text}</p> alt="" />` : ""}
+   <p class = "textGossip"> hej</p>
+   <p class="xoxoText"> XOXO</p>
+  </div>
   </div>
   <div id="containerPages">
   <p id= "klicka">KLICKAA</p>
@@ -260,68 +269,31 @@ function goToWhisperPage() {
   </div>
   `;
 
+  renderPage(currentPage);
+  if (currentWhisperCounterIndex == 0) {
+    pushToArray(whisperArray[currentWhisperCounterIndex]);
+    currentWhisperCounterIndex++;
+
+  }
   let containerGossip = document.getElementById("containerGossip");
   containerGossip.style.display = "flex";
   let previousPage = document.getElementById("previousPage");
   let nextPage = document.getElementById("nextPage");
   let pageNum = document.getElementById("pageNum");
 
-  let whisperArrayOnPageLocal =
-    JSON.parse(localStorage.getItem("whisperArrayOnPageLocal")) || [];
-  let currentWhisperCounterIndex = whisperArrayOnPageLocal.length;
-
-  //hämtar localStorage när man kommer tillbaka till sidan.
-  renderPage(currentPage);
 
   let klicka = document.getElementById("klicka");
 
   klicka.addEventListener("click", () => {
-    // if (currentWhisperCounterIndex < whisperArray.length) {
-    //   pushToArray(whisperArray[currentWhisperCounterIndex])
-    //   currentWhisperCounterIndex++;
-    timerIsActivated = true;
-    let intervalId;
+    pushToArray(whisperArray[currentWhisperCounterIndex]);
+    currentWhisperCounterIndex++;
+    renderPage(currentPage);
+  })
 
-    let countdownDiv = document.getElementById("countdownDiv");
-    countdownDiv.innerHTML += `
-    <p> <span id ="timeMin"> 10 </span> : <span id ="timeSec"> 00 </span>  </p> 
-    `;
-    countdownDiv.style.display = "initial";
 
-    let timeWhenStart = 600; //10 min
-
-    intervalId = setInterval(() => {
-      timeWhenStart--;
-      console.log("Timer körs");
-      console.log(timeWhenStart);
-      changeTime(timeWhenStart);
-
-      if (timeWhenStart % 10 === 0) {
-        if (currentWhisperCounterIndex < whisperArray.length) {
-          pushToArray(whisperArray[currentWhisperCounterIndex]);
-          currentWhisperCounterIndex++;
-        }
-      } else if (timeWhenStart == 0) {
-        clearInterval(intervalId);
-        timerIsActivated = false;
-      }
-    }, 1000);
-  });
-
-  function changeTime(totalSeconds) {
-    let minutes = Math.floor(totalSeconds / 60);
-    let seconds = totalSeconds % 60;
-
-    let timeMin = document.getElementById("timeMin");
-    let timeSec = document.getElementById("timeSec");
-    let countdownDiv = document.getElementById("countdownDiv");
-    timeMin.textContent = minutes;
-    timeSec.textContent = seconds.toString().padStart(2, "0");
-  }
 
   nextPage.addEventListener("click", () => {
     let maxPage = Math.ceil(whisperArrayOnPageLocal.length / 3);
-
     if (currentPage < maxPage) {
       currentPage++;
       renderPage(currentPage);
@@ -345,24 +317,18 @@ function getTodaysDate() {
   return todaysDate;
 }
 
-function pushToArray(whisperArray) {
+function pushToArray(whisper) {
   let whisperArrayOnPageLocal =
     JSON.parse(localStorage.getItem("whisperArrayOnPageLocal")) || [];
 
-  console.log(whisperArray);
-  if (whisperArray.picUrl) {
-    whisperArrayOnPageLocal.push({
-      date: whisperArray.date,
-      text: whisperArray.text,
-      picUrl: whisperArray.picUrl
-    });
-  } else {
-    whisperArrayOnPageLocal.push({
-      date: whisperArray.date,
-      text: whisperArray.text,
-    });
+  console.log(whisper);
+  whisperArrayOnPageLocal.push({
+    date: whisper.date,
+    text: whisper.text,
+    picUrl: whisper.picUrl || null
+  });
 
-  }
+
 
   localStorage.setItem(
     "whisperArrayOnPageLocal",
@@ -377,24 +343,7 @@ function renderPage(currentPage) {
 
   let whisperArrayOnPageLocal =
     JSON.parse(localStorage.getItem("whisperArrayOnPageLocal")) || [];
-
-  if (whisperArrayOnPageLocal.length === 0) {
-    containerGossip.innerHTML = `
-      <div class="boxGossip noGossipPost textGossip">
-        Ingen viskning än så länge..
-      </div>`;
-    return;
-  }
-
-  //kolla ifall inga viskningar finns, isåfall ta bort
-  let noGossipPostDiv = document.querySelector(".noGossipPost");
-  if (noGossipPostDiv) {
-    noGossipPostDiv.style.display = "none";
-  }
-
-  let allPosts =
-    JSON.parse(localStorage.getItem("whisperArrayOnPageLocal")) || [];
-  let reversed = [...allPosts].reverse();
+  let reversed = [...whisperArrayOnPageLocal].reverse();
 
   let start = (currentPage - 1) * 3;
   let end = start + 3;
