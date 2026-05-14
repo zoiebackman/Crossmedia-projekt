@@ -233,6 +233,7 @@ function welcomeFun() {
 //rensa main och visa Alla viskningar
 function goToWhisperPage() {
   document.body.classList.remove("homePage"); //ifall den fuckas i mobilvy med att den hoppar upp!!
+
   currentPage = 1;
 
   headerDivLoggo.innerHTML = `Alla viskningar`;
@@ -257,11 +258,14 @@ function goToWhisperPage() {
    <p class="xoxoText"> XOXO</p>
   </div>
   </div>
+  <div id=containerDown> 
   <div id="containerPages">
   <p id= "klicka">KLICKAA</p>
     <p class="textPages" id="previousPage">Föregående sida</p>
     <p class="textPages" id="pageNum">${currentPage}</p>
     <p class="textPages" id="nextPage">Nästa sida</p>
+    </div>
+    <img id="imgLock" src="../pictures/lockpic.png"
   </div>
   `;
 
@@ -278,12 +282,67 @@ function goToWhisperPage() {
   let nextPage = document.getElementById("nextPage");
   let pageNum = document.getElementById("pageNum");
   let klicka = document.getElementById("klicka");
+  let whisperLock = document.getElementById("imgLock")
+  let containerDown = document.getElementById("containerDown");
 
   klicka.addEventListener("click", () => {
     pushToArray(whisperArray[currentWhisperCounterIndex]);
     currentWhisperCounterIndex++;
     renderPage(currentPage);
   })
+
+  whisperLock.addEventListener("click", () => {
+    let lockDiv = document.getElementById("lockDiv");
+
+    // Om div-en INTE finns i HTML-dokumentet, skapa den nu
+    if (!lockDiv) {
+      showLockDiv();
+    } else {
+      // Om den redan finns, bara växla (toggle) klassen
+      lockDiv.classList.toggle("hidden");
+    }
+  });
+
+  function showLockDiv() {
+    let lockDiv = document.createElement("div");
+    lockDiv.id = "lockDiv";
+
+    lockDiv.innerHTML = `
+    <p id="lockText">Lås upp nästa viskning..</p>
+    <input id="passwordInput" type="text" placeholder="Lösenord..." />
+    <div id="groupLock"> 
+      <button id="unlockButton">Lås upp</button>
+      <p id="lockMessage"></p>
+    </div>
+  `;
+    containerDown.appendChild(lockDiv);
+
+
+    let passwordInput = document.getElementById("passwordInput");
+    let unlockButton = document.getElementById("unlockButton");
+    let errorMessage = document.getElementById("lockMessage");
+    let correctPassword = "yes";
+    unlockButton.addEventListener("click", () => {
+      console.log(passwordInput.value)
+      if (passwordInput.value != correctPassword) {
+        errorMessage.textContent = "Fel kod tyvärr, fortsätt leta."
+      }
+      else {
+        console.log("rätt")
+        errorMessage.textContent = ""
+        lockDiv.classList.toggle("hidden");
+
+      }
+    })
+
+
+    //input lösenord
+    //om lösenord som matas in är det nästa
+    //skriv ut nästa whisper
+    //om fel --> error meddelande
+
+  }
+
 
 
 
