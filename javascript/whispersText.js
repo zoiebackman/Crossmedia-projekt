@@ -1,11 +1,12 @@
 let whisperArray = [
     {
         date: getTodaysDate(),
-        text: `Ibland händer de mest intressanta sakerna mitt framför ögonen på folk… utan att de märker något alls. Festen på Niagaras takterrass igår kväll verkade bli en hit hos de flesta…
+        text: `Ibland händer de mest intressanta sakerna mitt framför ögonen på folk… utan att de märker något alls. Festen på  <strong>Niagaras takterrass </strong> igår kväll verkade bli en hit hos de flesta…
 
 Vår lilla charmör Leon verkade i alla fall inte särskilt blyg med att sprida leenden, blickar och lite väl närgången energi till mer än en tjej under kvällen.
 Det märkliga? Hans flickvän var faktiskt där också. Bara några meter bort. Helt ovetande.
 Så frågan är… är vissa hemligheter skickligare på att gömma sig än andra, eller är vissa bara bättre på att inte vilja se? Och vilka hemligheter gömmer sig på Niagaras takterrass efter gårdagens festande?`,
+        password: ""
     },
     {
         date: getTodaysDate(),
@@ -15,6 +16,7 @@ Efter-lektion-samtal som drar ut på tiden. Extra hjälp som ingen annan riktigt
 
 Men i korridorer där rykten rör sig snabbare än schemabyten… undrar man bara hur länge en hemlighet faktiskt kan stanna efter skoltid?
 `,
+        password: "HJKA"
     },
     {
         date: getTodaysDate(),
@@ -28,6 +30,7 @@ Vissa relationer börjar tydligen inte under föreläsningar, utan i stället i 
 Frågan är bara…
 hur länge de håller sig hemliga?
 `,
+        password: "HJKA"
     },
     {
         date: getTodaysDate(),
@@ -42,7 +45,9 @@ Var det verkligen bara en slump att Alice och den något äldre gästen verkade 
 Eller är vissa relationer lite mer… akademiska än vad de först verkar?
 Ibland är det tydligen inte bara kurslitteraturen som delas mellan student och lärare.
 Frågan är bara hur länge sådana små studiegrupper brukar hålla sig hemliga.
+XOXO” (Gå till NI:A0606 för nästa viskning)
 `,
+        password: "UTRC"
     },
     {
         date: getTodaysDate(),
@@ -54,8 +59,9 @@ Privata bord.
 Och bilder från platser där vissa människor väntar månader på att ens få en reservation.
 Frågan är bara…
 Kommer framgången före pengarna, eller kommer pengarna före historien?
-XOXO
+XOXO” (Gå till NI:A0322 för nästa viskning)
 `,
+        password: "GLBN"
     },
     {
         date: getTodaysDate(),
@@ -66,6 +72,7 @@ Vår ambitiösa vän Calle spenderar mycket tid där. Och ibland… verkar han o
 Frågan är bara…
 vad exakt är det han jobbar på så sent om kvällarna?
 `,
+        password: "XWHJ",
         picUrl: `../pictures/gissipinlägg6bild.jpg`,
     },
     {
@@ -74,6 +81,7 @@ vad exakt är det han jobbar på så sent om kvällarna?
 Frågan är bara…
 Är det värt att kanske förlora allt, bara för att avslöja en hemlighet?
 `,
+        password: "CCJD"
     },
     {
         date: getTodaysDate(),
@@ -85,6 +93,7 @@ För sanningen är väl ändå att man kan riva sönder fotografier… men inte 
  Och vissa ögonblick lämnar spår långt efter att bevisen försvunnit.
 Så säg mig… försökte någon gömma ett misstag — eller undanröja en hemlighet?
 `,
+        password: "XWSH"
     },
     {
         date: getTodaysDate(),
@@ -100,6 +109,7 @@ Vår kära Alice har bevisat att hon inte kan hålla sina fingrar i styr…
 Detta får en att undra…
 Är det bara charm, eller en diskret förmåga att villigt skapa kaos?
 `,
+        password: "CBCB"
     },
     {
         date: getTodaysDate(),
@@ -109,7 +119,8 @@ Det märkliga?
 De som letar hårdast efter andras problem brukar vara de som försöker fly från sina egna.
 För säg mig, Alice… vad exakt hoppas du hitta när du river i historier som inte tillhör dig?
 Och ännu viktigare — vad händer den dagen någon börjar gräva tillbaka?`,
-    },
+        password: "BNMW"
+    }
 ];
 
 /* let whisperArrayOnPage = []; */
