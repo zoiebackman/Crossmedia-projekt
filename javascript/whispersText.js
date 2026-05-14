@@ -1,6 +1,6 @@
 let whisperArray = [
     {
-        date: "24/4/2026",
+        date: getTodaysDate(),
         text: `Ibland händer de mest intressanta sakerna mitt framför ögonen på folk… utan att de märker något alls. Festen på Niagaras takterrass igår kväll verkade bli en hit hos de flesta…
 
 Vår lilla charmör Leon verkade i alla fall inte särskilt blyg med att sprida leenden, blickar och lite väl närgången energi till mer än en tjej under kvällen.
@@ -8,7 +8,7 @@ Det märkliga? Hans flickvän var faktiskt där också. Bara några meter bort. 
 Så frågan är… är vissa hemligheter skickligare på att gömma sig än andra, eller är vissa bara bättre på att inte vilja se? Och vilka hemligheter gömmer sig på Niagaras takterrass efter gårdagens festande?`,
     },
     {
-        date: "18/4/2026",
+        date: getTodaysDate(),
         text: `Det verkar som att någon i lärarrummet kanske borde läsa igenom skolans regler en gång till. En viss lärare, låt oss kalla honom “Mr. B”, har tydligen blivit lite för populär hos en elev.
 
 Efter-lektion-samtal som drar ut på tiden. Extra hjälp som ingen annan riktigt verkar få. Och blickar som känns allt annat än pedagogiska.
@@ -17,7 +17,7 @@ Men i korridorer där rykten rör sig snabbare än schemabyten… undrar man bar
 `,
     },
     {
-        date: "9/4/2026",
+        date: getTodaysDate(),
         text: `Det är alltid spännande när någon lite… äldre dyker upp på studentfester.
 Speciellt när personen verkar känna sig väldigt bekväm.
 Under gårdagens fest syntes en viss gäst prata länge med en av studenterna.
@@ -30,7 +30,7 @@ hur länge de håller sig hemliga?
 `,
     },
     {
-        date: "27/3/2026",
+        date: getTodaysDate(),
         text: `Det är alltid fascinerande hur vissa människor lyckas vara på exakt rätt plats… lite för ofta.
 Vår annars så diskreta Alice verkar ha haft en ganska intressant kväll på Niagara.
 Först vid räcket tillsammans med en viss upptagen charmör…
@@ -45,7 +45,7 @@ Frågan är bara hur länge sådana små studiegrupper brukar hålla sig hemliga
 `,
     },
     {
-        date: "1/4/2026",
+        date: getTodaysDate(),
         text: `Alla älskar någon som lyckas ta sig uppåt.
 Från bibliotekets tysta hörn till stadens lite mer… exklusiva bord.
 Vår ambitiösa vän Calle verkar ha utvecklat en ganska imponerande livsstil på sistone.
@@ -58,7 +58,7 @@ XOXO
 `,
     },
     {
-        date: "27/3/2026",
+        date: getTodaysDate(),
         text: `Alla historier börjar någonstans.
 Vissa börjar på takvåningar och studentfester.
 Andra börjar i bibliotekets tysta hörn.
@@ -69,14 +69,14 @@ vad exakt är det han jobbar på så sent om kvällarna?
         picUrl: `../pictures/gissipinlägg6bild.jpg`,
     },
     {
-        date: "27/3/2026",
+        date: getTodaysDate(),
         text: `Det är inte alltid så smart att veta allas privatliv… Speciellt när man själv bär på hemligheter och har mycket att förlora.
 Frågan är bara…
 Är det värt att kanske förlora allt, bara för att avslöja en hemlighet?
 `,
     },
     {
-        date: "27/3/2026",
+        date: getTodaysDate(),
         text: `Vissa tror att sanningen försvinner lika lätt som att papper går sönder… men i den här staden har minnen en tendens att överleva ändå.
 En bild som rivs sönder i små bitar lite för snabbt, lite för aggressivt,
 innan någon annan hinner se den.
@@ -87,7 +87,7 @@ Så säg mig… försökte någon gömma ett misstag — eller undanröja en hem
 `,
     },
     {
-        date: "27/3/2026",
+        date: getTodaysDate(),
         text: `Vissa människor tror att de kan smälta in…
  men vissa kvällar bevisar att de verkligen inte alls kan hålla sig i bakgrunden.
 Vår kära Alice verkar plötsligt tro att hela Niagara är hennes scen.
@@ -102,7 +102,7 @@ Detta får en att undra…
 `,
     },
     {
-        date: "27/3/2026",
+        date: getTodaysDate(),
         text: `Vissa människor verkar ha väldigt svårt att förstå skillnaden mellan nyfikenhet… och att lägga sig i sådant som aldrig angått dem från början.
 Vår kära Alice verkar i alla fall ha gjort det till sitt lilla kvällsnöje att springa runt och leta efter hemligheter där det kanske inte ens finns några. Frågor ställs lite för ofta. Blickar dröjer lite för länge. Och plötsligt känns det som att varje konversation förvandlas till ett förhör.
 Det märkliga?
