@@ -35,6 +35,12 @@
     width: 30%;
 }
 
+.titleBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 .textGossip {
     font-family: "bodondi72";
 }

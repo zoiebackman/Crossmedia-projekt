@@ -12,7 +12,6 @@ let hamburgerMenu = document.getElementById("hamburgerMenu");
 let loginButton = document.getElementById("logIn");
 let headerDivLoggo = document.getElementById("headerDivLogo");
 let currentPage;
-let timerIsActivated = false;
 // let currentWhisperCounterIndex = 0;
 
 const pictures = [
@@ -135,9 +134,7 @@ function homePage() {
     picturesPage();
   });
 
-  if (timerIsActivated == true) {
-    countdownDiv.style.display = "inital";
-  }
+
 }
 
 function welcomeFun() {
@@ -236,11 +233,7 @@ function welcomeFun() {
 //rensa main och visa Alla viskningar
 function goToWhisperPage() {
   document.body.classList.remove("homePage"); //ifall den fuckas i mobilvy med att den hoppar upp!!
-  let totalWhisperPosts;
   currentPage = 1;
-  let currentPostIndex = 0;
-
-
 
   headerDivLoggo.innerHTML = `Alla viskningar`;
   headerDivLoggo.style.backgroundImage = "none";
@@ -256,8 +249,11 @@ function goToWhisperPage() {
   <p id= "mobileOnly">Alla Viskningar</p>
   <div id="containerGossip">
   <div class = "boxGossip"> 
+    <div class = "titleBox"> 
+   <p class="dateText"> ${getTodaysDate()}</p>
+   <p class="dateText"> Viskning ${whisperArray[0].id} </p>
+   </div>
              ${currentWhisperCounterIndex == 0 ? ` <p class = "textGossip"> ${whisperArray[0].text}</p> alt="" />` : ""}
-   <p class = "textGossip"> hej</p>
    <p class="xoxoText"> XOXO</p>
   </div>
   </div>
@@ -270,18 +266,17 @@ function goToWhisperPage() {
   `;
 
   renderPage(currentPage);
+
   if (currentWhisperCounterIndex == 0) {
     pushToArray(whisperArray[currentWhisperCounterIndex]);
     currentWhisperCounterIndex++;
-
   }
+
   let containerGossip = document.getElementById("containerGossip");
   containerGossip.style.display = "flex";
   let previousPage = document.getElementById("previousPage");
   let nextPage = document.getElementById("nextPage");
   let pageNum = document.getElementById("pageNum");
-
-
   let klicka = document.getElementById("klicka");
 
   klicka.addEventListener("click", () => {
@@ -321,8 +316,8 @@ function pushToArray(whisper) {
   let whisperArrayOnPageLocal =
     JSON.parse(localStorage.getItem("whisperArrayOnPageLocal")) || [];
 
-  console.log(whisper);
   whisperArrayOnPageLocal.push({
+    id: whisper.id,
     date: whisper.date,
     text: whisper.text,
     picUrl: whisper.picUrl || null
@@ -353,9 +348,12 @@ function renderPage(currentPage) {
     // console.log(post)
     let boxGossipDiv = document.createElement("div");
     boxGossipDiv.classList.add("boxGossip");
-
+    console.log(post)
     boxGossipDiv.innerHTML = `
+    <div class = "titleBox"> 
+       <p class="dateText"> Viskning ${post.id} </p>
       <p class="dateText">${post.date}</p>
+      </div>
       <p class="textGossip">${post.text}</p>
        ${post.picUrl ? `<img id="imgGossip" src="${post.picUrl}" alt="" />` : ""}
   <p class="xoxoText">XOXO</p>
