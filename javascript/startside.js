@@ -348,24 +348,29 @@ function goToWhisperPage() {
       }
     })
   }
+}
 
-  nextPage.addEventListener("click", () => {
+document.addEventListener("click", (event) => {
+  if (event.target.id === "nextPage") {
+    let whisperArrayOnPageLocal = JSON.parse(localStorage.getItem("whisperArrayOnPageLocal")) || [];
     let maxPage = Math.ceil(whisperArrayOnPageLocal.length / 3);
+
     if (currentPage < maxPage) {
       currentPage++;
       renderPage(currentPage);
-      pageNum.textContent = currentPage;
+      document.getElementById("pageNum").textContent = currentPage;
     }
-  });
+  }
 
-  previousPage.addEventListener("click", () => {
+  if (event.target.id === "previousPage") {
     if (currentPage > 1) {
       currentPage--;
       renderPage(currentPage);
-      pageNum.textContent = currentPage;
+      document.getElementById("pageNum").textContent = currentPage;
     }
-  });
-}
+  }
+});
+
 
 function getTodaysDate() {
   let today = new Date();

@@ -67,7 +67,8 @@ main {
 }
 
 a {
-  color: white;
+  /* color: white; */
+  color: #dd9c4c;
   margin-top: 20px;
   width: 80%;
   margin-bottom: -28px;
