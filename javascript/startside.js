@@ -246,6 +246,11 @@ function goToWhisperPage() {
   let currentWhisperCounterIndex = whisperArrayOnPageLocal.length;
   console.log(whisperArrayOnPageLocal)
 
+  let correctPasswordArrayLocal =
+    JSON.parse(localStorage.getItem("correctPasswordArrayLocal")) || [];
+
+
+
   main.innerHTML = `
   <p id= "mobileOnly">Alla Viskningar</p>
   <div id="containerGossip">
@@ -260,7 +265,6 @@ function goToWhisperPage() {
   </div>
   <div id=containerDown> 
   <div id="containerPages">
-  <p id= "klicka">KLICKAA</p>
     <p class="textPages" id="previousPage">Föregående sida</p>
     <p class="textPages" id="pageNum">${currentPage}</p>
     <p class="textPages" id="nextPage">Nästa sida</p>
@@ -269,27 +273,22 @@ function goToWhisperPage() {
   </div>
   `;
 
-  renderPage(currentPage);
 
   if (currentWhisperCounterIndex == 0) {
     pushToArray(whisperArray[currentWhisperCounterIndex]);
     currentWhisperCounterIndex++;
   }
+  console.log(whisperArrayOnPageLocal.length)
+  renderPage(currentPage);
+  console.log(whisperArrayOnPageLocal.length)
 
   let containerGossip = document.getElementById("containerGossip");
   containerGossip.style.display = "flex";
   let previousPage = document.getElementById("previousPage");
   let nextPage = document.getElementById("nextPage");
   let pageNum = document.getElementById("pageNum");
-  let klicka = document.getElementById("klicka");
   let whisperLock = document.getElementById("imgLock")
   let containerDown = document.getElementById("containerDown");
-
-  klicka.addEventListener("click", () => {
-    pushToArray(whisperArray[currentWhisperCounterIndex]);
-    currentWhisperCounterIndex++;
-    renderPage(currentPage);
-  })
 
   whisperLock.addEventListener("click", () => {
     let lockDiv = document.getElementById("lockDiv");
@@ -321,30 +320,35 @@ function goToWhisperPage() {
     let passwordInput = document.getElementById("passwordInput");
     let unlockButton = document.getElementById("unlockButton");
     let errorMessage = document.getElementById("lockMessage");
-    let correctPassword = "yes";
+
     unlockButton.addEventListener("click", () => {
-      console.log(passwordInput.value)
-      if (passwordInput.value != correctPassword) {
+      let currentCorrectPassword = whisperArray[currentWhisperCounterIndex].password;
+
+      if (passwordInput.value != currentCorrectPassword) {
         errorMessage.textContent = "Fel kod tyvärr, fortsätt leta."
       }
       else {
-        console.log("rätt")
         errorMessage.textContent = ""
         lockDiv.classList.toggle("hidden");
 
+        if (whisperArray[currentWhisperCounterIndex].id == 2) {
+          pushToArray(whisperArray[currentWhisperCounterIndex]);
+          currentWhisperCounterIndex++;
+
+          renderPage(currentPage);
+
+          pushToArray(whisperArray[currentWhisperCounterIndex]);
+          currentWhisperCounterIndex++;
+        }
+        else {
+          pushToArray(whisperArray[currentWhisperCounterIndex]);
+          currentWhisperCounterIndex++;
+        }
+        renderPage(currentPage);
+
       }
     })
-
-
-    //input lösenord
-    //om lösenord som matas in är det nästa
-    //skriv ut nästa whisper
-    //om fel --> error meddelande
-
   }
-
-
-
 
   nextPage.addEventListener("click", () => {
     let maxPage = Math.ceil(whisperArrayOnPageLocal.length / 3);
@@ -379,7 +383,8 @@ function pushToArray(whisper) {
     id: whisper.id,
     date: whisper.date,
     text: whisper.text,
-    picUrl: whisper.picUrl || null
+    picUrl: whisper.picUrl || null,
+    password: whisper.password
   });
 
 
@@ -389,6 +394,9 @@ function pushToArray(whisper) {
     JSON.stringify(whisperArrayOnPageLocal),
   );
   renderPage(currentPage);
+
+  console.log(whisperArrayOnPageLocal.length)
+
 }
 
 function renderPage(currentPage) {

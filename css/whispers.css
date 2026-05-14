@@ -108,6 +108,7 @@
     padding: 20px;
     border-radius: 10px;
     border: 1px solid #dd9c4c;
+    margin-top: 10px;
 
 
 }
@@ -124,7 +125,7 @@
     color: red;
     margin: 0px;
     font-family: "bodondi72";
-    font-size: 12px;
+    font-size: 13px;
 }
 
 #groupLock {
@@ -162,7 +163,7 @@
     font-family: "imperial script";
     font-size: 31px;
     margin: 0px;
-    color: ;
+    color: red;
     color: #dd9c4c;
 }
 
