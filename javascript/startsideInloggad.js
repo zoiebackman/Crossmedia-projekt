@@ -4,6 +4,7 @@ logIn();
 function logIn() {
   main.innerHTML = ``;
   main.innerHTML = `
+  <a href="homePage.html">Tillbaka</a>
   <div id="loginContainer">
     <div id="logInPopup">
       <div id="popupLI">
@@ -50,7 +51,7 @@ function logIn() {
 function momentOfTruth() {
   const headerLogoMobil = document.getElementById("headerLoggaMobil");
   const headerDivLogo = document.getElementById("headerDivLogo");
-  headerDivLogo.innerHTML = "Sanningens ögonblick"
+  headerDivLogo.innerHTML = "Sanningens ögonblick";
   headerDivLogo.classList.add("momentOfTruthText");
 }
 
@@ -119,7 +120,6 @@ function gameOver() {
 }
 
 function reveal() {
- 
   const headerLogoMobil = document.getElementById("headerLoggaMobil");
   const headerDivLogo = document.getElementById("headerDivLogo");
   headerDivLogo.innerHTML = "Reveal";

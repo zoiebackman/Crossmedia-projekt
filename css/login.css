@@ -66,6 +66,15 @@ main {
   cursor: pointer;
 }
 
+a {
+  color: white;
+  margin-top: 20px;
+  width: 80%;
+  margin-bottom: -28px;
+  font-size: 20px;
+  font-family: "bodondi72";
+}
+
 @media (max-width: 767px) {
   #loginContainer {
     margin-top: 40px;
@@ -99,5 +108,9 @@ main {
     font-family: "didact gothic";
     border-radius: 10px;
     font-size: 16px;
+  }
+
+  a {
+    width: 90%;
   }
 }

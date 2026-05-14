@@ -354,14 +354,13 @@ function pushToArray(whisperArray) {
     whisperArrayOnPageLocal.push({
       date: whisperArray.date,
       text: whisperArray.text,
-      picUrl: whisperArray.picUrl
+      picUrl: whisperArray.picUrl,
     });
   } else {
     whisperArrayOnPageLocal.push({
       date: whisperArray.date,
       text: whisperArray.text,
     });
-
   }
 
   localStorage.setItem(
@@ -411,7 +410,7 @@ function renderPage(currentPage) {
        ${post.picUrl ? `<img id="imgGossip" src="${post.picUrl}" alt="" />` : ""}
   <p class="xoxoText">XOXO</p>
     `;
-    console.log(post.picUrl)
+    console.log(post.picUrl);
     containerGossip.prepend(boxGossipDiv);
   });
 }
@@ -604,13 +603,11 @@ linksNav.forEach((link) => {
     if (event.target.id == "whispers") {
       goToWhisperPage();
     } else if (event.target.id == "welcome") {
-      console.log("gå till welcome ");
+      welcomeFun();
     } else if (event.target.id == "pictures") {
       picturesPage();
     } else if (event.target.id == "sendTips") {
       sendTipsPage();
-    } else if (event.target.id == "welcome") {
-      welcomeFun();
     }
   });
 });
