@@ -143,10 +143,13 @@ function welcomeFun() {
    <div id="welcomeContainer">
    <div id="welcomeWrapper">
         <h1 id="WelcomeText">Välkommen till spelet</h1>
-        <p id="introText">Terminen har precis börjat på Malmö universitet, men istället för att fokusera på fastighetsrätt och kundmöten har du vaknat upp till din värsta mardröm. Baksmällan från gårdagens fest på Niagaras takvåning är ingenting jämfört med den ångest som sköljer över dig när du ser ditt namn pryda rubrikerna på MAU Gossip. Du är Alice. Du brukar hålla dig i bakgrunden, men nu är du indragen i ett nät av lögner, hemligheter och maktspel som styrs av Malmös absoluta elit. Ditt rykte och din framtida karriär står på spel.</p>
+        <p id="introText">Femte terminen har precis börjat på Malmö universitet, men istället för att fokusera på dina studier inom fastighetsrätt har du vaknat upp till din värsta mardröm. Baksmällan från gårdagens fest på Niagaras takvåning är ingenting jämfört med den ångest som sköljer över dig när du ser dig själv i MAU Gossips senaste inlägg. Vad kommer hända med din karriär när din blivande chef får syn på blogginlägget där du har snortat kokain från räcket på takterrassen? . <br><br>
+        Du är nu indragen i ett nät av lögner och hemligheter som styrs av Malmös absoluta elit. Ditt rykte och din framtida karriär står på spel.
+
+        </p>
 
         <div id="welcomeSection1">
-            <h2 id="howToPlay">Du som spelare är Alice </h2>
+            <h2 id="howToPlay">Din roll i spelet: </h2>
             <p id="welcomeInstructions">Du heter Alice, är 24 år gammal och går på fastighetsförmedlingsprogrammet på Malmö universitet.
               Du valde utbildningen för att skapa en stabil framtid. Du tar dina studier på allvar, jobbar extra vid sidan av och hoppas på att få en riktigt bra praktikplats efter terminen.
             </p>
@@ -154,7 +157,8 @@ function welcomeFun() {
               Du håller dig mest för dig själv.
               Observerar mer än du pratar.<br><br>
 
-              Och det har alltid fungerat.<br><br>
+              Och det har alltid fungerat.<br>
+              Fram tills nu.. <br><br>
 
               Du kommer att få tillgång till din (Alice) instagram:</p>
 
@@ -169,10 +173,10 @@ function welcomeFun() {
           </p>
 
             <ul>
-              <li><strong>Maja</strong> - 23 år gammal och går mäklar-linjen på Malmö universitet. Den populära tjejen i klassen, alla på skolan vet vem hon är och är dessutom dotter till ägaren av Trianon.</li>
-              <li><strong>Lovisa</strong> - 23 år gammal och är en populär tjej, men inte lika populär som sin bästa vän Maja. Hon går mäklar-linjen på Malmö universitet och är dotter till ägaren av SBB. </li>
-              <li><strong>Leon</strong> - 24 år gammal och är den charmiga och självsäkra killen i klassen som älskar uppmärksamhet, även om det är från andra tjejer än sin flickvän Maja. Leon går också på mäklar-linjen och är son till ägaren av Volito.</li>
-              <li><strong>Calle</strong> - 23 år gammal och går på mäklar-linjen på Malmö universitet. Han är bästa vän med Leon och älskar att festa.</li>
+              <li><strong>Maja</strong> - 23 år gammal och går mäklar-linjen på Malmö universitet och den populära tjejen inom programmet. Alla på universitetet vet vem hon är och dessutom dotter till VD:n av Mercedes Benz Malmö där pengar aldrig har varit ett problem. .</li>
+              <li><strong>Lovisa</strong> - 23 år gammal och är en populär tjej, men inte lika populär som sin bästa vän Maja. Hon går mäklar-linjen på Malmö universitet och även hon, dotter till rika föräldrar. </li>
+              <li><strong>Leon</strong> -  24 år gammal och är den charmiga och självsäkra killen i klassen som älskar uppmärksamhet, även om det är från andra tjejer än sin flickvän Maja. Leon går också på mäklar-linjen och är son till styrelseordförande på Ikano Bank.</li>
+              <li><strong>Calle</strong> - 23 år gammal och går tillsammans med de andra i eliten från mäklarprogrammet på Malmö universitet. Han är bästa vän med Leon och älskar att festa.</li>
             </ul>
 
             <p id="welcomeInstructions">Utåt sett är de perfekta. Men alla har något att dölja. 
