@@ -626,6 +626,7 @@ linksNav.forEach((link) => {
     if (event.target.id == "whispers") {
       goToWhisperPage();
     } else if (event.target.id == "welcome") {
+      welcomeFun()
       console.log("gå till welcome ");
     } else if (event.target.id == "pictures") {
       picturesPage();

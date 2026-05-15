@@ -34,7 +34,7 @@ function logIn() {
 
     const logInData = {
       username: "mau_gossip",
-      password: "123",
+      password: "cocochanel2024",
     };
 
     if (logInData.username === username && logInData.password === password) {
