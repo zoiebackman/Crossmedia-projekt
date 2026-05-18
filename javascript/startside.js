@@ -133,8 +133,6 @@ function homePage() {
   allPicturesButton.addEventListener("click", () => {
     picturesPage();
   });
-
-
 }
 
 function welcomeFun() {
@@ -243,12 +241,10 @@ function goToWhisperPage() {
   let whisperArrayOnPageLocal =
     JSON.parse(localStorage.getItem("whisperArrayOnPageLocal")) || [];
   let currentWhisperCounterIndex = whisperArrayOnPageLocal.length;
-  console.log(whisperArrayOnPageLocal)
+  console.log(whisperArrayOnPageLocal);
 
   let correctPasswordArrayLocal =
     JSON.parse(localStorage.getItem("correctPasswordArrayLocal")) || [];
-
-
 
   main.innerHTML = `
   <p id= "mobileOnly">Alla Viskningar</p>
@@ -272,21 +268,20 @@ function goToWhisperPage() {
   </div>
   `;
 
-
   if (currentWhisperCounterIndex == 0) {
     pushToArray(whisperArray[currentWhisperCounterIndex]);
     currentWhisperCounterIndex++;
   }
-  console.log(whisperArrayOnPageLocal.length)
+  console.log(whisperArrayOnPageLocal.length);
   renderPage(currentPage);
-  console.log(whisperArrayOnPageLocal.length)
+  console.log(whisperArrayOnPageLocal.length);
 
   let containerGossip = document.getElementById("containerGossip");
   containerGossip.style.display = "flex";
   let previousPage = document.getElementById("previousPage");
   let nextPage = document.getElementById("nextPage");
   let pageNum = document.getElementById("pageNum");
-  let whisperLock = document.getElementById("imgLock")
+  let whisperLock = document.getElementById("imgLock");
   let containerDown = document.getElementById("containerDown");
 
   whisperLock.addEventListener("click", () => {
@@ -315,19 +310,18 @@ function goToWhisperPage() {
   `;
     containerDown.appendChild(lockDiv);
 
-
     let passwordInput = document.getElementById("passwordInput");
     let unlockButton = document.getElementById("unlockButton");
     let errorMessage = document.getElementById("lockMessage");
 
     unlockButton.addEventListener("click", () => {
-      let currentCorrectPassword = whisperArray[currentWhisperCounterIndex].password;
+      let currentCorrectPassword =
+        whisperArray[currentWhisperCounterIndex].password;
 
       if (passwordInput.value != currentCorrectPassword) {
-        errorMessage.textContent = "Fel kod tyvärr, fortsätt leta."
-      }
-      else {
-        errorMessage.textContent = ""
+        errorMessage.textContent = "Fel kod tyvärr, fortsätt leta.";
+      } else {
+        errorMessage.textContent = "";
         lockDiv.classList.toggle("hidden");
 
         if (whisperArray[currentWhisperCounterIndex].id == 2) {
@@ -338,21 +332,20 @@ function goToWhisperPage() {
 
           pushToArray(whisperArray[currentWhisperCounterIndex]);
           currentWhisperCounterIndex++;
-        }
-        else {
+        } else {
           pushToArray(whisperArray[currentWhisperCounterIndex]);
           currentWhisperCounterIndex++;
         }
         renderPage(currentPage);
-
       }
-    })
+    });
   }
 }
 
 document.addEventListener("click", (event) => {
   if (event.target.id === "nextPage") {
-    let whisperArrayOnPageLocal = JSON.parse(localStorage.getItem("whisperArrayOnPageLocal")) || [];
+    let whisperArrayOnPageLocal =
+      JSON.parse(localStorage.getItem("whisperArrayOnPageLocal")) || [];
     let maxPage = Math.ceil(whisperArrayOnPageLocal.length / 3);
 
     if (currentPage < maxPage) {
@@ -371,7 +364,6 @@ document.addEventListener("click", (event) => {
   }
 });
 
-
 function getTodaysDate() {
   let today = new Date();
   let todaysDate =
@@ -388,10 +380,8 @@ function pushToArray(whisper) {
     date: whisper.date,
     text: whisper.text,
     picUrl: whisper.picUrl || null,
-    password: whisper.password
+    password: whisper.password,
   });
-
-
 
   localStorage.setItem(
     "whisperArrayOnPageLocal",
@@ -399,8 +389,7 @@ function pushToArray(whisper) {
   );
   renderPage(currentPage);
 
-  console.log(whisperArrayOnPageLocal.length)
-
+  console.log(whisperArrayOnPageLocal.length);
 }
 
 function renderPage(currentPage) {
@@ -419,7 +408,7 @@ function renderPage(currentPage) {
     // console.log(post)
     let boxGossipDiv = document.createElement("div");
     boxGossipDiv.classList.add("boxGossip");
-    console.log(post)
+    console.log(post);
     boxGossipDiv.innerHTML = `
     <div class = "titleBox"> 
        <p class="dateText"> Viskning ${post.id} </p>
@@ -429,7 +418,7 @@ function renderPage(currentPage) {
        ${post.picUrl ? `<img id="imgGossip" src="${post.picUrl}" alt="" />` : ""}
   <p class="xoxoText">XOXO</p>
     `;
-    console.log(post.picUrl)
+    console.log(post.picUrl);
     containerGossip.prepend(boxGossipDiv);
   });
 }
@@ -479,7 +468,7 @@ function picturesPage() {
       }
 
       if (pic === "../pictures/picturesPage/shifferKodBILD.jpeg") {
-        popupImage.style.backgroundImage = `url("../pictures/picturesPage/shifferKod2.jpeg")`;
+        popupImage.style.backgroundImage = `url("../pictures/picturesPage/shifferkod1.png")`;
       }
     });
 
@@ -622,7 +611,7 @@ linksNav.forEach((link) => {
     if (event.target.id == "whispers") {
       goToWhisperPage();
     } else if (event.target.id == "welcome") {
-      welcomeFun()
+      welcomeFun();
       console.log("gå till welcome ");
     } else if (event.target.id == "pictures") {
       picturesPage();
