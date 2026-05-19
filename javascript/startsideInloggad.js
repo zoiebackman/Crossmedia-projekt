@@ -177,27 +177,23 @@ function revealPopup() {
           <div id="upperRevealPopup">
             <p id="breadTextRevealPopup">
               Bra jobbat, du har nu listat ut vem som är MAU Gossip, men nu kommer sista
-          frågan... Ska du avslöja Lovisa eller radera hela MAU gossip
+          frågan... Ska du avslöja Lovisa eller ta över MAU Gossip sidan?
             </p>
             <p id="questionRevealPopup">
-            Ditt val kommer ha betydande påverkan för din framtid
+            Ditt val kommer ha betydande påverkan för din framtid...
             </p>
           </div>
           <div id="downRevealPopup">
             <div class="popupBox" id="whitepopup">
-              <p class="textpopup">Avslöja MAU Gossip</p>
+              <p class="textpopup">Avslöja MAU Gossip / Lovisa</p>
               <p class="PopupTextReveal">
-                Häng ut Lovisa och visa alla vem som ligger bakom kontot. Genom
-                att avslöja sanningen rentvår du ditt eget namn. Praktikplatsen
-                är säkrad, men till vilket pris?
+                Du väljer att avslöja Lovisa.  
               </p>
             </div>
             <div class="popupBox" id="redpopup">
               <p class="textpopup">Ta över MAU Gossip</p>
               <p class="PopupTextReveal">
-                Om du raderar allt försvinner bevisen mot dig, men också chansen
-                att hämnas. Du väljer moralen före karriären, men kommer ryktena
-                om dig att leva kvar i korridorerna?
+                Du väljer att ta över Mau Gossips hemsida. 
               </p>
             </div>
           </div>
