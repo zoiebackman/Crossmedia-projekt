@@ -5,24 +5,26 @@ function logIn() {
   main.innerHTML = ``;
   main.innerHTML = `
   <a id="tillbaka" href="homePage.html">Tillbaka</a>
-  <div id="loginContainer">
-    <div id="logInPopup">
-      <div id="popupLI">
-        <div id="logga-left">
-          <img id="loggaLoginIn" src="../pictures/logga2.png"></img>
-        </div>
-        <div id="login-right">
-          <div class="input-class"> <p id="username">Användarnamn</p>
-            <input id="input-username" type="text"></input>
+      <div id="loginContainer">
+        <div id="logInPopup">
+          <div id="popupLI">
+            <div id="logga-left">
+              <img id="loggaLoginIn" src="../pictures/logga2.png" />
+            </div>
+            <div id="login-right">
+              <div class="input-class">
+                <p id="username">Användarnamn</p>
+                <input id="input-username" type="text" />
+              </div>
+              <div class="input-class">
+                <p id="password">Lösenord</p>
+                <input id="input-password" type="password" />
+              </div>
+              <button id="login-knappen">Logga in</button>
+            </div>
           </div>
-          <div class="input-class"> <p id="password">Lösenord</p>
-            <input id="input-password" type="password"></input>
-          </div>
-          <button id="login-knappen">Logga in</button>
         </div>
-      </div>
-    </div>
-  </div>`;
+      </div>`;
 
   const loginBtn = document.getElementById("login-knappen");
   const usernameInput = document.getElementById("input-username");
@@ -60,15 +62,19 @@ function loggedInPage() {
   main.innerHTML = ``;
   main.innerHTML = `
   <div id="textWrapperMoment">
-   <h2 id="momentH2">Sanningens ögonblick...</h2>
-    <p id="momentTextP">Nu är frågan på allas läppar: vem är egentligen geniet bakom den här bloggen? Jag vet att ni dör av nyfikenhet, men gissningar är inte alltid gratis...Låt gissningsleken börja.</p>
-  <div id="inputRutaMoment">
-   <p id="questionMoment">Vem är MAU Gossip?</p>
-   <input id="inputMomentAnswer"type="password"></input>
-   <p id="notCorrectPassword"></p>
-   </div>
-  </div>
-  <button id="nextButtonMoment">Nästa</button>`;
+        <h2 id="momentH2">Sanningens ögonblick...</h2>
+        <p id="momentTextP">
+          Nu är frågan på allas läppar: vem är egentligen geniet bakom den här
+          bloggen? Jag vet att ni dör av nyfikenhet, men gissningar är inte
+          alltid gratis...Låt gissningsleken börja.
+        </p>
+        <div id="inputRutaMoment">
+          <p id="questionMoment">Vem är MAU Gossip?</p>
+          <input id="inputMomentAnswer" type="password" />
+          <p id="notCorrectPassword"></p>
+        </div>
+      </div>
+      <button id="nextButtonMoment">Nästa</button>`;
 
   const nextButtonMoment = document.getElementById("nextButtonMoment");
   const momentInput = document.getElementById("inputMomentAnswer");
@@ -111,13 +117,21 @@ function gameOver() {
   main.innerHTML = ``;
   main.innerHTML = `
   <div id="gameOverContainer">
-  <div id="gameOverWrapper"></div>
-  <h1 id="GameOverTitle">Game Over</h1>
-  <p id ="firstGameover-text">Det verkar som om mysteriet var lite för sofistikerat för vissa. Mau Gossip har spelat spelet fläckfritt – det kan vi alla konstatera med en gnutta avundsjuka. Dessvärre (ett ord som låter betydligt lyxigare än ett simpelt tyvärr) räckte din intuition inte hela vägen fram den här gången. Gåtan förblir olöst i dina händer, och vi som verkligen hade hoppats på att du skulle briljera på podiet. Men i den här världen får man inga poäng för att bara försöka. Bättre lycka nästa gång. Om det ens finns en nästa gång...</p>
-  <p id ="secondGameover-text">You know you love me. </p>
-  <p id="thirdGameover-text">XOXO</p>
+    <div id="gameOverWrapper"></div>
+    <h1 id="GameOverTitle">Game Over</h1>
+    <p id="firstGameover-text">
+      Det verkar som om mysteriet var lite för sofistikerat för vissa. Mau
+      Gossip har spelat spelet fläckfritt – det kan vi alla konstatera med
+      en gnutta avundsjuka. Dessvärre (ett ord som låter betydligt lyxigare
+      än ett simpelt tyvärr) räckte din intuition inte hela vägen fram den
+      här gången. Gåtan förblir olöst i dina händer, och vi som verkligen
+      hade hoppats på att du skulle briljera på podiet. Men i den här
+      världen får man inga poäng för att bara försöka. Bättre lycka nästa
+      gång. Om det ens finns en nästa gång...
+    </p>
+    <p id="secondGameover-text">You know you love me.</p>
+    <p id="thirdGameover-text">XOXO</p>
   </div>
-  
   `;
 }
 
@@ -153,23 +167,40 @@ function revealPopup() {
   main.innerHTML = ``;
   main.innerHTML = `
   <div id="revealPopupWrapper">
-  <div id="wrapperReveal">
-  <div id="upperRevealPopup">
-    <p id="breadTextRevealPopup">Självklart är det ingen enkel fråga att ställa, vad väljer du? Det finns naturligtvis ett svar som är det rätta, men frågan är om du har karaktären nog att hitta det. Det finns en viss moralisk estetik i det här spelet, och ingen skulle klandra dig om du frestades att välja något annat. </p>
-    <p id="questionRevealPopup">Kan du svara rätt, eller kommer du bara vara ännu en i mängden som gissade fel?</p>
-  </div>
-  <div id="downRevealPopup">
-  <div class="popupBox" id="whitepopup">
-    <p class="textpopup">Avslöja MAU Gossip</p>
-    <p class="PopupTextReveal">Häng ut Lovisa och visa alla vem som ligger bakom kontot. Genom att avslöja sanningen rentvår du ditt eget namn. Praktikplatsen är säkrad, men till vilket pris?</p>
-  </div>
-  <div class="popupBox" id="redpopup">
-    <p class="textpopup">Radera MAU Gossip</p>
-    <p class="PopupTextReveal">Om du raderar allt försvinner bevisen mot dig, men också chansen att hämnas. Du väljer moralen före karriären, men kommer ryktena om dig att leva kvar i korridorerna?</p>
-    </div>
-  </div>
-  </div>
-  </div>`;
+        <div id="wrapperReveal">
+          <div id="upperRevealPopup">
+            <p id="breadTextRevealPopup">
+              Självklart är det ingen enkel fråga att ställa, vad väljer du? Det
+              finns naturligtvis ett svar som är det rätta, men frågan är om du
+              har karaktären nog att hitta det. Det finns en viss moralisk
+              estetik i det här spelet, och ingen skulle klandra dig om du
+              frestades att välja något annat.
+            </p>
+            <p id="questionRevealPopup">
+              Kan du svara rätt, eller kommer du bara vara ännu en i mängden som
+              gissade fel?
+            </p>
+          </div>
+          <div id="downRevealPopup">
+            <div class="popupBox" id="whitepopup">
+              <p class="textpopup">Avslöja MAU Gossip</p>
+              <p class="PopupTextReveal">
+                Häng ut Lovisa och visa alla vem som ligger bakom kontot. Genom
+                att avslöja sanningen rentvår du ditt eget namn. Praktikplatsen
+                är säkrad, men till vilket pris?
+              </p>
+            </div>
+            <div class="popupBox" id="redpopup">
+              <p class="textpopup">Radera MAU Gossip</p>
+              <p class="PopupTextReveal">
+                Om du raderar allt försvinner bevisen mot dig, men också chansen
+                att hämnas. Du väljer moralen före karriären, men kommer ryktena
+                om dig att leva kvar i korridorerna?
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>`;
 
   const whiteButton = document.getElementById("whitepopup");
   const redButton = document.getElementById("redpopup");
