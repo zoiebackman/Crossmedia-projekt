@@ -479,7 +479,9 @@ function picturesPage() {
   let unlockedGalleryPictures =
     JSON.parse(localStorage.getItem("unlockedGalleryPictures")) || [];
 
-  let allPictures = [...pictures, ...unlockedGalleryPictures];
+  let allPictures = [
+    ...new Set([...pictures, ...unlockedGalleryPictures].filter((pic) => pic)),
+  ];
 
   for (let pic of allPictures) {
     let div = document.createElement("div");
