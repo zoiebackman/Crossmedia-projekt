@@ -142,7 +142,7 @@ function welcomeFun() {
    <div id="welcomeWrapper">
         <h1 id="WelcomeText">Välkommen till spelet</h1>
         <p id="introText">Femte terminen har precis börjat på Malmö universitet, men istället för att fokusera på fastighetsrätt och dina studier har du vaknat upp till din värsta mardröm. Baksmällan från gårdagens fest på Niagaras takvåning är ingenting jämfört med den ångest som sköljer över dig när du ser dig själv i MAU Gossips senaste inlägg. Vad kommer hända med din karriär när din blivande chef får syn på blogginlägget där du har snortat kokain på takterrassen? <br><br>
-        Du är nu indragen i ett nät av lögner och hemligheter som styrs av Malmös absoluta elit. Ditt rykte och din framtida karriär står på spel.
+        Du är nu indragen i ett nät av lögner och hemligheter som styrs av Malmös absoluta elit. Ditt rykte och din framtida karriär står på spel. Ditt jobb är att hitta vem som är MAU Gossip. 
 
         </p>
 
@@ -187,12 +187,12 @@ function welcomeFun() {
            <p id="welcomeInstructions">En ny sida har dykt upp:
             <strong>MAU Gossip</strong> <br><br> En anonym blogg där någon publicerar rykten om studenter på universitetet.
               Du vet en sak:
-              Om du inte tar reda på sanningen kommer någon annan att skriva den åt dig.
+              Om du inte tar reda på sanningen kommer det att förstöra ditt liv.
             </p>
             </div>
             <div id="welcomeSection4">
             <h2 id="howToPlay">Regler / Rekommendationer </h2>
-            <p id="welcomeInstructions">Det här är en berättelse som utspelar sig på flera plattformar.
+            <p id="welcomeInstructions">Det här är en berättelse som utspelar sig på flera plattformar. Det är viktigt att håller dig uppdaterad och ofta går in på bloggen och instagram.
               Två av dem kommer vara viktigast för dig:
             </p>
 

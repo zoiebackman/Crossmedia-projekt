@@ -17,6 +17,7 @@ function logIn() {
           </div>
           <div class="input-class"> <p id="password">Lösenord</p>
             <input id="input-password" type="password"></input>
+            <p id="wrong-password">Fel lösenord, vad god att prova igen <3 xoxo</p>
           </div>
           <button id="login-knappen">Logga in</button>
         </div>
@@ -27,6 +28,7 @@ function logIn() {
   const loginBtn = document.getElementById("login-knappen");
   const usernameInput = document.getElementById("input-username");
   const passwordInput = document.getElementById("input-password");
+  const wrongPasswordP = document.getElementById("wrong-password");
 
   loginBtn.addEventListener("click", function () {
     const username = usernameInput.value;
@@ -38,12 +40,14 @@ function logIn() {
     };
 
     if (logInData.username === username && logInData.password === password) {
+      wrongPasswordP.style.display = "none";
       momentOfTruth();
       loggedInPage();
     } else {
-      alert("Fel användarnamn eller lösenord. Försök igen!");
       passwordInput.value = "";
       usernameInput.value = "";
+      wrongPasswordP.style.display = "block";
+      wrongPasswordP.style.color = "red";
     }
   });
 }
@@ -110,10 +114,8 @@ function gameOver() {
   main.innerHTML = `
   <div id="gameOverContainer">
     <div id="gameOverWrapper"></div>
-    <h1 id="GameOverTitle">Game Over</h1>
-    <p id ="firstGameover-text">Det verkar som om mysteriet var lite för sofistikerat för vissa. Mau Gossip har spelat spelet fläckfritt – det kan vi alla konstatera med en gnutta avundsjuka. Dessvärre (ett ord som låter betydligt lyxigare än ett simpelt tyvärr) räckte din intuition inte hela vägen fram den här gången. Gåtan förblir olöst i dina händer, och vi som verkligen hade hoppats på att du skulle briljera på podiet. Men i den här världen får man inga poäng för att bara försöka. Bättre lycka nästa gång. Om det ens finns en nästa gång...</p>
-    <p id ="secondGameover-text">You know you love me. </p>
-    <p id="thirdGameover-text">XOXO</p>
+    <h1 id="GameOverTitle">Game over</h1>
+    <p id ="firstGameover-text">Det verkar som att du inte lyckas att lösa vem MAU Gossip är. Så synd :)</p>
   </div>
     
   `;
@@ -157,11 +159,11 @@ function revealPopup() {
   </div>
   <div id="downRevealPopup">
   <div class="popupBox" id="whitepopup">
-    <p class="textpopup">Avslöja MAU Gossip</p>
+    <p class="textpopup"><strong>Avslöja MAU Gossip</strong></p>
     <p class="PopupTextReveal">Häng ut Lovisa och visa alla vem som ligger bakom kontot. Genom att avslöja sanningen rentvår du ditt eget namn. Praktikplatsen är säkrad, men till vilket pris?</p>
   </div>
   <div class="popupBox" id="redpopup">
-    <p class="textpopup">Radera MAU Gossip</p>
+    <p class="textpopup"><strong>Radera MAU Gossip</strong></p>
     <p class="PopupTextReveal">Om du raderar allt försvinner bevisen mot dig, men också chansen att hämnas. Du väljer moralen före karriären, men kommer ryktena om dig att leva kvar i korridorerna?</p>
     </div>
   </div>
@@ -172,7 +174,7 @@ function revealPopup() {
   const redButton = document.getElementById("redpopup");
 
   whiteButton.addEventListener("click", function () {
-    gameOver();
+    LovisaReveal();
   });
 
   redButton.addEventListener("click", function () {
@@ -219,4 +221,30 @@ Hatten av för en sann vinnare. Men kom ihåg... även om bloggen är borta, fin
 
 function deleteWholePage() {
   document.body.style.display = "none";
+}
+
+function LovisaReveal(){
+   const headerLogoMobil = document.getElementById("headerLoggaMobil");
+  const headerDivLogo = document.getElementById("headerDivLogo");
+  headerDivLogo.innerHTML = "Vad hände sen?";
+  headerDivLogo.id = "gameOverTextId";
+
+  main.innerHTML = ``;
+  main.innerHTML = `
+  <div id="gameOverContainer">
+    <div id="gameOverWrapper"></div>
+    <h1 id="GameOverTitle">Vad hände sen?</h1>
+    <p id ="firstGameover-text">Det verkar som om mysteriet var lite för sofistikerat för vissa. Att avslöja Lovisa kanske kändes rätt för dig, men kvar finns bloggen – som fortfarande påverkar flera människors liv på djupet.
+
+För vissa blev konsekvenserna förödande. Alice lyckades aldrig få den där praktikplatsen på mäklarbyrån, och hon fick inte ens en fot in i branschen. Efter alla rykten om droger valde dessutom hennes egen familj att säga upp kontakten med henne.
+
+Alice arbetar idag på ett kafé och bor som inneboende med en bekant... Hon kämpar dagligen för att få ekonomin att gå ihop och få det att gå runt. Men mitt i allt det svåra hittade hon och Calle varandra. Calle blev djupt kär i Alice, och idag är de partners och bor tillsammans. De delar tillvaron och kämpar på, sida vid sida, med sin strama ekonomi.
+
+För Lovisa ändrades däremot ingenting. Hon visade sig vara listig och har idag lyckats knipa ett jobb på en av de främsta mäklarbyråerna.
+
+För Leon och Maja gick det tyvärr inte lika bra. Det turbulenta efterspelet slet på dem, och deras relation tog slut. Idag arbetar de på olika företag och fokuserar helt på sina karriärer för att försöka jobba sig uppåt.</p>
+  </div>
+    
+  `;
+
 }
