@@ -66,8 +66,7 @@ main {
   cursor: pointer;
 }
 
-a {
-  /* color: white; */
+#tillbaka {
   color: #dd9c4c;
   margin-top: 20px;
   width: 80%;
@@ -111,7 +110,7 @@ a {
     font-size: 16px;
   }
 
-  a {
+  #tillbaka {
     width: 90%;
   }
 }

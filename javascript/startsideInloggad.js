@@ -4,7 +4,7 @@ logIn();
 function logIn() {
   main.innerHTML = ``;
   main.innerHTML = `
-  <a href="homePage.html">Tillbaka</a>
+  <a id="tillbaka" href="homePage.html">Tillbaka</a>
   <div id="loginContainer">
     <div id="logInPopup">
       <div id="popupLI">
