@@ -93,7 +93,7 @@ function loggedInPage() {
     const correctPassword = "lovisa";
 
     if (password === correctPassword) {
-      reveal();
+      revealPopup();
     } else {
       attempts++;
     }
@@ -138,11 +138,24 @@ function reveal() {
   main.innerHTML = ``;
   main.innerHTML = `
   <div id="revealTextWrapper">
-    <p id="revealUpperText">Bra jobbat, du har nu listat ut vem som MAU Gossip är men kommer sista frågan...</p>
-    <p id="revealMiddleText">Ska du avslöja MAU Gossip? Häng ut Lovisa och visa alla vem som ligger bakom kontot. Genom att avslöja sanningen rentvår du ditt eget namn och köper dig en plats i värmen hos Maja och Leon. Praktikplatsen är säkrad, men till vilket pris?</p>
-    <p id="revealLastText">...eller ska du radera hemsidan? Stoppa kedjan av hat en gång för alla. Om du raderar allt försvinner bevisen mot dig, men också chansen att hämnas. Du väljer moralen före karriären, men kommer ryktena om dig att leva kvar i korridorerna?</p>
-  </div>
-  <button id="nextButtonReveal">Nästa</button>`;
+        <p id="revealUpperText">
+          Bra jobbat, du har nu listat ut vem som MAU Gossip är men kommer sista
+          frågan...
+        </p>
+        <p id="revealMiddleText">
+          Ska du avslöja MAU Gossip? Häng ut Lovisa och visa alla vem som ligger
+          bakom kontot. Genom att avslöja sanningen rentvår du ditt eget namn
+          och köper dig en plats i värmen hos Maja och Leon. Praktikplatsen är
+          säkrad, men till vilket pris?
+        </p>
+        <p id="revealLastText">
+          ...eller ska du radera hemsidan? Stoppa kedjan av hat en gång för
+          alla. Om du raderar allt försvinner bevisen mot dig, men också chansen
+          att hämnas. Du väljer moralen före karriären, men kommer ryktena om
+          dig att leva kvar i korridorerna?
+        </p>
+      </div>
+      <button id="nextButtonReveal">Nästa</button>`;
 
   const nextButtonReveal = document.getElementById("nextButtonReveal");
 
@@ -163,15 +176,11 @@ function revealPopup() {
         <div id="wrapperReveal">
           <div id="upperRevealPopup">
             <p id="breadTextRevealPopup">
-              Självklart är det ingen enkel fråga att ställa, vad väljer du? Det
-              finns naturligtvis ett svar som är det rätta, men frågan är om du
-              har karaktären nog att hitta det. Det finns en viss moralisk
-              estetik i det här spelet, och ingen skulle klandra dig om du
-              frestades att välja något annat.
+              Bra jobbat, du har nu listat ut vem som är MAU Gossip, men nu kommer sista
+          frågan... Ska du avslöja Lovisa eller radera hela MAU gossip
             </p>
             <p id="questionRevealPopup">
-              Kan du svara rätt, eller kommer du bara vara ännu en i mängden som
-              gissade fel?
+            Ditt val kommer ha betydande påverkan för din framtid
             </p>
           </div>
           <div id="downRevealPopup">
