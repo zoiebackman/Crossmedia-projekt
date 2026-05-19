@@ -11,7 +11,7 @@
   margin-bottom: 50px;
 }
 
-#wrapperReveal{
+#wrapperReveal {
   width: 90%;
   margin: 0 auto;
 }
@@ -24,26 +24,25 @@
   align-items: center;
 }
 
-#downRevealPopup{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 0 20px;
+#downRevealPopup {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0 20px;
 
-    align-items: center; /* Centrerar knapparna inuti listan */
-    
+  align-items: center; /* Centrerar knapparna inuti listan */
 }
 
-#breadTextRevealPopup{
-    font-family: "bodondi72";
-    font-size: 18px;
-    width: 90%;
+#breadTextRevealPopup {
+  font-family: "bodondi72";
+  font-size: 18px;
+  width: 90%;
 }
 
-#questionRevealPopup{
-    font-family: "bodondiItalic";
-    font-size: 18px;
-    width: 90%;
+#questionRevealPopup {
+  font-family: "bodondiItalic";
+  font-size: 18px;
+  width: 90%;
 }
 
 .popupBox {
@@ -60,29 +59,29 @@
   font-size: 18px;
 }
 
-.PopupTextReveal{
-    text-align: center;
-    font-size: 14px;
-    font-family: "didact gothic";
+.PopupTextReveal {
+  text-align: center;
+  font-size: 14px;
+  font-family: "didact gothic";
 }
 
 #whitepopup {
   background-color: white;
 }
 
-#whitepopup:hover{
-    background-color: #dd9c4c;
-    cursor: pointer;
+#whitepopup:hover {
+  background-color: #dd9c4c;
+  cursor: pointer;
 }
 
 #redpopup {
-  background-color: #ae2e30;
+  background-color: #ffffff;
 }
 
-#redpopup:hover{
-    background-color:#dd9c4c ;
-    border:none;
-    cursor: pointer;
+#redpopup:hover {
+  background-color: #dd9c4c;
+  border: none;
+  cursor: pointer;
 }
 
 .revealPopupText {
@@ -92,32 +91,33 @@
 }
 
 @media (max-width: 767px) {
-  #headerLoggaMobil{
+  #headerLoggaMobil {
     display: block;
   }
-  #revealPopupWrapper{
+  #revealPopupWrapper {
     margin-top: 40px;
     width: 90%;
   }
 
-  #breadTextRevealPopup, #questionRevealPopup{
+  #breadTextRevealPopup,
+  #questionRevealPopup {
     font-size: 14px;
   }
 
-  .textpopup, .PopupTextReveal{
+  .textpopup,
+  .PopupTextReveal {
     font-size: 12px;
   }
 
-  #upperRevealPopup{
+  #upperRevealPopup {
     padding: 5px;
   }
 
-  #wrapperReveal{
+  #wrapperReveal {
     width: 80%;
   }
 
-  .popupBox{
+  .popupBox {
     width: 100%;
-
   }
 }
