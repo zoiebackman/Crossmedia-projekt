@@ -30,6 +30,7 @@ const pictures = [
   "../pictures/picturesPage/12.png",
   "../pictures/picturesPage/13.png",
   "../pictures/picturesPage/14.png",
+  "../pictures/picturesPage/p1.png",
   "../pictures/picturesPage/15.png",
   "../pictures/picturesPage/16.png",
   "../pictures/picturesPage/17.png",
