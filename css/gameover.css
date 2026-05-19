@@ -15,6 +15,7 @@
   font-size: 16px;
   color: white;
   text-align: left;
+  margin-bottom: 50px;
 }
 
 .gameOverText {
@@ -50,10 +51,10 @@
     font-size: 14px;
   }
 
-  #gameOverTextId{
+  #gameOverTextId {
     display: none;
   }
-  
+
   #GameOverTitle {
     color: #ae2e30;
     font-size: 60px;
