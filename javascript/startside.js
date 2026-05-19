@@ -141,8 +141,8 @@ function welcomeFun() {
    <div id="welcomeContainer">
    <div id="welcomeWrapper">
         <h1 id="WelcomeText">Välkommen till spelet</h1>
-        <p id="introText">Femte terminen har precis börjat på Malmö universitet, men istället för att fokusera på fastighetsrätt och dina studier har du vaknat upp till din värsta mardröm. Baksmällan från gårdagens fest på Niagaras takvåning är ingenting jämfört med den ångest som sköljer över dig när du ser dig själv i MAU Gossips senaste inlägg. Vad kommer hända med din karriär när din blivande chef får syn på blogginlägget där du har snortat kokain på takterrassen? <br><br>
-        Du är nu indragen i ett nät av lögner och hemligheter som styrs av Malmös absoluta elit. Ditt rykte och din framtida karriär står på spel. Ditt jobb är att hitta vem som är MAU Gossip. 
+        <p id="introText">Femte terminen har precis börjat på Malmö universitet, men istället för att fokusera på fastighetsrätt och dina studier har du vaknat upp till din värsta mardröm. Baksmällan från gårdagens fest på Niagaras takvåning är ingenting jämfört med den ångest som sköljer över dig när du ser dig själv i MAU Gossips senaste inlägg. Vad kommer hända med din karriär när din blivande chef får syn på blogginlägget där du håller i en påse kokain på takterrassen? <br><br>
+        Du är nu indragen i ett nät av lögner och hemligheter som styrs av Malmös absoluta elit. Ditt rykte och din framtida karriär står på spel.
 
         </p>
 
@@ -247,9 +247,6 @@ function goToWhisperPage() {
   let currentWhisperCounterIndex = whisperArrayOnPageLocal.length;
   console.log(whisperArrayOnPageLocal);
 
-  let correctPasswordArrayLocal =
-    JSON.parse(localStorage.getItem("correctPasswordArrayLocal")) || [];
-
   main.innerHTML = `
   <p id= "mobileOnly">Alla Viskningar</p>
   <div id="containerGossip">
@@ -276,6 +273,12 @@ function goToWhisperPage() {
     pushToArray(whisperArray[currentWhisperCounterIndex]);
     currentWhisperCounterIndex++;
   }
+
+  if (currentWhisperCounterIndex == 1) {
+    pushToArray(whisperArray[currentWhisperCounterIndex]);
+    currentWhisperCounterIndex++;
+  }
+
   console.log(whisperArrayOnPageLocal.length);
   renderPage(currentPage);
   console.log(whisperArrayOnPageLocal.length);
@@ -420,7 +423,7 @@ function renderPage(currentPage) {
     console.log(post);
     boxGossipDiv.innerHTML = `
     <div class = "titleBox"> 
-       <p class="dateText"> Viskning ${post.id} </p>
+       <p class="dateText"> Viskning ${Number(post.id) + 1} </p>
       <p class="dateText">${post.date}</p>
       </div>
       <p class="textGossip">${post.text}</p>
