@@ -93,7 +93,7 @@ function loggedInPage() {
     const correctPassword = "lovisa";
 
     if (password === correctPassword) {
-      reveal();
+      revealPopup();
     } else {
       attempts++;
     }
@@ -138,11 +138,24 @@ function reveal() {
   main.innerHTML = ``;
   main.innerHTML = `
   <div id="revealTextWrapper">
-    <p id="revealUpperText">Bra jobbat, du har nu listat ut vem som MAU Gossip är men kommer sista frågan...</p>
-    <p id="revealMiddleText">Ska du avslöja MAU Gossip? Häng ut Lovisa och visa alla vem som ligger bakom kontot. Genom att avslöja sanningen rentvår du ditt eget namn och köper dig en plats i värmen hos Maja och Leon. Praktikplatsen är säkrad, men till vilket pris?</p>
-    <p id="revealLastText">...eller ska du radera hemsidan? Stoppa kedjan av hat en gång för alla. Om du raderar allt försvinner bevisen mot dig, men också chansen att hämnas. Du väljer moralen före karriären, men kommer ryktena om dig att leva kvar i korridorerna?</p>
-  </div>
-  <button id="nextButtonReveal">Nästa</button>`;
+        <p id="revealUpperText">
+          Bra jobbat, du har nu listat ut vem som MAU Gossip är men kommer sista
+          frågan...
+        </p>
+        <p id="revealMiddleText">
+          Ska du avslöja MAU Gossip? Häng ut Lovisa och visa alla vem som ligger
+          bakom kontot. Genom att avslöja sanningen rentvår du ditt eget namn
+          och köper dig en plats i värmen hos Maja och Leon. Praktikplatsen är
+          säkrad, men till vilket pris?
+        </p>
+        <p id="revealLastText">
+          ...eller ska du radera hemsidan? Stoppa kedjan av hat en gång för
+          alla. Om du raderar allt försvinner bevisen mot dig, men också chansen
+          att hämnas. Du väljer moralen före karriären, men kommer ryktena om
+          dig att leva kvar i korridorerna?
+        </p>
+      </div>
+      <button id="nextButtonReveal">Nästa</button>`;
 
   const nextButtonReveal = document.getElementById("nextButtonReveal");
 
@@ -163,14 +176,11 @@ function revealPopup() {
         <div id="wrapperReveal">
           <div id="upperRevealPopup">
             <p id="breadTextRevealPopup">
-              Självklart är det ingen enkel fråga att ställa, vad väljer du? Det
-              finns naturligtvis ett svar som är det rätta, men frågan är om du
-              har karaktären nog att hitta det. Det finns en viss moralisk
-              estetik i det här spelet, och ingen skulle klandra dig om du
-              frestades att välja något annat.
+              Bra jobbat, du har nu listat ut vem som är MAU Gossip, men nu kommer sista
+          frågan... Ska du avslöja Lovisa eller radera hela MAU gossip
             </p>
             <p id="questionRevealPopup">
-             
+            Ditt val kommer ha betydande påverkan för din framtid
             </p>
           </div>
           <div id="downRevealPopup">
@@ -209,9 +219,9 @@ function revealPopup() {
 function win() {
   const headerLogoMobil = document.getElementById("headerLoggaMobil");
   const headerDivLogo = document.getElementById("headerDivLogo");
-  headerDivLogo.innerHTML = "You Won";
-  headerDivLogo.classList.add("youWonText");
-  headerDivLogo.style.width = "308px";
+  headerDivLogo.innerHTML = "Vad hände sen?";
+  /*   headerDivLogo.id = "gameOverTextId"; */
+  headerDivLogo.style.width = "465px";
 
   main.innerHTML = ``;
   main.innerHTML = `
@@ -251,23 +261,34 @@ function LovisaReveal() {
   const headerLogoMobil = document.getElementById("headerLoggaMobil");
   const headerDivLogo = document.getElementById("headerDivLogo");
   headerDivLogo.innerHTML = "Vad hände sen?";
-  headerDivLogo.id = "gameOverTextId";
+  /*   headerDivLogo.id = "gameOverTextId"; */
+  headerDivLogo.style.width = "465px";
 
   main.innerHTML = ``;
   main.innerHTML = `
-  <div id="gameOverContainer">
-    <div id="gameOverWrapper"></div>
-    <h1 id="GameOverTitle">Vad hände sen?</h1>
-    <p id ="firstGameover-text">Det verkar som om mysteriet var lite för sofistikerat för vissa. Att avslöja Lovisa kanske kändes rätt för dig, men kvar finns bloggen – som fortfarande påverkar flera människors liv på djupet.
-
-För vissa blev konsekvenserna förödande. Alice lyckades aldrig få den där praktikplatsen på mäklarbyrån, och hon fick inte ens en fot in i branschen. Efter alla rykten om droger valde dessutom hennes egen familj att säga upp kontakten med henne.
-
-Alice arbetar idag på ett kafé och bor som inneboende med en bekant... Hon kämpar dagligen för att få ekonomin att gå ihop och få det att gå runt. Men mitt i allt det svåra hittade hon och Calle varandra. Calle blev djupt kär i Alice, och idag är de partners och bor tillsammans. De delar tillvaron och kämpar på, sida vid sida, med sin strama ekonomi.
-
-För Lovisa ändrades däremot ingenting. Hon visade sig vara listig och har idag lyckats knipa ett jobb på en av de främsta mäklarbyråerna.
-
-För Leon och Maja gick det tyvärr inte lika bra. Det turbulenta efterspelet slet på dem, och deras relation tog slut. Idag arbetar de på olika företag och fokuserar helt på sina karriärer för att försöka jobba sig uppåt.</p>
-  </div>
-    
+        <div id="gameOverContainer">
+        <div id="gameOverWrapper"></div>
+        <h1 id="GameOverTitle">Vad hände sen?</h1>
+        <p id="firstGameover-text">
+          Det verkar som om mysteriet var lite för sofistikerat för vissa. Att
+          avslöja Lovisa kanske kändes rätt för dig, men kvar finns bloggen –
+          som fortfarande påverkar flera människors liv på djupet. För vissa
+          blev konsekvenserna förödande. Alice lyckades aldrig få den där
+          praktikplatsen på mäklarbyrån, och hon fick inte ens en fot in i
+          branschen. Efter alla rykten om droger valde dessutom hennes egen
+          familj att säga upp kontakten med henne. Alice arbetar idag på ett
+          kafé och bor som inneboende med en bekant... Hon kämpar dagligen för
+          att få ekonomin att gå ihop och få det att gå runt. Men mitt i allt
+          det svåra hittade hon och Calle varandra. Calle blev djupt kär i
+          Alice, och idag är de partners och bor tillsammans. De delar tillvaron
+          och kämpar på, sida vid sida, med sin strama ekonomi. För Lovisa
+          ändrades däremot ingenting. Hon visade sig vara listig och har idag
+          lyckats knipa ett jobb på en av de främsta mäklarbyråerna. För Leon
+          och Maja gick det tyvärr inte lika bra. Det turbulenta efterspelet
+          slet på dem, och deras relation tog slut. Idag arbetar de på olika
+          företag och fokuserar helt på sina karriärer för att försöka jobba sig
+          uppåt.
+        </p>
+      </div>
   `;
 }
