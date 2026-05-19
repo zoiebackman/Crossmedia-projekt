@@ -103,7 +103,7 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    width: 50%;
+    width: 60%;
     background-color: #54312f;
     padding: 20px;
     border-radius: 10px;
@@ -152,7 +152,7 @@
     display: inline;
     padding: 5px 10px;
     border-radius: 5px;
-    width: 40%;
+    width: 50%;
     text-align: center;
     color: black;
     font-family: "bodondi72";
@@ -199,11 +199,7 @@
         font-family: "bodondi72";
         color: #cd9c72;
         width: 90%;
-
-        /* color: #dd9c4c;
-        font-size: 30px;
-        font-family: "bodondi72"; */
-        /* margin-bottom: 0; */
+        margin-left: 20px;
     }
 
     header {

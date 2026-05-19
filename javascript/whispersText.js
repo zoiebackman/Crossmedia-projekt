@@ -2,7 +2,7 @@ let whisperArray = [
     {
         id: 0,
         date: getTodaysDate(),
-        text: `Det är faktiskt imponerande hur vissa lyckas göra ett så… starkt intryck på en enda kväll. <br>
+        text: `Det är faktiskt imponerande hur vissa lyckas göra ett så… starkt intryck på en enda kväll.
 Vår kära Alice verkade i alla fall bestämma sig för att Niagara-festen skulle bli hennes personliga audition för “mest urspårad innan midnatt”.
 Lite för många drinkar.
 Lite för mycket uppmärksamhet.
@@ -30,11 +30,11 @@ XOXO`,
     {
         id: 1,
         date: getTodaysDate(),
-        text: `Ibland händer de mest intressanta sakerna mitt framför ögonen på folk… utan att de märker något alls. Festen på  <strong>Niagaras takterrass </strong> igår kväll verkade bli en hit hos de flesta…
+        text: `Ibland händer de mest intressanta sakerna mitt framför ögonen på folk… utan att de märker något alls. Festen på  Niagaras takterrass igår kväll verkade bli en hit hos de flesta…
 
 Vår lilla charmör Leon verkade i alla fall inte särskilt blyg med att sprida leenden, blickar och lite väl närgången energi till mer än en tjej under kvällen.
 Det märkliga? Hans flickvän var faktiskt där också. Bara några meter bort. Helt ovetande.
-Så frågan är… är vissa hemligheter skickligare på att gömma sig än andra, eller är vissa bara bättre på att inte vilja se? Och vilka hemligheter gömmer sig på Niagaras takterrass efter gårdagens festande?`,
+Så frågan är… är vissa hemligheter skickligare på att gömma sig än andra, eller är vissa bara bättre på att inte vilja se? Och vilka hemligheter gömmer sig på <strong>Niagaras takterrass </strong>  efter gårdagens festande?`,
         password: ""
     },
     {

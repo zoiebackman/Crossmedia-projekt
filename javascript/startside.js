@@ -141,7 +141,7 @@ function welcomeFun() {
    <div id="welcomeContainer">
    <div id="welcomeWrapper">
         <h1 id="WelcomeText">Välkommen till spelet</h1>
-        <p id="introText">Femte terminen har precis börjat på Malmö universitet, men istället för att fokusera på fastighetsrätt och dina studier har du vaknat upp till din värsta mardröm. Baksmällan från gårdagens fest på Niagaras takvåning är ingenting jämfört med den ångest som sköljer över dig när du ser dig själv i MAU Gossips senaste inlägg. Vad kommer hända med din karriär när din blivande chef får syn på blogginlägget där du har snortat kokain på takterrassen? <br><br>
+        <p id="introText">Femte terminen har precis börjat på Malmö universitet, men istället för att fokusera på fastighetsrätt och dina studier har du vaknat upp till din värsta mardröm. Baksmällan från gårdagens fest på Niagaras takvåning är ingenting jämfört med den ångest som sköljer över dig när du ser dig själv i MAU Gossips senaste inlägg. Vad kommer hända med din karriär när din blivande chef får syn på blogginlägget där du håller i en påse kokain på takterrassen? <br><br>
         Du är nu indragen i ett nät av lögner och hemligheter som styrs av Malmös absoluta elit. Ditt rykte och din framtida karriär står på spel.
 
         </p>
