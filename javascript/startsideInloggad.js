@@ -176,8 +176,15 @@ function revealPopup() {
         <div id="wrapperReveal">
           <div id="upperRevealPopup">
             <p id="breadTextRevealPopup">
-              Bra jobbat, du har nu listat ut vem som är MAU Gossip, men nu kommer sista
-          frågan... Ska du avslöja Lovisa eller ta över MAU Gossip sidan?
+Bra jobbat. Du har lyckats med det ingen annan klarade – du har avslöjat vem som döljer sig bakom MAU Gossip.
+
+Men allt leder fram till detta ögonblick… den sista frågan.
+
+Vad gör du nu?
+
+Ditt val kommer ha betydande påverkan för din framtid...
+
+            
             </p>
             <p id="questionRevealPopup">
             Ditt val kommer ha betydande påverkan för din framtid...
@@ -185,7 +192,7 @@ function revealPopup() {
           </div>
           <div id="downRevealPopup">
             <div class="popupBox" id="whitepopup">
-              <p class="textpopup">Avslöja MAU Gossip / Lovisa</p>
+              <p class="textpopup">Avslöja MAU Gossip</p>
               <p class="PopupTextReveal">
                 Du väljer att avslöja Lovisa.  
               </p>
