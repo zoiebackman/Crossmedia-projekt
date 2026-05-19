@@ -46,7 +46,6 @@ const pictures = [
   "../pictures/picturesPage/25.png",
   "../pictures/picturesPage/26.png",
   "../pictures/picturesPage/27.png",
-  "../pictures/picturesPage/28.png",
 ];
 
 function homePage() {
