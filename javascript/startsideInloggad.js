@@ -170,8 +170,7 @@ function revealPopup() {
               frestades att välja något annat.
             </p>
             <p id="questionRevealPopup">
-              Kan du svara rätt, eller kommer du bara vara ännu en i mängden som
-              gissade fel?
+             
             </p>
           </div>
           <div id="downRevealPopup">
