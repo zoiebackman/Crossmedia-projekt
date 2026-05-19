@@ -247,9 +247,6 @@ function goToWhisperPage() {
   let currentWhisperCounterIndex = whisperArrayOnPageLocal.length;
   console.log(whisperArrayOnPageLocal);
 
-  let correctPasswordArrayLocal =
-    JSON.parse(localStorage.getItem("correctPasswordArrayLocal")) || [];
-
   main.innerHTML = `
   <p id= "mobileOnly">Alla Viskningar</p>
   <div id="containerGossip">
@@ -276,6 +273,12 @@ function goToWhisperPage() {
     pushToArray(whisperArray[currentWhisperCounterIndex]);
     currentWhisperCounterIndex++;
   }
+
+  if (currentWhisperCounterIndex == 1) {
+    pushToArray(whisperArray[currentWhisperCounterIndex]);
+    currentWhisperCounterIndex++;
+  }
+
   console.log(whisperArrayOnPageLocal.length);
   renderPage(currentPage);
   console.log(whisperArrayOnPageLocal.length);
@@ -420,7 +423,7 @@ function renderPage(currentPage) {
     console.log(post);
     boxGossipDiv.innerHTML = `
     <div class = "titleBox"> 
-       <p class="dateText"> Viskning ${post.id} </p>
+       <p class="dateText"> Viskning ${Number(post.id) + 1} </p>
       <p class="dateText">${post.date}</p>
       </div>
       <p class="textGossip">${post.text}</p>

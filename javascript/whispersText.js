@@ -1,5 +1,33 @@
 let whisperArray = [
     {
+        id: 0,
+        date: getTodaysDate(),
+        text: `Det är faktiskt imponerande hur vissa lyckas göra ett så… starkt intryck på en enda kväll. <br>
+Vår kära Alice verkade i alla fall bestämma sig för att Niagara-festen skulle bli hennes personliga audition för “mest urspårad innan midnatt”.
+Lite för många drinkar.
+Lite för mycket uppmärksamhet.
+Och kanske lite för lite konsekvenstänk.
+Det började med dans på borden,
+fortsatte med några väldigt närgångna samtal,
+och slutade tydligen med att halva programmet nu har något att viska om.
+Och vissa bilder från kvällen?
+Ja… de verkar redan cirkulera snabbare än kursmaterialet.
+Problemet är bara att vissa kvällar inte stannar på festen.
+Särskilt inte när folk från både praktikplatser och universitet råkar känna samma personer.
+Man undrar ju hur populärt det är att dyka upp till praktiken när ens namn redan hunnit bli Malmös största snackis.
+För om chefen får nys om det här, med tanke på deras nolltolerans mot droger, sägs det att han hellre skulle ringa varenda mäklarbyrå i stan än att låta någon glömma vem Alice är.
+Tänk att bli ihågkommen för två saker:
+festen…
+och den där lilla,vita påsen.
+Inte direkt “årets framtida mäklare”-energi.
+Vissa säger att man bara lever en gång.
+Andra säger att man också kan få leva utefter sina 
+misstag.     
+XOXO`,
+        picUrl: `../pictures/alicePowder.png`,
+    },
+
+    {
         id: 1,
         date: getTodaysDate(),
         text: `Ibland händer de mest intressanta sakerna mitt framför ögonen på folk… utan att de märker något alls. Festen på  <strong>Niagaras takterrass </strong> igår kväll verkade bli en hit hos de flesta…
