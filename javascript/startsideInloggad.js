@@ -193,7 +193,7 @@ function revealPopup() {
               </p>
             </div>
             <div class="popupBox" id="redpopup">
-              <p class="textpopup">Radera MAU Gossip</p>
+              <p class="textpopup">Ta över MAU Gossip</p>
               <p class="PopupTextReveal">
                 Om du raderar allt försvinner bevisen mot dig, men också chansen
                 att hämnas. Du väljer moralen före karriären, men kommer ryktena
