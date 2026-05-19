@@ -210,9 +210,9 @@ function revealPopup() {
 function win() {
   const headerLogoMobil = document.getElementById("headerLoggaMobil");
   const headerDivLogo = document.getElementById("headerDivLogo");
-  headerDivLogo.innerHTML = "You Won";
-  headerDivLogo.classList.add("youWonText");
-  headerDivLogo.style.width = "308px";
+  headerDivLogo.innerHTML = "Vad hände sen?";
+  /*   headerDivLogo.id = "gameOverTextId"; */
+  headerDivLogo.style.width = "465px";
 
   main.innerHTML = ``;
   main.innerHTML = `
@@ -252,7 +252,8 @@ function LovisaReveal() {
   const headerLogoMobil = document.getElementById("headerLoggaMobil");
   const headerDivLogo = document.getElementById("headerDivLogo");
   headerDivLogo.innerHTML = "Vad hände sen?";
-  headerDivLogo.id = "gameOverTextId";
+  /*   headerDivLogo.id = "gameOverTextId"; */
+  headerDivLogo.style.width = "465px";
 
   main.innerHTML = ``;
   main.innerHTML = `
