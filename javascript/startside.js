@@ -29,7 +29,6 @@ const pictures = [
   "../pictures/picturesPage/11.png",
   "../pictures/picturesPage/12.png",
   "../pictures/picturesPage/13.png",
-  "../pictures/picturesPage/23.jpg",
   "../pictures/picturesPage/14.png",
   "../pictures/picturesPage/15.png",
   "../pictures/picturesPage/16.png",
@@ -328,6 +327,10 @@ function goToWhisperPage() {
         errorMessage.textContent = "";
         lockDiv.classList.toggle("hidden");
 
+        if (whisperArray[currentWhisperCounterIndex].password === "CBCB") {
+          unlockGalleryPicture("../pictures/picturesPage/23.jpg");
+        }
+
         if (whisperArray[currentWhisperCounterIndex].id == 2) {
           pushToArray(whisperArray[currentWhisperCounterIndex]);
           currentWhisperCounterIndex++;
@@ -340,6 +343,7 @@ function goToWhisperPage() {
           pushToArray(whisperArray[currentWhisperCounterIndex]);
           currentWhisperCounterIndex++;
         }
+
         renderPage(currentPage);
       }
     });
@@ -427,24 +431,36 @@ function renderPage(currentPage) {
   });
 }
 
+function unlockGalleryPicture(picUrl) {
+  let unlockedGalleryPictures =
+    JSON.parse(localStorage.getItem("unlockedGalleryPictures")) || [];
+
+  if (!unlockedGalleryPictures.includes(picUrl)) {
+    unlockedGalleryPictures.push(picUrl);
+  }
+
+  localStorage.setItem(
+    "unlockedGalleryPictures",
+    JSON.stringify(unlockedGalleryPictures),
+  );
+}
+
 function picturesPage() {
   document.body.classList.remove("homePage");
   headerDivLoggo.innerHTML = `Bild galleri`;
   headerDivLogo.classList.add("headerText");
   headerDivLoggo.style.width = "500px";
   footer.style.display = "block";
-  main.innerHTML = ``;
+
   main.innerHTML = `
     <div id="picturePageBox">
-        <div id="picturesPageTitlePhone">
-            <p>Bildgalleri</p>
-        </div>
-        <div id="picturesGalleryBox"></div>
+      <div id="picturesPageTitlePhone">
+        <p>Bildgalleri</p>
+      </div>
+      <div id="picturesGalleryBox"></div>
     </div>
   `;
 
-  /*   let textBox = document.createElement("div");
-  textBox.id = ""; */
   let picturesBox = document.getElementById("picturesGalleryBox");
 
   let imagePopup = document.createElement("div");
@@ -456,7 +472,12 @@ function picturesPage() {
   imagePopup.append(popupImage);
   document.body.append(imagePopup);
 
-  for (let pic of pictures) {
+  let unlockedGalleryPictures =
+    JSON.parse(localStorage.getItem("unlockedGalleryPictures")) || [];
+
+  let allPictures = [...pictures, ...unlockedGalleryPictures];
+
+  for (let pic of allPictures) {
     let div = document.createElement("div");
     div.classList.add("pictureGallery");
     div.style.backgroundImage = `url(${pic})`;
