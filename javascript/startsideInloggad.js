@@ -208,11 +208,11 @@ function revealPopup() {
   });
 
   redButton.addEventListener("click", function () {
-    win();
+    takeOverMau();
   });
 }
 
-function win() {
+function takeOverMau() {
   const headerLogoMobil = document.getElementById("headerLoggaMobil");
   const headerDivLogo = document.getElementById("headerDivLogo");
   headerDivLogo.innerHTML = "Vad hände sen?";
@@ -221,25 +221,31 @@ function win() {
 
   main.innerHTML = ``;
   main.innerHTML = `
-  <div id="winWrapper">
+       <div id="winWrapper">
         <h1 id="youWonTitle">You Won</h1>
         <p class="upperWin">
-          När Alice kom in på hemsidan såg hon alla rykten som länge hade
-          förstört hennes namn. Hon visste att sidan hade skadat henne och gjort
-          att andra fått fel bild av vem hon var. Därför bestämde hon sig för
-          att göra något åt saken. Med ett sista klick raderade Alice Mau Gossip
-          för alltid. Alla viskningar, hemligheter och elaka kommentarer
-          försvann från sidan. Efteråt gick Alice till Lovisa, som hade skapat
-          hemsidan. Hon berättade lugnt att Mau Gossip nu var borta. Lovisa blev
-          först chockad, men började sedan förstå hur mycket sidan faktiskt hade
-          påverkat Alice. Det fick Lovisa att tänka om. Hon insåg att hon
-          behövde ta ansvar för det hon hade gjort. Därför hjälpte hon Alice att
-          rentvå sitt rykte och berättade sanningen för de andra. Till slut
-          började folk se Alice för den hon verkligen var, inte för ryktena som
-          spridits. När sanningen kom fram fick Alice äntligen sin praktikplats.
+          Alice fick nog av att Mau Gossip förstörde studenters liv och lyckades
+          genom ett smart drag hacka sig in och ta över kontrollen av hemsidan.
+          Lovisa, som i hemlighet faktiskt hade skapat sidan, märkte plötsligt
+          att hon var utlåst. Men Alice valde att inte avslöja vem som hade
+          startat bloggen, hon hade en helt annan plan för sin hämnd. Alice
+          började istället använda sidan till att posta grova rykten och
+          känsliga hemligheter om just Lovisa. Inlägg efter inlägg spreds om
+          Lovisas privatliv och påstådda snedsteg, precis på samma elaka sätt
+          som sidan alltid hade fungerat. Lovisa tvingades nu uppleva exakt
+          samma mardröm som hon själv hade utsatt andra för. Ryktena om Lovisa
+          spred sig snabbt utanför universitetet och nådde stadens mäklarfirmor.
+          När examen kom var Lovisas rykte så förstört av allt skvaller att
+          ingen i branschen ville anställa henne. Flera år senare satt Lovisa
+          fast i en lokal fiskbutik där hon rensade fisk dag ut och dag in, ett
+          jobb hon absolut vantrivdes med, men det enda hon kunde få. Alice
+          däremot lämnade allt drama bakom sig och flyttade till New York. Med
+          sitt enorma driv klättrade hon snabbt till toppen och blev en av
+          Manhattans mest framgångsrika mäklare, helt fri från det förflutna.
         </p>
+        <img class="finalpictures" src="../pictures/aliceMedSnyggMan.jpeg" alt="" />
+        <img class="finalpictures" src="../pictures/picturesPage/lovisaJobless.png" alt="" />
       </div>
-      <button id="deleteBlogButton">Delete</button>
   `;
 
   const deleteBlogButton = document.getElementById("deleteBlogButton");
@@ -262,29 +268,28 @@ function LovisaReveal() {
 
   main.innerHTML = ``;
   main.innerHTML = `
-        <div id="gameOverContainer">
+  <div id="gameOverContainer">
         <div id="gameOverWrapper"></div>
         <h1 id="GameOverTitle">Vad hände sen?</h1>
         <p id="firstGameover-text">
-          Det verkar som om mysteriet var lite för sofistikerat för vissa. Att
-          avslöja Lovisa kanske kändes rätt för dig, men kvar finns bloggen –
-          som fortfarande påverkar flera människors liv på djupet. För vissa
-          blev konsekvenserna förödande. Alice lyckades aldrig få den där
-          praktikplatsen på mäklarbyrån, och hon fick inte ens en fot in i
-          branschen. Efter alla rykten om droger valde dessutom hennes egen
-          familj att säga upp kontakten med henne. Alice arbetar idag på ett
-          kafé och bor som inneboende med en bekant... Hon kämpar dagligen för
-          att få ekonomin att gå ihop och få det att gå runt. Men mitt i allt
-          det svåra hittade hon och Calle varandra. Calle blev djupt kär i
-          Alice, och idag är de partners och bor tillsammans. De delar tillvaron
-          och kämpar på, sida vid sida, med sin strama ekonomi. För Lovisa
-          ändrades däremot ingenting. Hon visade sig vara listig och har idag
-          lyckats knipa ett jobb på en av de främsta mäklarbyråerna. För Leon
-          och Maja gick det tyvärr inte lika bra. Det turbulenta efterspelet
-          slet på dem, och deras relation tog slut. Idag arbetar de på olika
-          företag och fokuserar helt på sina karriärer för att försöka jobba sig
-          uppåt.
+          Alice konfronterade Lovisa inför alla och avslöjade att det var hon
+          som låg bakom skvallerbloggen Mau Gossip. Men Lovisa spelade skakad,
+          och ingen trodde på Alice. Rasande över anklagelsen bestämde sig
+          Lovisa för att hämnas. Hon spred nya, grova lögner om att Alice fuskat
+          och varit illojal, rykten som snabbt nådde utanför universitetet.
+          Eftersom fastighetsbranschen bygger helt på förtroende blev
+          konsekvenserna totala. Ingen mäklarfirma ville ta i henne. Det spelade
+          ingen roll hur mycket Alice kämpade, ringde runt eller skickade in
+          sitt CV; dörrarna var helt stängda och hennes namn var svartlistat.
+          Månader blev till år. Utan inkomst eller framtidsutsikter tvingades
+          Alice flytta in i sin mammas källare. Det som skulle ha varit starten
+          på en framgångsrik karriär förvandlades istället till en monoton
+          vardag framför datorskärmen, där hon dag ut och dag in fortsatte att
+          skicka iväg jobbansökningar som aldrig ledde till någonting. Lovisas
+          rykten hade lyckats förstöra hennes drömmar för gott.
         </p>
+        <img class="finalpictures" src="../pictures/picturesPage/lovisaEngaged.png" alt="" />
+        <img class="finalpictures" src="../pictures/picturesPage/aliceJoblless.png" alt="" />
       </div>
   `;
 }
