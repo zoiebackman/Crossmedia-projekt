@@ -23,11 +23,6 @@ function logIn() {
               <button id="login-knappen">Logga in</button>
             </div>
           </div>
-          <div class="input-class"> <p id="password">Lösenord</p>
-            <input id="input-password" type="password"></input>
-            <p id="wrong-password">Fel lösenord, vad god att prova igen <3 xoxo</p>
-          </div>
-          <button id="login-knappen">Logga in</button>
         </div>
       </div>`;
 
@@ -252,8 +247,8 @@ function deleteWholePage() {
   document.body.style.display = "none";
 }
 
-function LovisaReveal(){
-   const headerLogoMobil = document.getElementById("headerLoggaMobil");
+function LovisaReveal() {
+  const headerLogoMobil = document.getElementById("headerLoggaMobil");
   const headerDivLogo = document.getElementById("headerDivLogo");
   headerDivLogo.innerHTML = "Vad hände sen?";
   headerDivLogo.id = "gameOverTextId";
@@ -275,5 +270,4 @@ För Leon och Maja gick det tyvärr inte lika bra. Det turbulenta efterspelet sl
   </div>
     
   `;
-
 }
