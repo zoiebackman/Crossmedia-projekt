@@ -53,6 +53,7 @@ function momentOfTruth() {
   const headerDivLogo = document.getElementById("headerDivLogo");
   headerDivLogo.innerHTML = "Sanningens ögonblick";
   headerDivLogo.classList.add("momentOfTruthText");
+  headerDivLogo.style.width = "603px";
 }
 
 function loggedInPage() {
@@ -105,17 +106,18 @@ function gameOver() {
   const headerDivLogo = document.getElementById("headerDivLogo");
   headerDivLogo.innerHTML = "Game Over";
   headerDivLogo.id = "gameOverTextId";
+  headerDivLogo.style.width = "380px";
 
   main.innerHTML = ``;
   main.innerHTML = `
   <div id="gameOverContainer">
-    <div id="gameOverWrapper"></div>
-    <h1 id="GameOverTitle">Game Over</h1>
-    <p id ="firstGameover-text">Det verkar som om mysteriet var lite för sofistikerat för vissa. Mau Gossip har spelat spelet fläckfritt – det kan vi alla konstatera med en gnutta avundsjuka. Dessvärre (ett ord som låter betydligt lyxigare än ett simpelt tyvärr) räckte din intuition inte hela vägen fram den här gången. Gåtan förblir olöst i dina händer, och vi som verkligen hade hoppats på att du skulle briljera på podiet. Men i den här världen får man inga poäng för att bara försöka. Bättre lycka nästa gång. Om det ens finns en nästa gång...</p>
-    <p id ="secondGameover-text">You know you love me. </p>
-    <p id="thirdGameover-text">XOXO</p>
+  <div id="gameOverWrapper"></div>
+  <h1 id="GameOverTitle">Game Over</h1>
+  <p id ="firstGameover-text">Det verkar som om mysteriet var lite för sofistikerat för vissa. Mau Gossip har spelat spelet fläckfritt – det kan vi alla konstatera med en gnutta avundsjuka. Dessvärre (ett ord som låter betydligt lyxigare än ett simpelt tyvärr) räckte din intuition inte hela vägen fram den här gången. Gåtan förblir olöst i dina händer, och vi som verkligen hade hoppats på att du skulle briljera på podiet. Men i den här världen får man inga poäng för att bara försöka. Bättre lycka nästa gång. Om det ens finns en nästa gång...</p>
+  <p id ="secondGameover-text">You know you love me. </p>
+  <p id="thirdGameover-text">XOXO</p>
   </div>
-    
+  
   `;
 }
 
@@ -124,6 +126,7 @@ function reveal() {
   const headerDivLogo = document.getElementById("headerDivLogo");
   headerDivLogo.innerHTML = "Reveal";
   headerDivLogo.classList.add("revealText");
+  headerDivLogo.style.width = "280px";
 
   main.innerHTML = ``;
   main.innerHTML = `
@@ -185,29 +188,29 @@ function win() {
   const headerDivLogo = document.getElementById("headerDivLogo");
   headerDivLogo.innerHTML = "You Won";
   headerDivLogo.classList.add("youWonText");
+  headerDivLogo.style.width = "308px";
 
   main.innerHTML = ``;
   main.innerHTML = `
   <div id="winWrapper">
-  <h1 id="youWonTitle">You Won</h1>
-    <p class="upperWin">Där satt den, Alice.
-
-Vem hade kunnat tro att det var Lovisa som drog i alla trådar? Under den perfekta ytan av fastighetsdrömmar och dyra drinkar dolde sig en redaktör med en minst sagt smutsig agenda. Men medan hon hoppades på att se dig falla, visade du något som är sällsyntare än en ledig takvåning i Västra Hamnen: Ryggrad.
-
-Du hade lösenordet i din hand. Du hade makten. Du visste att genom att radera bloggen så raderade du också din chans till den där glittriga praktikplatsen. Men du valde sanningen framför status, och moral framför makt.
-
-Kanske förlorade du jobbet, men du vann något mycket större – din frihet. Lovisas imperium av lögner ligger nu i papperskorgen, och tystnaden som sprider sig över Malmö Universitet är faktiskt ganska... öronbedövande.
-
-Så, vad händer nu? Utan en blogg att gömma sig bakom tvingas alla se sig själva i spegeln. Och du? Du kan gå med högt huvud genom Niagara, för vi vet alla vem som egentligen äger den här stan nu.
-
-Hatten av för en sann vinnare. Men kom ihåg... även om bloggen är borta, finns det alltid någon som ser på.</p>
-<div id="xoxoWrapper">
-  <p class="downWin">You know you love me.
-  XOXO,
-  Gossip Girl</p>
-</div>
-</div>
-<button id="deleteBlogButton">Delete</button>
+        <h1 id="youWonTitle">You Won</h1>
+        <p class="upperWin">
+          När Alice kom in på hemsidan såg hon alla rykten som länge hade
+          förstört hennes namn. Hon visste att sidan hade skadat henne och gjort
+          att andra fått fel bild av vem hon var. Därför bestämde hon sig för
+          att göra något åt saken. Med ett sista klick raderade Alice Mau Gossip
+          för alltid. Alla viskningar, hemligheter och elaka kommentarer
+          försvann från sidan. Efteråt gick Alice till Lovisa, som hade skapat
+          hemsidan. Hon berättade lugnt att Mau Gossip nu var borta. Lovisa blev
+          först chockad, men började sedan förstå hur mycket sidan faktiskt hade
+          påverkat Alice. Det fick Lovisa att tänka om. Hon insåg att hon
+          behövde ta ansvar för det hon hade gjort. Därför hjälpte hon Alice att
+          rentvå sitt rykte och berättade sanningen för de andra. Till slut
+          började folk se Alice för den hon verkligen var, inte för ryktena som
+          spridits. När sanningen kom fram fick Alice äntligen sin praktikplats.
+        </p>
+      </div>
+      <button id="deleteBlogButton">Delete</button>
   `;
 
   const deleteBlogButton = document.getElementById("deleteBlogButton");
