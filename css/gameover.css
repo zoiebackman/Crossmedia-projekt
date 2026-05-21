@@ -39,6 +39,7 @@
 
 #GameOverTitle {
   display: none;
+  color: #a31414;
 }
 
 @media (max-width: 767px) {
@@ -57,7 +58,7 @@
   }
 
   #GameOverTitle {
-    color: #dd9c4c;
+    color: #a31414;
     font-size: 45px;
     display: block;
     font-family: "imperial script";

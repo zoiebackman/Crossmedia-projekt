@@ -19,9 +19,9 @@ function logIn() {
               <div class="input-class">
                 <p id="password">Lösenord</p>
                 <input id="input-password" type="password" />
+                </div>
+                <button id="login-knappen">Logga in</button>
                 <p id="wrong-password">Fel lösenord. Leta lite till och försök igen.. </p>
-              </div>
-              <button id="login-knappen">Logga in</button>
             </div>
           </div>
         </div>
