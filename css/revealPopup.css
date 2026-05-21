@@ -95,6 +95,49 @@
   margin-bottom: 20px;
 }
 
+.lastPictureBox {
+  width: 100%;
+  display: flex;
+  gap: 15px;
+  margin-bottom: 50px;
+}
+
+#lovisaEngaged {
+  width: 280px;
+  height: 290px;
+  background-image: url(../pictures/picturesPage/lovisaEngaged.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#aliceJobless {
+  width: 280px;
+  height: 290px;
+  background-image: url(../pictures/picturesPage/aliceJoblless.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#AliceWithJob {
+  width: 280px;
+  height: 290px;
+  background-image: url(../pictures/aliceMedSnyggMan.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#LovisaJobless {
+  width: 280px;
+  height: 290px;
+  background-image: url(../pictures/picturesPage/lovisaJobless.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 @media (max-width: 767px) {
   #headerLoggaMobil {
     display: block;
@@ -124,5 +167,13 @@
 
   .popupBox {
     width: 100%;
+  }
+
+  .lastPictureBox {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
   }
 }
