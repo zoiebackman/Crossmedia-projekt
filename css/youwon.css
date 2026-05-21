@@ -55,10 +55,10 @@
   }
 
   #youWonTitle {
-    display: block;
     color: #dd9c4c;
+    font-size: 45px;
+    display: block;
     font-family: "imperial script";
-    margin-bottom: 5px;
   }
 
   #deleteBlogButton {

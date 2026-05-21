@@ -128,42 +128,6 @@ function gameOver() {
   `;
 }
 
-function reveal() {
-  const headerLogoMobil = document.getElementById("headerLoggaMobil");
-  const headerDivLogo = document.getElementById("headerDivLogo");
-  headerDivLogo.innerHTML = "Reveal";
-  headerDivLogo.classList.add("revealText");
-  headerDivLogo.style.width = "280px";
-
-  main.innerHTML = ``;
-  main.innerHTML = `
-  <div id="revealTextWrapper">
-        <p id="revealUpperText">
-          Bra jobbat, du har nu listat ut vem som MAU Gossip är men kommer sista
-          frågan...
-        </p>
-        <p id="revealMiddleText">
-          Ska du avslöja MAU Gossip? Häng ut Lovisa och visa alla vem som ligger
-          bakom kontot. Genom att avslöja sanningen rentvår du ditt eget namn
-          och köper dig en plats i värmen hos Maja och Leon. Praktikplatsen är
-          säkrad, men till vilket pris?
-        </p>
-        <p id="revealLastText">
-          ...eller ska du radera hemsidan? Stoppa kedjan av hat en gång för
-          alla. Om du raderar allt försvinner bevisen mot dig, men också chansen
-          att hämnas. Du väljer moralen före karriären, men kommer ryktena om
-          dig att leva kvar i korridorerna?
-        </p>
-      </div>
-      <button id="nextButtonReveal">Nästa</button>`;
-
-  const nextButtonReveal = document.getElementById("nextButtonReveal");
-
-  nextButtonReveal.addEventListener("click", function () {
-    revealPopup();
-  });
-}
-
 function revealPopup() {
   const headerLogoMobil = document.getElementById("headerLoggaMobil");
   const headerDivLogo = document.getElementById("headerDivLogo");
@@ -222,7 +186,6 @@ function takeOverMau() {
   const headerLogoMobil = document.getElementById("headerLoggaMobil");
   const headerDivLogo = document.getElementById("headerDivLogo");
   headerDivLogo.innerHTML = "Vad hände sen?";
-  /*   headerDivLogo.id = "gameOverTextId"; */
   headerDivLogo.style.width = "465px";
 
   main.innerHTML = ``;
@@ -255,16 +218,6 @@ function takeOverMau() {
         </div>
       </div>
   `;
-
-  const deleteBlogButton = document.getElementById("deleteBlogButton");
-
-  deleteBlogButton.addEventListener("click", function () {
-    deleteWholePage();
-  });
-}
-
-function deleteWholePage() {
-  document.body.style.display = "none";
 }
 
 function LovisaReveal() {
