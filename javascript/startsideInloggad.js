@@ -186,7 +186,7 @@ Vad gör du nu?
             
             </p>
             <p id="questionRevealPopup">
-            Ditt val kommer ha betydande påverkan för din framtid...
+            Ditt val kommer ha betydande påverkan på din framtid...
             </p>
           </div>
           <div id="downRevealPopup">
@@ -228,13 +228,13 @@ function takeOverMau() {
   main.innerHTML = ``;
   main.innerHTML = `
        <div id="winWrapper">
-        <h1 id="youWonTitle">You Won</h1>
+        <h1 id="youWonTitle">Vad hände sen?</h1>
         <p class="upperWin">
-          Alice fick nog av att Mau Gossip förstörde studenters liv och lyckades
-          genom ett smart drag hacka sig in och ta över kontrollen av hemsidan.
+          Du fick nog av att Mau Gossip förstörde studenters liv och lyckades
+          genom ett smart drag hacka dig in och ta över kontrollen av hemsidan.
           Lovisa, som i hemlighet faktiskt hade skapat sidan, märkte plötsligt
-          att hon var utlåst. Men Alice valde att inte avslöja vem som hade
-          startat bloggen, hon hade en helt annan plan för sin hämnd. Alice
+          att hon var utlåst. Men du valde att inte avslöja vem som hade
+          startat bloggen, utan hade en helt annan plan för hämnd. Du
           började istället använda sidan till att posta grova rykten och
           känsliga hemligheter om just Lovisa. Inlägg efter inlägg spreds om
           Lovisas privatliv och påstådda snedsteg, precis på samma elaka sätt
@@ -242,11 +242,11 @@ function takeOverMau() {
           samma mardröm som hon själv hade utsatt andra för. Ryktena om Lovisa
           spred sig snabbt utanför universitetet och nådde stadens mäklarfirmor.
           När examen kom var Lovisas rykte så förstört av allt skvaller att
-          ingen i branschen ville anställa henne. Flera år senare satt Lovisa
-          fast i en lokal fiskbutik där hon rensade fisk dag ut och dag in, ett
-          jobb hon absolut vantrivdes med, men det enda hon kunde få. Alice
-          däremot lämnade allt drama bakom sig och flyttade till New York. Med
-          sitt enorma driv klättrade hon snabbt till toppen och blev en av
+          ingen i branschen ville anställa henne. Lovisa hamnade
+           i en lokal fiskbutik där hon rensade fisk dag ut och dag in, ett
+          jobb hon absolut vantrivdes med, men det enda hon kunde få. Du däremot, Alice, 
+          lämnade allt drama bakom dig och flyttade till New York. Med
+           stort driv klättrade du dig snabbt till toppen och blev en av
           Manhattans mest framgångsrika mäklare, helt fri från det förflutna.
         </p>
         <img class="finalpictures" src="../pictures/aliceMedSnyggMan.jpeg" alt="" />
@@ -278,21 +278,20 @@ function LovisaReveal() {
         <div id="gameOverWrapper"></div>
         <h1 id="GameOverTitle">Vad hände sen?</h1>
         <p id="firstGameover-text">
-          Alice konfronterade Lovisa inför alla och avslöjade att det var hon
+          Du konfronterade Lovisa inför alla och avslöjade att det var hon
           som låg bakom skvallerbloggen Mau Gossip. Men Lovisa spelade skakad,
-          och ingen trodde på Alice. Rasande över anklagelsen bestämde sig
-          Lovisa för att hämnas. Hon spred nya, grova lögner om att Alice fuskat
-          och varit illojal, rykten som snabbt nådde utanför universitetet.
+          och ingen trodde på dig. Rasande över anklagelsen bestämde sig
+          Lovisa för att hämnas. Hon spred nya, grova lögner om dig, rykten som snabbt spreds utanför universitetet.
           Eftersom fastighetsbranschen bygger helt på förtroende blev
-          konsekvenserna totala. Ingen mäklarfirma ville ta i henne. Det spelade
-          ingen roll hur mycket Alice kämpade, ringde runt eller skickade in
-          sitt CV; dörrarna var helt stängda och hennes namn var svartlistat.
+          konsekvenserna totala. Ingen mäklarfirma ville längre ha dig i företaget. Det spelade
+          ingen roll hur mycket du kämpade, ringde runt eller skickade in
+          sitt CV; dörrarna var helt stängda och ditt namn, "Alice Björklund", blev svartlistat.
           Månader blev till år. Utan inkomst eller framtidsutsikter tvingades
-          Alice flytta in i sin mammas källare. Det som skulle ha varit starten
+          du flytta in i sin mammas källare. Det som skulle ha varit starten
           på en framgångsrik karriär förvandlades istället till en monoton
-          vardag framför datorskärmen, där hon dag ut och dag in fortsatte att
+          vardag framför datorskärmen, där du dag ut och dag in fortsatte att
           skicka iväg jobbansökningar som aldrig ledde till någonting. Lovisas
-          rykten hade lyckats förstöra hennes drömmar för gott.
+          rykten hade lyckats förstöra dina drömmar och din framtid för gott.
         </p>
         <img class="finalpictures" src="../pictures/picturesPage/lovisaEngaged.png" alt="" />
         <img class="finalpictures" src="../pictures/picturesPage/aliceJoblless.png" alt="" />
