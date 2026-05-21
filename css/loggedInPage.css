@@ -1,23 +1,26 @@
-#momentTruthContainer{
+#momentTruthContainer {
     width: 80%;
     margin-top: 40px;
 }
 
-#momentTruthWrapper{
+#momentTruthWrapper {
     width: 80%;
 }
 
-#momentOfTruth, #momentText, #questionMoment{
+#momentOfTruth,
+#momentText,
+#questionMoment {
     font-family: "bondoni72";
     font-size: 20px;
-    color: white;
+    /* color: white; */
+    color: #DD9C4C;
 }
 
-#questionMoment{
+#questionMoment {
     margin-bottom: 5px;
 }
 
-#whoIsMau{
+#whoIsMau {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -29,7 +32,7 @@
 
 } */
 
-#questionInputMoment{
+#questionInputMoment {
     background-color: #F8E1CD;
     border-radius: 10px;
     width: 40%;
@@ -38,7 +41,7 @@
     margin-bottom: 40px;
 }
 
-#nextButton{
+#nextButton {
     width: 120px;
     height: 47px;
     background-color: #dd9c4c;
@@ -51,27 +54,29 @@
 }
 
 #nextButton:hover {
-  background-color: #f8e1cd;
-  cursor: pointer;
+    background-color: #f8e1cd;
+    cursor: pointer;
 }
 
-@media (max-width: 767px){
-    #momentTruthContainer{
+@media (max-width: 767px) {
+    #momentTruthContainer {
         width: 80%;
         margin-top: 140px;
     }
 
-    #momentOfTruth, #momentText, #questionMoment{
+    #momentOfTruth,
+    #momentText,
+    #questionMoment {
         font-size: 18px;
         width: 100%;
     }
 
-    #questionInputMoment{
+    #questionInputMoment {
         width: 80%;
     }
 
-    #nextButton{
-    margin-left: 145px;
+    #nextButton {
+        margin-left: 145px;
     }
 
 

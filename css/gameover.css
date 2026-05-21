@@ -13,7 +13,7 @@
 #thirdGameover-text {
   font-family: "bodondi72";
   font-size: 16px;
-  color: white;
+  color: #cd9c72;
   text-align: left;
   margin-bottom: 50px;
 }
@@ -40,6 +40,7 @@
 #GameOverTitle {
   display: none;
 }
+
 @media (max-width: 767px) {
   #gameOverContainer {
     margin-top: 20px;

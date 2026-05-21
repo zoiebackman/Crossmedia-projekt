@@ -1,50 +1,55 @@
-#revealTextWrapper{
+#revealTextWrapper {
     width: 80%;
 }
 
-#revealUpperText, #revealMiddleText, #revealLastText{
+#revealUpperText,
+#revealMiddleText,
+#revealLastText {
     font-size: 18px;
     font-family: "bodondi72";
     color: white;
 }
 
-#nextButtonReveal{
+#nextButtonReveal {
     height: 50px;
-    margin-left: 50%;
+    align-self: start;
+    margin-left: 93px;
     margin-bottom: 50px;
     border: none;
 
     width: 120px;
-  height: 47px;
-  background-color: #dd9c4c;
-  font-family: "didact gothic";
-  border-radius: 10px;
-  font-size: 16px;
+    height: 47px;
+    background-color: #dd9c4c;
+    font-family: "didact gothic";
+    border-radius: 10px;
+    font-size: 16px;
 }
 
-#nextButtonReveal:hover{
+#nextButtonReveal:hover {
     background-color: #F8E1CD;
     border: none;
     cursor: pointer;
 }
 
 
-.revealText{
+.revealText {
     font-size: 100px;
     font-family: "imperial script";
     color: #DD9C4C;
 }
 
 @media (max-width: 767px) {
-    #revealTextWrapper{
+    #revealTextWrapper {
         margin-top: 40px;
     }
 
-    #revealUpperText, #revealMiddleText, #revealLastText{
+    #revealUpperText,
+    #revealMiddleText,
+    #revealLastText {
         font-size: 14px;
     }
 
-    #nextButtonReveal{
+    #nextButtonReveal {
         width: 100px;
         height: 36px;
     }

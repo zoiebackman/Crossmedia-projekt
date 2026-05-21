@@ -75,7 +75,11 @@ main {
   font-family: "bodondi72";
 }
 
-#wrong-password{
+.xoxoText {
+  font-family: "imperial script";
+}
+
+#wrong-password {
   display: none;
 }
 

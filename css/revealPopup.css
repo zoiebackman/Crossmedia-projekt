@@ -9,6 +9,7 @@
   flex-direction: column;
   gap: 20px;
   margin-bottom: 50px;
+  padding-bottom: 30px;
 }
 
 #wrapperReveal {
@@ -30,7 +31,8 @@
   gap: 20px;
   padding: 0 20px;
 
-  align-items: center; /* Centrerar knapparna inuti listan */
+  align-items: center;
+  /* Centrerar knapparna inuti listan */
 }
 
 #breadTextRevealPopup {
@@ -142,6 +144,7 @@
   #headerLoggaMobil {
     display: block;
   }
+
   #revealPopupWrapper {
     margin-top: 40px;
     width: 90%;
@@ -152,9 +155,13 @@
     font-size: 14px;
   }
 
-  .textpopup,
+
   .PopupTextReveal {
-    font-size: 12px;
+    font-size: 14px;
+  }
+
+  .textpopup {
+    font-size: 16px;
   }
 
   #upperRevealPopup {

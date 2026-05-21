@@ -55,7 +55,7 @@ header {
   letter-spacing: 1.2px;
 }
 
-.navbarText:hover{
+.navbarText:hover {
   cursor: pointer;
 }
 
@@ -132,7 +132,7 @@ header {
     width: 70%;
     border-bottom: 1px solid #dd9c4c;
     text-align: center;
-    color: white;
+    color: #cd9c72;
     font-size: 20px;
     font-family: "bodondi72";
   }

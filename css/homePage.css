@@ -3,12 +3,14 @@
   flex-direction: column;
   align-items: center;
 }
+
 #whisperBox,
 #selectedPicturesBox {
   width: 846px;
   display: flex;
   justify-content: start;
 }
+
 #whisperTitle {
   font-family: "bodondi72";
   font-size: 32px;
@@ -36,7 +38,7 @@
 .allTipsAllPictures {
   font-family: "bodondi72";
   font-size: 16px;
-  color: #e3820a;
+  color: #dd9c4c;
   margin-top: 8px;
   text-decoration: underline;
 }
@@ -44,7 +46,7 @@
 #selectedPicturesText {
   font-family: "bodondi72";
   font-size: 32px;
-  color: #e3820a;
+  color: #dd9c4c;
   margin-bottom: 10px;
 }
 
@@ -75,18 +77,23 @@
 #picture1 {
   background-image: url(../pictures/picturesPage/1.png);
 }
+
 #picture2 {
   background-image: url(../pictures/picturesPage/2.png);
 }
+
 #picture3 {
   background-image: url(../pictures/picturesPage/3.png);
 }
+
 #picture4 {
   background-image: url(../pictures/picturesPage/4.png);
 }
+
 #picture5 {
   background-image: url(../pictures/picturesPage/5.png);
 }
+
 #picture6 {
   background-image: url(../pictures/picturesPage/6.png);
 }
@@ -94,7 +101,7 @@
 #quote {
   font-family: "imperial script";
   font-size: 36px;
-  color: white;
+  color: #cd9c72;
   margin-top: 80px;
   margin-bottom: 120px;
   text-align: center;

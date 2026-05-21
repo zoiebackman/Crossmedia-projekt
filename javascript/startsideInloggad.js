@@ -74,7 +74,7 @@ function loggedInPage() {
         </p>
         <div id="inputRutaMoment">
           <p id="questionMoment">Vem är MAU Gossip?</p>
-          <input id="inputMomentAnswer" type="password" />
+          <input id="inputMomentAnswer" type="text" />
           <p id="notCorrectPassword"></p>
         </div>
       </div>
@@ -101,7 +101,7 @@ function loggedInPage() {
     if (attempts === 1) {
       notCorrectPassword.style.display = "block";
       notCorrectPassword.textContent =
-        "Du har en chans till att skriva rätt, annars är det Game Over";
+        "Du har en till gissning. Så tänk noggrant, annars är det Game Over..";
       momentInput.value = "";
       momentInput.focus();
     } else if (attempts >= 2) {
@@ -123,7 +123,13 @@ function gameOver() {
   <div id="gameOverContainer">
     <div id="gameOverWrapper"></div>
     <h1 id="GameOverTitle">Game over</h1>
-    <p id ="firstGameover-text">Det verkar som att du inte lyckas att lösa vem MAU Gossip är. Så synd :)</p>
+    <p id ="firstGameover-text"> Någon där ute har låst portarna till skvallrets heligaste plats, och bara de smartaste eller de mest desperata tar sig in. <br><br>Två försök. Två chanser att knäcka koden för att låsa upp hemligheterna, att kliva in i rummet där alla sanningar gömmer sig. Men vissa dörrar öppnas inte för alla… <br><br>
+    Och låt oss vara ärliga… det värsta är inte att du förlorade.
+Det är att du aldrig får veta vad som fanns där inne. <br> <br>
+     Och bara så, game over. <br><br>
+    <span class="xoxoText"> XOXO </span>
+     </p>
+    
   </div>
   `;
 }

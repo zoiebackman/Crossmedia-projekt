@@ -23,21 +23,29 @@
 
 #WelcomeText,
 #introText,
-#welcomeSection1, #welcomeSection3, #welcomeSection2, #welcomeSection4,
+#welcomeSection1,
+#welcomeSection3,
+#welcomeSection2,
+#welcomeSection4,
 #universityTitle {
-  color: #dd9c4c;
+  color: #cd9c72;
   font-family: "didact gothic";
+  font-size: 14px;
 
 }
 
 #WelcomeText {
   font-family: "imperial script";
-  font-size: 38px;
+  font-size: 30px;
+  color: #dd9c4c;
+
 }
 
-#howToPlay, #universityTitle{
+#howToPlay,
+#universityTitle {
   font-family: "bodondiItalic";
   font-size: 24px;
+  color: #dd9c4c;
 }
 
 #imgContainer {
@@ -47,8 +55,10 @@
   background-size: cover;
   border-radius: 10px;
 
-  width: 80%; /* Eller t.ex. 300px */
-  height: 400px; /* Justera höjden efter behov */
+  width: 80%;
+  /* Eller t.ex. 300px */
+  height: 400px;
+  /* Justera höjden efter behov */
   margin: 20px 0;
 }
 
@@ -71,8 +81,8 @@
   cursor: pointer;
 }
 
-.instagramPasswordAlice{
-  color: rgb(228, 127, 4);
+.instagramPasswordAlice {
+  color: #dd9c4c;
 }
 
 @media (max-width: 767px) {
@@ -90,9 +100,6 @@
     box-shadow: 0 10px 30px rgba(140, 135, 135, 0.5);
   }
 
-  #WelcomeText {
-    font-size: 20px;
-  }
 
   #introText,
   #welcomeSection1,
