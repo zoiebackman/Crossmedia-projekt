@@ -77,8 +77,8 @@ function loggedInPage() {
           <input id="inputMomentAnswer" type="text" />
           <p id="notCorrectPassword"></p>
         </div>
-      </div>
-      <button id="nextButtonMoment">Nästa</button>`;
+        <button id="nextButtonMoment">Nästa</button>
+        </div>`
 
   const nextButtonMoment = document.getElementById("nextButtonMoment");
   const momentInput = document.getElementById("inputMomentAnswer");
