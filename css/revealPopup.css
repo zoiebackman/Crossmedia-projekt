@@ -95,6 +95,13 @@
   margin-bottom: 20px;
 }
 
+.lastPictureBox {
+  width: 100%;
+  display: flex;
+  gap: 15px;
+  margin-bottom: 50px;
+}
+
 #lovisaEngaged {
   width: 280px;
   height: 290px;
@@ -144,11 +151,11 @@
     width: 100%;
   }
 
-  #aliceJobless {
-    margin-bottom: 10px;
-  }
-
-  #lovisaEngaged {
-    margin-bottom: 10px;
+  .lastPictureBox {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
   }
 }

@@ -294,8 +294,10 @@ function LovisaReveal() {
           skicka iväg jobbansökningar som aldrig ledde till någonting. Lovisas
           rykten hade lyckats förstöra hennes drömmar för gott.
         </p>
-        <div id="lovisaEngaged"></div>
-        <div id="aliceJobless"></div>
+        <div class="lastPictureBox">
+          <div id="lovisaEngaged"></div>
+          <div id="aliceJobless"></div>
+        </div>
       </div>
   `;
 }
