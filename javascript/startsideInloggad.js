@@ -249,8 +249,10 @@ function takeOverMau() {
           sitt enorma driv klättrade hon snabbt till toppen och blev en av
           Manhattans mest framgångsrika mäklare, helt fri från det förflutna.
         </p>
-        <img class="finalpictures" id="finalPicAlice "src="../pictures/aliceMedSnyggMan.jpeg" alt="" />
-        <img class="finalpictures" src="../pictures/picturesPage/lovisaJobless.png" alt="" />
+        <div class="lastPictureBox">
+          <div id="AliceWithJob"></div>
+          <div id="LovisaJobless"></div>
+        </div>
       </div>
   `;
 
