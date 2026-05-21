@@ -182,7 +182,6 @@ Men allt leder fram till detta ögonblick… den sista frågan.
 
 Vad gör du nu?
 
-Ditt val kommer ha betydande påverkan för din framtid...
 
             
             </p>
