@@ -95,6 +95,24 @@
   margin-bottom: 20px;
 }
 
+#lovisaEngaged {
+  width: 280px;
+  height: 290px;
+  background-image: url(../pictures/picturesPage/lovisaEngaged.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#aliceJobless {
+  width: 280px;
+  height: 290px;
+  background-image: url(../pictures/picturesPage/aliceJoblless.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 @media (max-width: 767px) {
   #headerLoggaMobil {
     display: block;
@@ -124,5 +142,13 @@
 
   .popupBox {
     width: 100%;
+  }
+
+  #aliceJobless {
+    margin-bottom: 10px;
+  }
+
+  #lovisaEngaged {
+    margin-bottom: 10px;
   }
 }

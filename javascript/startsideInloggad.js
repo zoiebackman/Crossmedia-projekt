@@ -250,7 +250,7 @@ function takeOverMau() {
           sitt enorma driv klättrade hon snabbt till toppen och blev en av
           Manhattans mest framgångsrika mäklare, helt fri från det förflutna.
         </p>
-        <img class="finalpictures" src="../pictures/aliceMedSnyggMan.jpeg" alt="" />
+        <img class="finalpictures" id="finalPicAlice "src="../pictures/aliceMedSnyggMan.jpeg" alt="" />
         <img class="finalpictures" src="../pictures/picturesPage/lovisaJobless.png" alt="" />
       </div>
   `;
@@ -295,8 +295,8 @@ function LovisaReveal() {
           skicka iväg jobbansökningar som aldrig ledde till någonting. Lovisas
           rykten hade lyckats förstöra hennes drömmar för gott.
         </p>
-        <img class="finalpictures" src="../pictures/picturesPage/lovisaEngaged.png" alt="" />
-        <img class="finalpictures" src="../pictures/picturesPage/aliceJoblless.png" alt="" />
+        <div id="lovisaEngaged"></div>
+        <div id="aliceJobless"></div>
       </div>
   `;
 }
