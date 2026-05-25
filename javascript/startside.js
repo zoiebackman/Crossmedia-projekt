@@ -159,7 +159,7 @@ function welcomeFun() {
 
               Du kommer att få tillgång till din (Alice) instagram:</p>
 
-            <p class="instagramPasswordAlice"><strong>Användarnamn: alicemagdalenabjorklund <br>Lösenord: Hej123456</strong> </p>
+            <p class="instagramPasswordAlice"><strong>Användarnamn: alicemagdalenabjorklund <br>Lösenord: Hej1234567</strong> </p>
         </div>
 
         <div id="welcomeSection2">
